@@ -55,7 +55,7 @@
 
 {{ if eq ($.Scratch.Get "moderator") "moderator" }}
 		<!-- ========moderator========== -->
-					<p><strong>{{.Params.submitter.first_name}} {{.Params.moderator.last_name}}</strong> (Moderator)<br>
+					<p><strong>{{.Params.submitter.first_name}} {{.Params.moderator.last_name}}</strong> (Moderator{{ if .Params.moderator.is_confirmed }}--<strong>confirmed</strong>{{else}}--<strong>not confirmed</strong>{{end}})<br>
 					<span>{{.Params.moderator.title}}, {{.Params.moderator.organization}}</span><br>
 					<span>{{.Params.moderator.city}}</span><br>
 
