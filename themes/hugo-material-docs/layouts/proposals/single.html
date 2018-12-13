@@ -27,6 +27,19 @@
 			<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 
 			{{ .Content }}
+			<h2>Session Information</h2>
+			<p><strong>Uniqueness:</strong> {{.Params.uniqueness}}</p>
+			<p><strong>Objectives:</strong> {{.Params.objectives}}</p>
+			<p><strong>Engagement:</strong> {{.Params.engagement}}</p>
+			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship}}</p>
+			{{ with .Params.additional_comments }}<p><strong>Additional Comments: </strong> {{- . -}}</p>{{end}}
+
+			<h2>Audience</h2>
+			<p><strong>Audience:</strong> {{ delimit .Params.tags ", " }}</p>
+			<p><strong>Professional Level:</strong> {{ delimit .Params.categories ", " }}</p>
+			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{- . -}}</p>{{end}}
+
+
 
 			<h2>Participants</h2>
 			<div class="person-block" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start;">
@@ -135,19 +148,15 @@
 		{{ end }}
 	</div>
 
+	{{ with or .Params.keynote_suggestions .Params.other_suggestions }}<h2>Additional Information</h2>{{ end }}
+	{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{- . -}}</p>{{end}}
+	{{ with .Params.other_suggestions }}<p><strong>Other Suggestions: </strong> {{- . -}}</p>{{end}}
 
 
 
 
-			<aside class="copyright" role="note">
-				{{ with .Site.Params.copyright }}
-				&copy; {{ now.Format "2006" }} {{ . }} &ndash;
-				{{ end }}
-				Documentation built with
-				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
-				using the
-				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
-			</aside>
+
+		<div style="min-height: 80px"></div>
 
 			<footer class="footer">
 				{{ partial "footer" . }}
