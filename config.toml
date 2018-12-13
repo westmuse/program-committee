@@ -37,10 +37,10 @@ googleAnalytics = ""
 
 
 [social]
-	twitter = ""
-	github  = "digitalcraftsman"
-	email   = "hello@email.com"
-	web 		= ""
+	twitter = "westmuse"
+	github  = ""
+	email   = "programs@westmuse.org"
+	web 		= "https://westmuse.org"
 
 
 [[menu.main]]
@@ -62,11 +62,6 @@ googleAnalytics = ""
 	name   = "Proposals by Professional Level"
 	url    = "categories/"
 	weight = 30
-
-[[menu.main]]
-	name   = "License"
-	url    = "license/"
-	weight = 40
 
 
 [blackfriday]
