@@ -19,14 +19,11 @@
 
 	<article class="article">
 		<div class="wrapper">
-
-			<h1>All {{ .Title }}</h1>
+			<h1>Proposals by Professional Level</h1>
 			<ul>
 			{{ range .Data.Pages }}
 			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
-
-
-
+			
 			{{ end }}
 			</ul>
 			<aside class="copyright" role="note">

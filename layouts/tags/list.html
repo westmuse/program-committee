@@ -19,16 +19,15 @@
 
 	<article class="article">
 		<div class="wrapper">
+			<h1>Proposals by Audience</h1>
 
-			<h1>All {{ .Title }}</h1>
 			<ul>
 			{{ range .Data.Pages }}
 			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
 
-
-
 			{{ end }}
 			</ul>
+
 			<aside class="copyright" role="note">
 				{{ with .Site.Params.copyright }}
 				&copy; {{ now.Format "2006" }} {{ . }} &ndash;

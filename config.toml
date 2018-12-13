@@ -44,23 +44,23 @@ googleAnalytics = ""
 
 
 [[menu.main]]
-	name   = "Material"
+	name   = "Home"
 	url    = "/"
 	weight = 0
 
 [[menu.main]]
-	name   = "Getting started"
-	url    = "getting-started/"
+	name   = "All Proposals"
+	url    = "proposals/"
 	weight = 10
 
 [[menu.main]]
-	name   = "Adding content"
-	url    = "adding-content/"
+	name   = "Proposals by Audience"
+	url    = "tags/"
 	weight = 20
 
 [[menu.main]]
-	name   = "Roadmap"
-	url    = "roadmap/"
+	name   = "Proposals by Professional Level"
+	url    = "categories/"
 	weight = 30
 
 [[menu.main]]
