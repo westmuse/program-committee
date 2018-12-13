@@ -148,13 +148,20 @@
 		{{ end }}
 	</div>
 
+	{{ with or .Params.moderator.reason .Params.presenter_1.reason }}<h2>Participant Justifications</h2>{{end}}
+	{{ with .Params.moderator.reason }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{.}}</p>{{ end }}
+	{{ with .Params.presenter_1.reason }}<p><strong>{{$.Params.presenter_1.first_name}} {{$.Params.presenter_1.last_name}}: </strong> {{.}}</p>{{ end }}
+	{{ with .Params.presenter_2.reason }}<p><strong>{{$.Params.presenter_2.first_name}} {{$.Params.presenter_2.last_name}}: </strong> {{.}}</p>{{ end }}
+	{{ with .Params.presenter_3.reason }}<p><strong>{{$.Params.presenter_3.first_name}} {{$.Params.presenter_3.last_name}}: </strong> {{.}}</p>{{ end }}
+	{{ with .Params.presenter_4.reason }}<p><strong>{{$.Params.presenter_4.first_name}} {{$.Params.presenter_4.last_name}}: </strong> {{.}}</p>{{ end }}
+
 	{{ with or .Params.keynote_suggestions .Params.other_suggestions }}<h2>Additional Information</h2>{{ end }}
 	{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{- . -}}</p>{{end}}
 	{{ with .Params.other_suggestions }}<p><strong>Other Suggestions: </strong> {{- . -}}</p>{{end}}
 
 
 
-
+</div>
 
 		<div style="min-height: 80px"></div>
 
