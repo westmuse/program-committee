@@ -1,4 +1,4 @@
-baseurl = "https://example.org/"
+baseurl = "/"
 languageCode = "en-us"
 title = "WMA Proposal Review"
 theme = "hugo-material-docs"
