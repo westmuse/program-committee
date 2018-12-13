@@ -1,0 +1,28 @@
+# Hugo default output directory
+
+
+
+
+
+
+.env
+npm-debug.log
+
+/node_modules
+
+
+
+/public
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store
+
+package.json
+package-lock.json

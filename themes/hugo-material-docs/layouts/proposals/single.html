@@ -27,11 +27,13 @@
 			<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 
 			{{ .Content }}
-			<div class="person-block">
+
 			<h2>Participants</h2>
+			<div class="person-block" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start;">
 <!-- ========submitter========== -->
+			<div class="wma-participant">
 			<p><strong>{{.Params.submitter.first_name}} {{.Params.submitter.last_name}}</strong> (Submitter{{- if .Params.submitter.is_moderator -}} &nbsp;&amp; Moderator{{- end -}})<br>
-			<span>{{.Params.submitter.title}}, {{.Params.submitter.organization}}</span><br>
+			<span>{{.Params.submitter.title}}<br>{{.Params.submitter.organization}}</span><br>
 			<span>{{.Params.submitter.city}}</span><br>
 
 				{{ with .Params.submitter.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
@@ -55,8 +57,9 @@
 
 {{ if eq ($.Scratch.Get "moderator") "moderator" }}
 		<!-- ========moderator========== -->
-					<p><strong>{{.Params.submitter.first_name}} {{.Params.moderator.last_name}}</strong> (Moderator{{ if .Params.moderator.is_confirmed }}--<strong>confirmed</strong>{{else}}--<strong>not confirmed</strong>{{end}})<br>
-					<span>{{.Params.moderator.title}}, {{.Params.moderator.organization}}</span><br>
+					<div class="wma-participant">
+						<p><strong>{{.Params.moderator.first_name}} {{.Params.moderator.last_name}}</strong> (Moderator)<br>
+					<span>{{.Params.moderator.title}}<br>{{.Params.moderator.organization}}</span><br>
 					<span>{{.Params.moderator.city}}</span><br>
 
 						{{ with .Params.moderator.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
@@ -70,11 +73,37 @@
 						{{else}}
 							{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is not</strong> presenting.
 						{{end}}
-					</span>
+					</span><br>
+					<span><em>({{ if .Params.moderator.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
 
 
 				</div>
 			{{ end }}
+
+			{{ if .Params.presenter_1.last_name }}
+			{{- $.Scratch.Set "presenter_1" "presenter1" -}}
+			{{ end }}
+
+			{{ if eq ($.Scratch.Get "presenter_1") "presenter1" }}
+					<!-- ========moderator========== -->
+								<div class="wma-participant">
+									<p><strong>{{.Params.presenter_1.first_name}} {{.Params.presenter_1.last_name}}</strong> (Panelist)<br>
+								<span>{{.Params.presenter_1.title}}<br>{{.Params.presenter_1.organization}}</span><br>
+								<span>{{.Params.presenter_1.city}}</span><br>
+
+									{{ with .Params.presenter_1.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.presenter_1.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.presenter_1.telephone }}<span>{{.}}</span><br>{{end}}
+								</p>
+								<span><em>({{ if .Params.presenter_1.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+
+
+
+
+							</div>
+						{{ end }}
+
+
 			<aside class="copyright" role="note">
 				{{ with .Site.Params.copyright }}
 				&copy; {{ now.Format "2006" }} {{ . }} &ndash;

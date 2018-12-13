@@ -1,5 +1,5 @@
 ---
-title: This is the session title
+title: "This is the session title"
 date: 2018-11-30 22:03:18 -0000
 author: Joey Joe-Joe Shabadoo
 categories: ["Student", "Emerging Professional"]
@@ -30,7 +30,7 @@ moderator:
   city: 
   primary_email: 
   secondary_email: 
-  telephone: qwer
+  telephone: 
   is_confirmed: 
   is_presenting: 
   reason: 
