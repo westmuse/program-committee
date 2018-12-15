@@ -24,21 +24,13 @@
 
 	<article class="article">
 		<div class="wrapper">
-			{{ range where .Site.Pages "Type" "index" }}
+			{{ range where .Site.Pages "Section" "home" }}
 				<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 
 				{{ .Content }}
 			{{ end }}
 
-			<aside class="copyright" role="note">
-				{{ with .Site.Params.copyright }}
-				&copy; {{ now.Format "2006" }} {{ . }} &ndash;
-				{{ end }}
-				Documentation built with
-				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
-				using the
-				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
-			</aside>
+			<div style="min-height: 85px;"></div>
 
 			<footer class="footer">
 				{{ partial "footer" . }}
