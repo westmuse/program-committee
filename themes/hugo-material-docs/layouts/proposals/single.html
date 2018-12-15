@@ -56,7 +56,7 @@
 			</p>
 
 			<span>
-				{{ if eq .Params.submitter.is_presenting "Yes"}}
+				{{ if .Params.submitter.is_presenting }}
 					{{.Params.submitter.first_name}} {{.Params.submitter.last_name}} <strong>is</strong> presenting as well.
 				{{else}}
 					{{.Params.submitter.first_name}} {{.Params.submitter.last_name}} <strong>is not</strong> presenting.
@@ -78,7 +78,7 @@
 					{{ with .Params.moderator.telephone }}<span>{{.}}</span><br>{{end}}
 				</p>
 				<span>
-					{{ if eq .Params.moderator.is_presenting "Yes"}}
+					{{ if .Params.moderator.is_presenting }}
 						{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is</strong> presenting as well.
 					{{else}}
 						{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is not</strong> presenting.
@@ -94,7 +94,7 @@
 			<div class="wma-participant">
 				<p><strong>{{.Params.presenter_1.first_name}} {{.Params.presenter_1.last_name}}</strong> (Panelist)<br>
 					<span>{{.Params.presenter_1.title}}<br>{{.Params.presenter_1.organization}}</span><br>
-					<span>{{.Params.presenter_1.city}}</span><br>
+					{{ with .Params.presenter_1.city }}<span>{{.}}</span><br>{{end}}
 					{{ with .Params.presenter_1.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.presenter_1.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.presenter_1.telephone }}<span>{{.}}</span><br>{{end}}
@@ -109,7 +109,7 @@
 			<div class="wma-participant">
 				<p><strong>{{.Params.presenter_2.first_name}} {{.Params.presenter_2.last_name}}</strong> (Panelist)<br>
 					<span>{{.Params.presenter_2.title}}<br>{{.Params.presenter_2.organization}}</span><br>
-					<span>{{.Params.presenter_2.city}}</span><br>
+					{{ with .Params.presenter_2.city }}<span>{{.}}</span><br>{{end}}
 					{{ with .Params.presenter_2.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.presenter_2.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.presenter_2.telephone }}<span>{{.}}</span><br>{{end}}
@@ -124,7 +124,7 @@
 			<div class="wma-participant">
 				<p><strong>{{.Params.presenter_3.first_name}} {{.Params.presenter_3.last_name}}</strong> (Panelist)<br>
 					<span>{{.Params.presenter_3.title}}<br>{{.Params.presenter_3.organization}}</span><br>
-					<span>{{.Params.presenter_3.city}}</span><br>
+					{{ with .Params.presenter_3.city }}<span>{{.}}</span><br>{{end}}
 					{{ with .Params.presenter_3.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.presenter_3.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.presenter_3.telephone }}<span>{{.}}</span><br>{{end}}
@@ -139,7 +139,7 @@
 			<div class="wma-participant">
 				<p><strong>{{.Params.presenter_4.first_name}} {{.Params.presenter_4.last_name}}</strong> (Panelist)<br>
 					<span>{{.Params.presenter_4.title}}<br>{{.Params.presenter_4.organization}}</span><br>
-					<span>{{.Params.presenter_4.city}}</span><br>
+					{{ with .Params.presenter_4.city }}<span>{{.}}</span><br>{{end}}
 					{{ with .Params.presenter_4.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.presenter_4.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.presenter_4.telephone }}<span>{{.}}</span><br>{{end}}
