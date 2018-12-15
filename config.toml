@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "WMA Proposal Review"
+title = "Western Museums Association Program Committee"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
@@ -47,6 +47,11 @@ googleAnalytics = ""
 	name   = "Home"
 	url    = "/"
 	weight = 0
+
+[[menu.main]]
+	name   = "Guidelines & Timelines"
+	url    = "pc-materials/"
+	weight = 10
 
 [[menu.main]]
 	name   = "All Proposals"

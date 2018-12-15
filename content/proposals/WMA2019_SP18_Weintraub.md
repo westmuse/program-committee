@@ -1,5 +1,5 @@
 ---
-title: "Grants 101?How to Apply for a Federal Grant"
+title: "Grants 101: How to Apply for a Federal Grant"
 date: 2018-12-13 14:06:51 -0000
 author: Ariel Weintraub
 categories: ["All"]
@@ -21,7 +21,7 @@ submitter:
   last_name: Weintraub
   title: Associate Director, Institutional Giving
   organization: Oakland Museum of California
-  city: Oakland, CA 
+  city: Oakland, CA
   primary_email: aweintraub@museumca.org
   secondary_email: airs@igc.org
   telephone: 510-318-8519
@@ -30,12 +30,12 @@ submitter:
 moderator:
   first_name: Ariel
   last_name: Weintraub
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
   is_confirmed: TRUE
   is_presenting: FALSE
   reason: Ariel Weintraub has been the grant writer at the Oakland Museum of California for over 10 years and has helped the Oakland Museum of California apply for and be awarded over a dozen IMLS grants for multiple kinds of projects. The most recent grant application is on the IMLS website as a model for other organizations to follow. She has led other successful Grant writing 101 sessions and workshops at WMA.
@@ -44,45 +44,45 @@ presenter_1:
   last_name: Narva
   title: Senior Program Officer, Office of Museum Services
   organization: Institute of Museum and Library Services
-  city: 
+  city:
   primary_email: snarva@imls.gov
-  secondary_email: 
+  secondary_email:
   telephone: 202-653-4634
   is_confirmed: FALSE
   reason: Sandra Narva will represent the funding agency. She would very much like to be part of this session but will not be able to confirm until Spring 2019, dependent upon Federal budget.
 presenter_2:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
   is_confirmed: TRUE
-  reason: If Sandra Narva is unavailable, another presenter can be found. Either another grant writer with similar experience from a different type/size museum or another OMCA team member who works with Ariel?most likely the OMCA Evaluator, Johanna Jones. 
+  reason: If Sandra Narva is unavailable, another presenter can be found. Either another grant writer with similar experience from a different type/size museum or another OMCA team member who works with Ariel?most likely the OMCA Evaluator, Johanna Jones.
 presenter_3:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
-  reason: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
+  reason:
 presenter_4:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
-  reason: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
+  reason:
 keynote_suggestions: ""
 other_suggestions: ""
 

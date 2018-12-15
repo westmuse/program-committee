@@ -1,5 +1,5 @@
 ---
-title: 'Managing the Digital Content Lifecycle: Write Once, Use Everywhere[1]'
+title: 'Managing the Digital Content Lifecycle: Write Once, Use Everywhere'
 date: '2018-12-13 14:06:51 -0000'
 author: 'Seth Johnson'
 categories:

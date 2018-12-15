@@ -25,19 +25,20 @@
 	<article class="article">
 		<div class="wrapper">
 			<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
-	
+		<h3>ID: {{.File.BaseFileName}}</h3>
+
 			{{ .Content }}
 			<h2>Session Information</h2>
-			<p><strong>Uniqueness:</strong> {{.Params.uniqueness}}</p>
-			<p><strong>Objectives:</strong> {{.Params.objectives}}</p>
-			<p><strong>Engagement:</strong> {{.Params.engagement}}</p>
-			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship}}</p>
-			{{ with .Params.additional_comments }}<p><strong>Additional Comments: </strong> {{- . -}}</p>{{end}}
+			<p><strong>Uniqueness:</strong> {{.Params.uniqueness | markdownify }}</p>
+			<p><strong>Objectives:</strong> {{.Params.objectives | markdownify }}</p>
+			<p><strong>Engagement:</strong> {{.Params.engagement | markdownify }}</p>
+			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
+			{{ with .Params.additional_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 			<h2>Audience</h2>
 			<p><strong>Audience:</strong> {{ delimit .Params.tags ", " }}</p>
 			<p><strong>Professional Level:</strong> {{ delimit .Params.categories ", " }}</p>
-			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{- . -}}</p>{{end}}
+			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 
 
@@ -149,15 +150,15 @@
 	</div>
 
 	{{ with or .Params.moderator.reason .Params.presenter_1.reason }}<h2>Participant Justifications</h2>{{end}}
-	{{ with .Params.moderator.reason }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{.}}</p>{{ end }}
-	{{ with .Params.presenter_1.reason }}<p><strong>{{$.Params.presenter_1.first_name}} {{$.Params.presenter_1.last_name}}: </strong> {{.}}</p>{{ end }}
-	{{ with .Params.presenter_2.reason }}<p><strong>{{$.Params.presenter_2.first_name}} {{$.Params.presenter_2.last_name}}: </strong> {{.}}</p>{{ end }}
-	{{ with .Params.presenter_3.reason }}<p><strong>{{$.Params.presenter_3.first_name}} {{$.Params.presenter_3.last_name}}: </strong> {{.}}</p>{{ end }}
-	{{ with .Params.presenter_4.reason }}<p><strong>{{$.Params.presenter_4.first_name}} {{$.Params.presenter_4.last_name}}: </strong> {{.}}</p>{{ end }}
+	{{ with .Params.moderator.reason }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.presenter_1.reason }}<p><strong>{{$.Params.presenter_1.first_name}} {{$.Params.presenter_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.presenter_2.reason }}<p><strong>{{$.Params.presenter_2.first_name}} {{$.Params.presenter_2.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.presenter_3.reason }}<p><strong>{{$.Params.presenter_3.first_name}} {{$.Params.presenter_3.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.presenter_4.reason }}<p><strong>{{$.Params.presenter_4.first_name}} {{$.Params.presenter_4.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 
 	{{ with or .Params.keynote_suggestions .Params.other_suggestions }}<h2>Additional Information</h2>{{ end }}
-	{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{- . -}}</p>{{end}}
-	{{ with .Params.other_suggestions }}<p><strong>Other Suggestions: </strong> {{- . -}}</p>{{end}}
+	{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
+	{{ with .Params.other_suggestions }}<p><strong>Other Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
 
 
 

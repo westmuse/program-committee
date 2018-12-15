@@ -1,5 +1,5 @@
 ---
-title: "Uncovering Stories then Preserving and Sharing them in Different Ways-||Successful Models for Use in Large and Small Museums"
+title: "Uncovering Stories then Preserving and Sharing them in Different Ways: Successful Models for Use in Large and Small Museums"
 date: 2018-12-13 14:06:51 -0000
 author: Patty A. Miller
 categories: ["Information could be used by Directors", "Curators", "or Volunteers"]

@@ -1,9 +1,9 @@
 ---
-title: "?If You Build it, Will They Come??"
+title: "If You Build it, Will They Come?"
 date: 2018-12-13 14:06:51 -0000
 author: Kathleen Fitzpatrick
 categories: ["Entry to Senior"]
-tags: [" CEOs/Directors", "security", "operations", "event managers", "collections staff", "curators", "educators", "architects", "visitor services", "retail and site managers." ]
+tags: [" CEOs/Directors", "security", "operations", "event managers", "collections staff", "curators", "educators", "architects", "visitor services", "retail and site managers" ]
 description: "Undertaking major changes to programming can be a challenging exercise for museums. The Chandler Museum, Nora Eccles Harrison Museum of Art, and Heard Museum have each endeavored to move beyond the walls of their building and find ways to engage with new audiences. Whether through renovation or reorganization, you will learn the importance of early and continued engagement with stakeholders and how their input can help guide programming in a positive and unexpected way.  "
 uniqueness: "We?ll look at how to position museums for future expansion, the strategic role of non-traditional programming, and extending user experiences beyond the building's four walls."
 objectives: "1. Understand the role stakeholder engagement plays in programming, and present strategies for continuing to listen and engage long after the ribbon has been cut.

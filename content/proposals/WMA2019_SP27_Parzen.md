@@ -1,5 +1,5 @@
 ---
-title: "The Power of Adaptability: Raising Your ?AQ? in a Rapidly Changing Industry"
+title: "The Power of Adaptability: Raising Your 'AQ' in a Rapidly Changing Industry"
 date: 2018-12-13 14:06:51 -0000
 author: Micah Parzen
 categories: ["All levels"]
@@ -82,4 +82,4 @@ keynote_suggestions: ""
 other_suggestions: ""
 
 ---
-The ability to positively adapt to changing circumstances?one's "Adaptability Quotient," or "AQ??may prove to be one of the most important aptitudes in successfully navigating our industry going forward. This panel will: Unpack the idea of AQ; explore how it positively manifests (and gets negatively stuck) within a variety of institutional contexts and positions within museums; help attendees think about ways to improve their ability to successfully adapt, both personally and professionally.
+The ability to positively adapt to changing circumstances--one's "Adaptability Quotient," or "AQ"--may prove to be one of the most important aptitudes in successfully navigating our industry going forward. This panel will: Unpack the idea of AQ; explore how it positively manifests (and gets negatively stuck) within a variety of institutional contexts and positions within museums; help attendees think about ways to improve their ability to successfully adapt, both personally and professionally.
