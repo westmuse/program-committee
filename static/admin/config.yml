@@ -20,3 +20,4 @@ collections:
       - {label: "draft", name: "draft", widget: "boolean"}
       - {label: "abstract", name: "abstract", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Weight", name: "weight", widget: "number"}
