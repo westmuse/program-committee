@@ -21,26 +21,19 @@
 		<div class="wrapper">
 			<h1>{{ .Title }}</h1>
 
+
 			{{ range .Data.Pages }}
 			<a href="{{ .Permalink }}" title="{{ .Title }}">
-				<h2>{{ .Title }}</h2>
+				<h2 class="wma-header-link">{{ .Title }}</h2>
 			</a>
 
 			<br>
-			{{ printf "%s" .Summary | markdownify }}
+			{{ with .Params.abstract }}{{.}}{{else}}{{ printf "%s" .Summary | markdownify }}{{ end }}
 
 			<hr>
 			{{ end }}
 
-			<aside class="copyright" role="note">
-				{{ with .Site.Params.copyright }}
-				&copy; {{ now.Format "2006" }} {{ . }} &ndash;
-				{{ end }}
-				Documentation built with
-				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
-				using the
-				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
-			</aside>
+
 		</div>
 	</article>
 

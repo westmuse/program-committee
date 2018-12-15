@@ -2,6 +2,8 @@
 title: "Goals and Values for the Annual Meeting Program"
 date: 2018-12-12T09:40:06-06:00
 draft: false
+weight: 30
+abstract: "Understanding the character and values of WMA, and how those are applied to the annual meeting."
 ---
 
 __The Annual Meeting should be:__
@@ -21,7 +23,9 @@ __The Annual Meeting should:__
 * Involve "first person voices"
 * Encourage dialog within the sessions
 * Provide tangible take-aways for attendees
-Content should target one of the following:
+
+__Content should target one of the following:__
+
 * Core curriculum, nuts and bolts, “101” sessions
 * Mid/advanced best practices and issues
 * Senior leadership and management issues

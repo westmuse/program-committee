@@ -2,17 +2,10 @@
 title: "WMA Proposal Reviewing Guidelines"
 date: 2018-12-12T09:40:06-06:00
 draft: false
+weight: 10
+abstract: "Things to think about as you review proposals for this year's WMA conference."
 ---
-Each year, questions arise from Program Committee (PC) members as to what
-specific elements should be considered as they read through the proposals. These
-notes supplement the Goals and Values list—below—that mainly address content
-and format. This list addresses the logistical realities of the WMA Annual Meeting:
-conference size, marketing approach, and other issues that impact the type of
-program that is possible. Remember that only about 40-45 sessions will make it to
-the final program, so these notes, along with the Goals and Values list, will help
-you in your efforts to score the sessions fairly. The PC has the right and the
-responsibility to recommend to the session proposer that changes be made
-according to the needs of the Annual Meeting.
+Each year, questions arise from Program Committee (PC) members as to what specific elements should be considered as they read through the proposals. These notes supplement the Goals and Values list—below—that mainly address content and format. This list addresses the logistical realities of the WMA Annual Meeting: conference size, marketing approach, and other issues that impact the type of program that is possible. Remember that only about 40-45 sessions will make it to the final program, so these notes, along with the Goals and Values list, will help you in your efforts to score the sessions fairly. The PC has the right and the responsibility to recommend to the session proposer that changes be made according to the needs of the Annual Meeting.
 ## Representing WMA
 In the PC’s work, they are representatives of WMA. Conversations with proposers, presenters, as well as any other participants should be professional, neutral, and confidential. All conversations during the PC Meetings are strictly confidential; this is particularly important so that PC members are able to speak candidly in order to develop the best program possible.
 ## Program and Session Diversity

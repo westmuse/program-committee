@@ -2,6 +2,8 @@
 title: "Program Committee Process"
 date: 2018-12-12T09:40:06-06:00
 draft: false
+weight: 40
+abstract: "Summary of your roles and responsibilities as a WMA Program Committee member."
 ---
 
 Summary of the steps taken by the Western Museums Association (WMA) staff and the Program Committee (PC) to create the program for the WMA Annual Meeting.

@@ -5,3 +5,14 @@ max-width: 424px;
 padding-left: 15px;
 padding-right: 20px;
 }
+
+.wma-header-link::after {
+    content: "\e602";
+    display: block;
+    float: right;
+    font-family: Icon;
+    font-size: 23px;
+    width: 1.2em;
+    margin-left: -1.2em;
+    vertical-align: -.1em;
+  }
