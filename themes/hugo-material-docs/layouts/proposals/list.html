@@ -26,7 +26,7 @@
 				<li><a href="/categories">Proposals by Professional Level</a></li>
 			<ul>
 				<hr>
-			{{ range .Data.Pages }}
+			{{ range sort .Data.Pages.ByTitle }}
 			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
 
 
