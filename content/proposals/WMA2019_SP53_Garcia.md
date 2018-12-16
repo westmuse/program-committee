@@ -8,7 +8,7 @@ tags:
     - 'Professionals in any role in an organization (and students) can apply the content of this session to their sphere of influence.'
 description: 'In Edmonton and then in Tacoma we delved into ways that structural racism shows up in our workplaces. Join us for this double session for the first time, or return to continue the conversation in Boise.  Discuss what self-care looks like for professionals of color! Develop your skills as a white ally! Find a community of practice! Workshop-style activities and break-out groups prepare participants to be effective advocates for equity and inclusion. '
 uniqueness: 'This session will engage participants in group activities and discussions aimed at equipping them with tools to undo aspects of institutional racism in museums.'
-objectives: "1. Move attendees to the next step on their path toward embodying equity and inclusion. Attendees will leave with action items geared at their sphere of influence.\n*2. Update understanding of core concepts related to racial and ethnic inequity in museums and the broader culture.\n*3. Define what being a white ally and responsible gatekeeper looks like, and what self-care for professionals of color requires, in museums. "
+objectives: "<ol><li>Move attendees to the next step on their path toward embodying equity and inclusion. Attendees will leave with action items geared at their sphere of influence.</li><li>Update understanding of core concepts related to racial and ethnic inequity in museums and the broader culture.</li><li>Define what being a white ally and responsible gatekeeper looks like, and what self-care for professionals of color requires, in museums.</li></ul> "
 engagement: 'This session will move from an ''undoing institutional racism 101'' overview focused on one key concept, to activities in break-out groups that allow for frank discussion. White allies and people of color will have opportunities to share their questions/impressions/experiences separately and then come together for a broader conversation.'
 additional_comments: 'Based on the follow-up to this session in Tacoma that was convened informally the following morning, we are proposing a double session. The overwhelming response from participants was that more time was required!'
 other_comments: ""
@@ -80,7 +80,7 @@ presenter_4:
   telephone:
   is_confirmed:
   reason:
-keynote_suggestions: " ||Amy Lonetree, Cecilia Garibay, Joanne Rizzi||B. Other types of programming that you would like to see during the 2018 Annual Conference.||Submission Deadline is November 30, 2018||Please email the completed document to proposals@westmuse.org||Thank you for your submission and supporting WMA!||We look forward to seeing you in Boise!"
+keynote_suggestions: "Amy Lonetree, Cecilia Garibay, Joanne Rizzi"
 other_suggestions: ""
 
 ---
