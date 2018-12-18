@@ -140,5 +140,5 @@ collections:
           - {label: "Telephone", name: "telephone", widget: "string"}
           - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
           - {label: "Reason for including", name: "reason", widget: "markdown"}
-        - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown"}
-        - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown"}
+      - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown"}
+      - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown"}
