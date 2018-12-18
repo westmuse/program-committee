@@ -69,76 +69,76 @@ collections:
           - {label: "Telephone", name: "telephone", widget: "string"}
           - {label: "Also moderating?", name: "is_moderator", widget: "boolean"}
           - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
-        - label: "Moderator"
-          name: "moderator"
-          widget: "object"
-          fields:
-            - {label: "First Name", name: "first_name", widget: "string"}
-            - {label: "Last Name", name: "last_name", widget: "string"}
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Organization", name: "first_name", widget: "string"}
-            - {label: "City, State", name: "city", widget: "string"}
-            - {label: "Primary E-mail", name: "primary_email", widget: "string"}
-            - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
-            - {label: "Telephone", name: "telephone", widget: "string"}
-            - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
-            - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
-            - {label: "Reason for including", name: "reason", widget: "markdown"}
-        - label: "Presenter 1"
-          name: "presenter_1"
-          widget: "object"
-          fields:
-            - {label: "First Name", name: "first_name", widget: "string"}
-            - {label: "Last Name", name: "last_name", widget: "string"}
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Organization", name: "first_name", widget: "string"}
-            - {label: "City, State", name: "city", widget: "string"}
-            - {label: "Primary E-mail", name: "primary_email", widget: "string"}
-            - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
-            - {label: "Telephone", name: "telephone", widget: "string"}
-            - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
-            - {label: "Reason for including", name: "reason", widget: "markdown"}
-        - label: "Presenter 2"
-          name: "presenter_2"
-          widget: "object"
-          fields:
-            - {label: "First Name", name: "first_name", widget: "string"}
-            - {label: "Last Name", name: "last_name", widget: "string"}
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Organization", name: "first_name", widget: "string"}
-            - {label: "City, State", name: "city", widget: "string"}
-            - {label: "Primary E-mail", name: "primary_email", widget: "string"}
-            - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
-            - {label: "Telephone", name: "telephone", widget: "string"}
-            - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
-            - {label: "Reason for including", name: "reason", widget: "markdown"}
-        - label: "Presenter 3"
-          name: "presenter_3"
-          widget: "object"
-          fields:
-            - {label: "First Name", name: "first_name", widget: "string"}
-            - {label: "Last Name", name: "last_name", widget: "string"}
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Organization", name: "first_name", widget: "string"}
-            - {label: "City, State", name: "city", widget: "string"}
-            - {label: "Primary E-mail", name: "primary_email", widget: "string"}
-            - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
-            - {label: "Telephone", name: "telephone", widget: "string"}
-            - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
-            - {label: "Reason for including", name: "reason", widget: "markdown"}
-        - label: "Presenter 4"
-          name: "presenter_4"
-          widget: "object"
-          fields:
-            - {label: "First Name", name: "first_name", widget: "string"}
-            - {label: "Last Name", name: "last_name", widget: "string"}
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Organization", name: "first_name", widget: "string"}
-            - {label: "City, State", name: "city", widget: "string"}
-            - {label: "Primary E-mail", name: "primary_email", widget: "string"}
-            - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
-            - {label: "Telephone", name: "telephone", widget: "string"}
-            - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
-            - {label: "Reason for including", name: "reason", widget: "markdown"}
-          - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown"}
-          - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown"}
+      - label: "Moderator"
+        name: "moderator"
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 1"
+        name: "presenter_1"
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 2"
+        name: "presenter_2"
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 3"
+        name: "presenter_3"
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 4"
+        name: "presenter_4"
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+        - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown"}
+        - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown"}
