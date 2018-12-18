@@ -52,8 +52,8 @@ collections:
       - {label: "Uniqueness", name: "uniqueness", widget: "markdown"}
       - {label: "Objectives", name: "objectives", widget: "markdown"}
       - {label: "Engagement", name: "engagement", widget: "markdown"}
-      - {label: "Additional Comments", name: "additional_comments", widget: "markdown", required: "false"}
-      - {label: "Other Comments", name: "other_comments", widget: "markdown", required: "false"}
+      - {label: "Additional Comments", name: "additional_comments", widget: "markdown", required: false}
+      - {label: "Other Comments", name: "other_comments", widget: "markdown", required: false}
       - {label: "Relationship to Theme", name: "theme_relationship", widget: "markdown"}
       - label: "Submitter"
         name: "submitter"
@@ -65,14 +65,14 @@ collections:
           - {label: "Organization", name: "first_name", widget: "string"}
           - {label: "City, State", name: "city", widget: "string"}
           - {label: "Primary E-mail", name: "primary_email", widget: "string"}
-          - {label: "Secondary E-mail", name: "secondary_email", widget: "string", required: "false"}
-          - {label: "Telephone", name: "telephone", widget: "string", required: "false"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string", required: false}
+          - {label: "Telephone", name: "telephone", widget: "string", required: false}
           - {label: "Also moderating?", name: "is_moderator", widget: "boolean"}
           - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
       - label: "Moderator"
         name: "moderator"
         widget: "object"
-        required: "false"
+        required: false
         fields:
           - {label: "First Name", name: "first_name", widget: "string"}
           - {label: "Last Name", name: "last_name", widget: "string"}
@@ -88,7 +88,7 @@ collections:
       - label: "Presenter 1"
         name: "presenter_1"
         widget: "object"
-        required: "false"
+        required: false
         fields:
           - {label: "First Name", name: "first_name", widget: "string"}
           - {label: "Last Name", name: "last_name", widget: "string"}
@@ -103,7 +103,7 @@ collections:
       - label: "Presenter 2"
         name: "presenter_2"
         widget: "object"
-        required: "false"
+        required: false
         fields:
           - {label: "First Name", name: "first_name", widget: "string"}
           - {label: "Last Name", name: "last_name", widget: "string"}
@@ -117,7 +117,7 @@ collections:
           - {label: "Reason for including", name: "reason", widget: "markdown"}
       - label: "Presenter 3"
         name: "presenter_3"
-        required: "false"
+        required: false
         widget: "object"
         fields:
           - {label: "First Name", name: "first_name", widget: "string"}
@@ -132,7 +132,7 @@ collections:
           - {label: "Reason for including", name: "reason", widget: "markdown"}
       - label: "Presenter 4"
         name: "presenter_4"
-        required: "false"
+        required: false
         widget: "object"
         fields:
           - {label: "First Name", name: "first_name", widget: "string"}
@@ -145,5 +145,5 @@ collections:
           - {label: "Telephone", name: "telephone", widget: "string"}
           - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
           - {label: "Reason for including", name: "reason", widget: "markdown"}
-      - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown", required: "false"}
-      - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown", required: "false"}
+      - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown", required: false}
+      - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown", required: false}
