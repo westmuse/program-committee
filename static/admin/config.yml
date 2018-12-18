@@ -57,15 +57,6 @@ collections:
       - {label: "Relationship to Theme", name: "theme_relationship", widget: "markdown"}
       - label: "Submitter"
           name: "submitter"
-          widget: "list"
+          widget: "object"
           fields:
             - {label: "First Name", name: "first_name", widget: "string"}
-
-
-
-
-
-
-
-
-      
