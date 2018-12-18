@@ -33,3 +33,39 @@ collections:
       - {label: "draft", name: "draft", widget: "boolean"}
       - {label: "abstract", name: "abstract", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "proposals" # Used in routes, e.g., /admin/collections/blog
+    label: "Proposals" # Used in the UI
+    folder: "content/proposals" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "WMA2019_SP{{ID}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "ID", name: "ID", widget: "number"}
+      - {label: "submitter", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "draft", name: "draft", widget: "boolean"}
+      - {label: "Professional Level", name: "categories", widget: "list"}
+      - {label: "Audience", name: "tags", widget: "list"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Uniqueness", name: "uniqueness", widget: "markdown"}
+      - {label: "Objectives", name: "objectives", widget: "markdown"}
+      - {label: "Engagement", name: "engagement", widget: "markdown"}
+      - {label: "Additional Comments", name: "additional_comments", widget: "markdown"}
+      - {label: "Other Comments", name: "other_comments", widget: "markdown"}
+      - {label: "Relationship to Theme", name: "theme_relationship", widget: "markdown"}
+      - label: "Submitter"
+          name: "submitter"
+          widget: "list"
+          fields:
+            - {label: "First Name", name: "first_name", widget: "string"}
+
+
+
+
+
+
+
+
+      
