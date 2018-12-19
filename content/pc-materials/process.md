@@ -2,7 +2,7 @@
 title: "Program Committee Process"
 date: 2018-12-12T09:40:06-06:00
 draft: false
-weight: 40
+weight: 10
 abstract: "Summary of your roles and responsibilities as a WMA Program Committee member."
 ---
 

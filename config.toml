@@ -41,6 +41,8 @@ googleAnalytics = ""
 	github  = ""
 	email   = "programs@westmuse.org"
 	web 		= "https://westmuse.org"
+	instagram = "https://www.instagram.com/westmuse.pics/"
+  facebook = "https://www.facebook.com/westmuse/"
 
 
 [[menu.main]]

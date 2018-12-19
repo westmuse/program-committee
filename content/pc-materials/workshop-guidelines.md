@@ -2,7 +2,7 @@
 title: "Workshop Guidelines"
 date: 2018-12-12T09:40:06-06:00
 draft: false
-weight: 20
+weight: 40
 abstract: Details and logistics for both half-day and full-day workshops.
 ---
 
