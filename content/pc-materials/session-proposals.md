@@ -2,7 +2,7 @@
 title: "How to Review Session Proposals"
 date: 2018-12-12T09:40:06-06:00
 draft: false
-weight: 50
+weight: 25
 abstract: "Outline of the process for reviewing proposals."
 ---
 
