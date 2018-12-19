@@ -1,5 +1,5 @@
 ---
-title: 'First Program Committee Meeting: January 19-20, 2018 in Tacoma'
+title: 'First Program Committee Meeting: January 25-26, 2019 in Boise'
 date: 2018-12-12T15:40:06.000Z
 abstract: >-
   Agendas and other important information about the first Program Committee
