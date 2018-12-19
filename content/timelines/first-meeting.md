@@ -61,7 +61,8 @@ Idaho State Museum**
 * 10:05 am – Share ranking and cut-off; Provide Feedback for Successful Proposals
 * 10:30 am – Strategic Session Needs and Brainstorming to Fill Program Gaps
 * 12:00 pm – Lunch break (provided by WMA)
-* 1:00 pm – Brainstorm additional WMA 2019 activities and programming
+* 1:00 pm – Strategic Session Needs and Brainstorming to Fill Program Gaps
+* 2:00 pm – Workshops
 * 2:45 pm – Wrap Up/Next Steps
 * 3:00 pm – Adjourn
 * 3:05 pm – Tour museum (TBD)
