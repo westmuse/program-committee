@@ -2,7 +2,7 @@
 title: "Program Committee Timeline"
 date: 2018-12-12T09:40:06-06:00
 draft: false
-weight: 50
+weight: 10
 abstract: "Overall timeline with important dates and deadlines."
 ---
 

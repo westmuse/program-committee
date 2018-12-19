@@ -49,9 +49,14 @@ googleAnalytics = ""
 	weight = 10
 
 [[menu.main]]
-	name   = "Guidelines & Timelines"
+	name   = "Reviewing Guidelines & Process"
 	url    = "pc-materials/"
 	weight = 20
+
+[[menu.main]]
+	name   = "Timelines & Meeting Agendas"
+	url    = "timelines/"
+	weight = 25
 
 [[menu.main]]
 	name   = "All Proposals"
