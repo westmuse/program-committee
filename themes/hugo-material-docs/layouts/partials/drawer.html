@@ -55,6 +55,20 @@
             </a>
           </li>
           {{ end }}
+          {{ with .Site.Social.instagram }}
+          <li>
+            <a href="{{ . }}" target="_blank" title="@{{ . }} on Instagram">
+              Instagram
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Social.facebook }}
+          <li>
+            <a href="{{ . }}" target="_blank" title="@{{ . }} on Facebook">
+              Facebook
+            </a>
+          </li>
+          {{ end }}
         </ul>
         {{ end }}
       </div>
