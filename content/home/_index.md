@@ -11,7 +11,7 @@ The best place to start is [Guidelines & Timelines](/pc-materials/), followed b
 ## PC Roster
 
 Here's the 2019 PC Roster, which includes members; contact information:
-Doc: Roster
+[Doc: Roster](/docs/WMA2019_PC_Roster.xlsx)
 
 ## Important Dates:
 
