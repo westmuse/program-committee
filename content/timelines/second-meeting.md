@@ -4,7 +4,7 @@ date: 2018-12-12T15:40:06.000Z
 abstract: >-
   Agendas and other important information about the second Program Committee
   meeting in March, 2019.
-weight: 25
+weight: 40
 ---
 ## Hotel Information
 
