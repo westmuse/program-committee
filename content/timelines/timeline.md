@@ -7,7 +7,7 @@ weight: 10
 ## December 2018
 
 * Co-Chairs and staff assign proposals to PC members
-* December 14 – Staff posts submitted proposals to PC Wiki and notifies PC
+* Staff notifies PC when all submitted proposals are posted to the PC Website
 * PC members review all proposals 
 
 ## January 2019
