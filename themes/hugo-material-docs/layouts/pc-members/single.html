@@ -25,7 +25,16 @@
 	<article class="article">
 		<div class="wrapper">
 			<h1>{{ .Title }}</h1>
-		<h3>ID: {{.File.BaseFileName}}</h3>
+			<div class="wma-participant">
+				<p>
+					<span>{{.Params.org_title}}<br>{{.Params.organization}}</span><br>
+					<span>{{.Params.state}}</span><br>
+					{{ with .Params.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.phone }}<span>{{.}}</span><br>{{end}}
+					{{ with .Params.moderator.telephone }}<span>{{.}}</span><br>{{end}}
+				</p>
+
+			</div>
 
 
 
