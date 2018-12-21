@@ -19,6 +19,23 @@ collections:
       - {label: "abstract", name: "abstract", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Weight", name: "weight", widget: "number"}
+  - name: "pc-members" # Used in routes, e.g., /admin/collections/blog
+    label: "Committee Members" # Used in the UI
+    folder: "content/pc-members" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{last_name}}_{{first_name}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "First Name", name: "first_name", widget: "string"}
+      - {label: "Last Name", name: "last_name", widget: "string"}
+      - {label: "Org Title", name: "org_title", widget: "string"}
+      - {label: "Organization", name: "organization", widget: "string"}
+      - {label: "State", name: "state", widget: "string"}
+      - {label: "E-mail", name: "email", widget: "string"}
+      - {label: "Phone", name: "phone", widget: "string"}
+      - {label: "Is Chair?", name: "chair", widget: "boolean"}
+      - {label: "PC Year", name: "year", widget: "string"}
   - name: "timelines" # Used in routes, e.g., /admin/collections/blog
     label: "Timelines and Agendas" # Used in the UI
     folder: "content/timelines" # The path to the folder where the documents are stored
