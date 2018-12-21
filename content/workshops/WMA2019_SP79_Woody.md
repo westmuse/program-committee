@@ -5,7 +5,7 @@ author: Rachael Woody
 categories: ["All"]
 tags: ["Audience: Appropriate for all levels of professionals", "regardless of institution type." ]
 description: 'The reality of working in history is that we often struggle to secure enough funding to function at our full potential. Grant funding is repeatedly sought to fill the gap needed for staff, supplies, and projects. The session will offer a sandbox for constructing competitive grant project ideas, reveal proposal pitfalls, and provide a template for creating a winning grant proposal. This workshop is for anyone who is part of an under-funded organization.'
-format: 'Half-day'
+session_format: 'Half-day'
 fee: '$10 per participant to receive workbook that accompanies workshop.'
 uniqueness: 'My workshop goes beyond the typical introduction to grants and teaches museum professionals how to construct competitive grant project ideas.'
 objectives: '•	Participants will learn how to tease out potential grant project ideas by working their daily needs into a creative, and attractive grant project.
@@ -23,52 +23,52 @@ submitter:
   organization: Rachael Christine Consulting
   city: Tigard, OR
   primary_email: consulting@rachaelcristine.com
-  secondary_email: 
+  secondary_email:
   telephone: 503-922-3402
   is_presenting: TRUE
 presenter_1:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
   is_confirmed: TRUE
   reason: ''
 presenter_2:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 presenter_3:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 presenter_4:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 
 keynote_suggestions: ''

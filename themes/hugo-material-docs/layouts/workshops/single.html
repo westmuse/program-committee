@@ -29,11 +29,14 @@
 
 			{{ .Content }}
 			<h2>Session Information</h2>
+			<p><strong>Workshop Format:</strong> {{.Params.session_format}}<br>
+			<strong>Fee:</strong> {{ .Params.fee }}</p>
 			<p><strong>Uniqueness:</strong> {{.Params.uniqueness | markdownify }}</p>
 			<p><strong>Objectives:</strong> {{.Params.objectives | markdownify }}</p>
 			<p><strong>Engagement:</strong> {{.Params.engagement | markdownify }}</p>
 			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
 			{{ with .Params.additional_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
+
 
 			<h2>Audience</h2>
 			<p><strong>Audience:</strong> {{ delimit .Params.tags ", " }}</p>

@@ -5,10 +5,10 @@ author: Layce Johnson
 categories: ["All"]
 tags: ["Audience: emerging professionals", "professionals new to managing archival and photographic materials in their museum", "professionals that would like a refresher" ]
 description: 'This workshop is designed for museum professionals, beginners and old pros alike, who find themselves struggling to manage paper and photographic materials in their institutions. We encourage an open mind and an open heart to engage with us and each other as we journey through the dark passageways of the archival profession. There will be two hands-on group projects: processing a manuscript collection and creating a digitization plan.'
-format: 'Full-day'
+session_format: 'Full-day'
 fee: 'N/A'
 uniqueness: 'We offer a unique learning opportunity on how best to tackle management of paper/photographic collections. Though related, museum and archival practices do not always align.'
-objectives: '1. Acquisitions/Appraisals § Collection Policy and Donor Relationships § Surveying collections § Custodial transfer, Deeds of Gift, etc. 2. Arrangement and Description (Processing a Collection) § Processing an archival collection § Preservation and handling of archival materials § Preservation and handling and Identification of photographs § Processing fails: what not to do 3. Access and digitization § Reading Room § Preservation and handling of archival materials § Preservation and handling and Identification of photographs § Metadata $ Digitization: what it is not 
+objectives: '1. Acquisitions/Appraisals § Collection Policy and Donor Relationships § Surveying collections § Custodial transfer, Deeds of Gift, etc. 2. Arrangement and Description (Processing a Collection) § Processing an archival collection § Preservation and handling of archival materials § Preservation and handling and Identification of photographs § Processing fails: what not to do 3. Access and digitization § Reading Room § Preservation and handling of archival materials § Preservation and handling and Identification of photographs § Metadata $ Digitization: what it is not
  Potential Outcomes:
    
   1. Feeling empowered to manage and
@@ -28,7 +28,7 @@ submitter:
   organization: Idaho State Historical Society
   city: Boise, Idaho
   primary_email: layce.johnson@ishs.idaho.gov
-  secondary_email: 
+  secondary_email:
   telephone: 208-514-2312
   is_presenting: TRUE
 presenter_1:
@@ -38,42 +38,42 @@ presenter_1:
   organization: Idaho State Historical Society
   city: Boise, Idaho
   primary_email: danielle.grundel@ishs.idaho.gov
-  secondary_email: 
+  secondary_email:
   telephone: 208-514-2323
   is_confirmed: TRUE
   reason: ''
 presenter_2:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 presenter_3:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 presenter_4:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 
 keynote_suggestions: ''

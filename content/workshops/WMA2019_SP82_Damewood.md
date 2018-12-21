@@ -9,7 +9,7 @@ tags:
     - 'Staff from across the museum'
     - 'board members'
 description: "We’ll share the state of human centered design in museums and what’s\nworking/not working. Based on our learnings, we’ll guide attendees through\nactivities, providing a framework for evaluating promising practices and\nimplementing improved approaches. We’ll gather this information through\nevents in the Bay Area and online (January - March 2019) to answer the\nquestions:\n1. How do museums implement visitor research learnings?\n2. What strategies have museums employed to create a culture of visitor\ncentered practices?\n3. What are the unsolved problems?"
-format: Half-day
+session_format: Half-day
 fee: "$25/participant -\nWe expect this fee to cover the cost of printed\nhandouts, sticky notes (easel- and standard-sized),\nmarkers, pens and pencils."
 uniqueness: "Our pre-work (events) will inform our session, ensuring content is highly\nrelevant, and with our experience working across sectors, including museums,\nwe’ll ensure it’s engaging and fresh."
 objectives: "Participants will:\n-gain an understanding of promising practices for interpreting and\nimplementing programmatic changes based on visitor feedback\n-learn how to lead the appropriate activities to effectively manage the change\nto a visitor-centered operations model\n-connect with professionals with similar problems or questions, empowering\nthem to create a community of practice to address new needs as they arise"

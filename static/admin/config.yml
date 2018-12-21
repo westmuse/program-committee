@@ -184,7 +184,7 @@ collections:
       - {label: "Professional Level", name: "categories", widget: "list"}
       - {label: "Audience", name: "tags", widget: "list"}
       - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Workshop Format", name: "format", widget: "string"}
+      - {label: "Workshop Format", name: "session_format", widget: "string"}
       - {label: "Workshop Fee", name: "fee", widget: "string"}
       - {label: "Uniqueness", name: "uniqueness", widget: "markdown"}
       - {label: "Objectives", name: "objectives", widget: "markdown"}

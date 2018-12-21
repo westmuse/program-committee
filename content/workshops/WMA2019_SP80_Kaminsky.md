@@ -6,7 +6,7 @@ categories: ["Any—Professionals new to the industry", "long-time museum staff 
 tags: ["Museum and other interpretive site staff who work in any capacity on projects for users that have physical display components." ]
 description: 'In this fast-paced workshop, participants will:
   Analyze “good” and “bad” labels based on various (often personal and subjective) criteria Discover ways to put visitors at the center of the process Participate in a rapid writing activity Discuss big ideas, main messages, and label frameworks Explore ways to collaborate with community advisors Share writing challenges and exercise new skills writing and rewriting labels'
-format: 'Half-day '
+session_format: 'Half-day '
 fee: 'I’ll provide handouts, a laptop with adaptor,
 and props for activities. I’ll need a projector and screen.
 I don’t anticipate any additional costs.'
@@ -36,42 +36,42 @@ presenter_1:
   organization: MIG | Portico
   city: Denver, CO (I sit in the Denver office and work primarily with the interpretive team in Seattle, WA)
   primary_email: bkaminsky@migcom.com
-  secondary_email: 
+  secondary_email:
   telephone: 303.830.1311
   is_confirmed: TRUE
   reason: 'My favorite part of my job is label writing—not because it’s easy, because it’s rewarding. As a visitor, I appreciate well-written, easy to read labels that connect me (and other users) to content in three-dimensional free choice informal learning environments. Having the opportunity to share my enthusiasm with people involved in interpretation thrills me.'
 presenter_2:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 presenter_3:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 presenter_4:
-  first_name: 
-  last_name: 
-  title: 
-  organization: 
-  city: 
-  primary_email: 
-  secondary_email: 
-  telephone: 
-  is_confirmed: 
+  first_name:
+  last_name:
+  title:
+  organization:
+  city:
+  primary_email:
+  secondary_email:
+  telephone:
+  is_confirmed:
   reason: ''
 
 keynote_suggestions: ''
