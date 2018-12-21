@@ -61,13 +61,18 @@ googleAnalytics = ""
 	weight = 25
 
 [[menu.main]]
-	name   = "All Proposals"
+	name   = "Session Proposals"
 	url    = "proposals/"
-	weight = 30
+	weight = 40
+
+[[menu.main]]
+		name   = "Workshop Proposals"
+		url    = "workshops/"
+		weight = 40
 [[menu.main]]
 	name   = "Committee Members"
 	url    = "pc-members/"
-	weight = 40
+	weight = 30
 
 [blackfriday]
 	smartypants	= true
