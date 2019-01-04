@@ -13,7 +13,7 @@ The best place to start is [Reviewing Guidelines & Process](https://pc.westmuse.
 ## PC Roster
 
 Here's the 2019 PC Roster, which includes members; contact information:
-[Doc: Roster](/docs/WMA2019_PC_Roster.xlsx)
+[Doc: Roster](/images/uploads/wma2019-pc-roster.xlsx)
 
 ## Important Dates:
 
