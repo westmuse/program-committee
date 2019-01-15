@@ -29,7 +29,7 @@ objectives: >-
   Session attendees will: 
 
 
-  1. Feel empowered to repurpose materials_ _
+  1. Feel empowered to repurpose materials
 
   2. Have access to existing networks for sharing museum materials
 
@@ -69,9 +69,11 @@ submitter:
 moderator:
   city: 'San Francisco, CA'
   first_name: Rachael
-  is_confirmed: false
+  is_confirmed: true
   is_presenting: true
   last_name: Faust
+  organization: San Francisco Museum of Modern Art
+  primary_email: rfaust@sfmoma.org
   reason: >-
     After spending six months trying to repurpose over 500 light canisters and
     lenses that were no longer needed at SFMOMA, I learned a lot about the
@@ -83,26 +85,23 @@ moderator:
   telephone: 415-538-2682
   title: Manager of the Artist Initiative
 presenter_1:
-  first_name: Phoebe A. Hearst Museum of Anthropology
+  first_name: Katie
   is_confirmed: true
   last_name: Fleming
+  organization: Phoebe A. Hearst Museum of Anthropology
   primary_email: kfleming@berkeley.edu
   reason: >-
-    Have you completed a collections move and found yourself left with a
-    plethora of foam, polyester fiberfill, and boxes that you would happily
-    share with another institution? Or maybe you're moving out of a space and
-    have storage furniture that you can no longer use? Repurposing archival
-    materials and museum furniture takes time and effort, which is often not
-    built into our job descriptions. As stewards of cultural heritage we must be
-    conscious of protecting our environment by not creating unnecessary waste.
-    This session will focus on creative and efficient ways to share unwanted
-    goods through community resources, furniture vendors, social media, and
-    online classifieds.
+    Katie was instrumental in a four-year long collections move for the Hearst
+    Museum. At the end of the move Katie and her team found themselves with an
+    excess of packing materials that they couldn’t use and didn’t want to put in
+    the dumpster. Katie reached out to community organizations and utilized
+    online classifieds to creatively repurpose materials.
   title: Gallery Manager and Education Coordinator
 presenter_2:
-  first_name: CultureNut Xchange. CultureNut is a division of Exhibits Development Group
+  first_name: Elizabeth
   is_confirmed: true
   last_name: Schmidt
+  organization: CultureNut Xchange. CultureNut is a division of Exhibits Development Group
   primary_email: Hello@culturenut.com
   reason: >-
     Elizabeth is an Ambassador for CultureNut Xchange, a marketplace where
@@ -115,7 +114,7 @@ presenter_2:
   telephone: 651-335-4984
   title: Ambassador
 presenter_3:
-  first_name: ''
+  first_name: Furniture
   last_name: Vendor - TBD
 presenter_4: {}
 keynote_suggestions: ''
