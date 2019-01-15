@@ -59,7 +59,7 @@ submitter:
   city: 'San Francisco, CA'
   first_name: Rachael
   is_moderator: true
-  is_presenting: false
+  is_presenting: true
   last_name: Faust
   organization: San Francisco Museum of Modern Art
   primary_email: rfaust@sfmoma.org
