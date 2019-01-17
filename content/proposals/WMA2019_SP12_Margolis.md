@@ -13,7 +13,7 @@ description: >-
   of museum craft, such as:
 
 
-  * Spine tingling tales about human resources practices! (The HR in HoRRor!)
+  * Spine-tingling tales about human resources practices! (The HR in HoRRor!)
 
   * Devilish stories of development (You can take it with you? Unplanned
   giving?)
@@ -61,6 +61,7 @@ moderator:
   is_confirmed: true
   is_presenting: false
   last_name: Margolis
+  organization: The Museum of Flight
   reason: >-
     There is nothing better than a good old fashioned story swap. It is
     cathartic and inspirational. Seth recognizes the power of this type of
@@ -71,6 +72,7 @@ presenter_1:
   first_name: Noel
   is_confirmed: false
   last_name: Ratch
+  organization: Reynolds-Alberta Museum
   primary_email: noel.ratch@gov.ab.ca
   reason: >-
     Noel has vast and varied museum professional experiences and seems to have
@@ -82,6 +84,7 @@ presenter_2:
   first_name: Katie
   is_confirmed: false
   last_name: Buckingham or Molly Wilmoth
+  organization: MoG/WSHS
   reason: >-
     Katie and Molly are seemingly perpetually positive and can shine a light on
     how to remain ?up? in the face of wacky situations
@@ -94,7 +97,7 @@ other_suggestions: ''
 ---
 Gather round the (artificial) campfire as we swap unimaginable but true tales of museum craft, such as:
 
-* Spine tingling tales about human resources practices! (The HR in HoRRor!)
+* Spine-tingling tales about human resources practices! (The HR in HoRRor!)
 * Devilish stories of development (You can take it with you? Unplanned giving?)
 * Creepy collections management! (Tales from the Crypt)
 * Astonishing Legends of Early Learning (the infected! Night of the living germs!)
