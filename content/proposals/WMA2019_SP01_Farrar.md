@@ -2,7 +2,6 @@
 title: >-
   A scientist Walks into an Art Museum…Partnering with Cross-Disciplinary
   Content Experts for Your Programs
-ID: '01'
 author: Chelsea Farrar
 date: '2018-11-30 22:03:18 -0000'
 categories:
@@ -58,6 +57,7 @@ submitter:
   is_moderator: true
   is_presenting: true
   last_name: Farrar
+  organization: University of Arizona Museum of Art
   primary_email: cjfarrar@email.arizona.edu
   telephone: 520-621-7567
   title: Curator of Community Engagement
@@ -67,6 +67,7 @@ moderator:
   is_confirmed: false
   is_presenting: false
   last_name: Sturgeon
+  organization: Wenatchee Valley Museum
   primary_email: kstugeon@wvmcc.org
   reason: >-
     Keni Sturgeon has been involved with the Portal to the Public (Science and
@@ -81,6 +82,7 @@ presenter_1:
   first_name: Carolina
   is_confirmed: false
   last_name: Chambers
+  organization: Pacific Science Center
   primary_email: cchambers@pacsci.org
   reason: >-
     As a Project Coordinator, Carolina has worked closely with artists and
@@ -92,10 +94,11 @@ presenter_2:
   first_name: Kelsey
   is_confirmed: false
   last_name: Van Voorst
+  organization: Conner Prairie
   primary_email: vanvoorst@connerprarie.org
   reason: ''
   telephone: 317-776-6000
-  title: Interprestation Manager
+  title: Interpretation Manager
 presenter_3:
   reason: ''
 presenter_4:
