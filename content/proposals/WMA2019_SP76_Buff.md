@@ -2,7 +2,6 @@
 title: >-
   The Transgender Museum Experience: Creating a Safe Space for Everyone to Work,
   Learn, and Play
-ID: '76'
 author: Mac Buff
 date: '2018-12-13 14:06:51 -0000'
 categories:
@@ -49,6 +48,7 @@ submitter:
   is_moderator: true
   is_presenting: true
   last_name: Buff
+  organization: Tacoma Art Museum
   primary_email: mbuff@tacomaartmuseum.org
   telephone: (253) 272-4258 x3009
   title: Manager of Family & Elementary Initiatives
@@ -58,6 +58,7 @@ moderator:
   is_confirmed: true
   is_presenting: true
   last_name: Buff
+  organization: Tacoma Art Museum
   primary_email: mbuff@tacomaartmuseum.org
   reason: >-
     Mac is a transgender museum educator who transitioned while working at a
@@ -73,6 +74,7 @@ presenter_1:
   first_name: Holly M.
   is_confirmed: true
   last_name: Crawford
+  organization: El Segundo Museum of Art (ESMoA)
   primary_email: crawfordhollym@gmail.com
   reason: >-
     Holly is a non-binary museum worker who leads a team focused on creating a
@@ -86,6 +88,7 @@ presenter_2:
   first_name: Erin
   is_confirmed: true
   last_name: Wilde
+  organization: Foss Waterway Seaport
   primary_email: Erin.wilde@fosswaterwayseaport.org
   reason: >-
     Erin is a transgender museum/environmental educator who has experience
@@ -98,6 +101,7 @@ presenter_3:
   first_name: Geo
   is_confirmed: false
   last_name: Neptune
+  organization: Geo Neptune Baskets
   reason: >-
     Geo is a member of the Passamaquoddy Tribe and identifies as two-spirit, an
     indigenous cultural gender role that is a sacred blend of both male and
