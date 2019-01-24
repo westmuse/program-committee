@@ -1,6 +1,5 @@
 ---
 title: Student Engagement on Social Issues
-ID: '72'
 author: Dr. Elisabeth Ward
 date: '2018-12-13 14:06:51 -0000'
 categories:
@@ -97,6 +96,7 @@ submitter:
   is_moderator: true
   is_presenting: true
   last_name: Ward
+  organization: Los Altos History Museum
   primary_email: eward@losaltoshistory.org
   telephone: 650.948.9427
   title: Executive Director
@@ -106,6 +106,7 @@ moderator:
   is_confirmed: true
   is_presenting: false
   last_name: Ward
+  organization: Los Altos History Museum
   primary_email: eward@losaltoshistory.org
   reason: >-
     Dr. Elisabeth Ward is the executive director of Los Altos History Museum and
@@ -120,6 +121,7 @@ presenter_1:
   first_name: Dr. Perlita
   is_confirmed: true
   last_name: Dicochea
+  organization: Los Altos History Museum
   primary_email: pdicochea@losaltoshistory.org
   reason: >-
     Dr. Dicochea co-curated the exhibit Inspired by Juana: La Doña de la
@@ -135,6 +137,7 @@ presenter_2:
   first_name: Eileen
   is_confirmed: false
   last_name: Hansen
+  organization: Oakland Museum of California
   primary_email: curators@museumca.org
   reason: >-
     Eileen Hansen has experience working with teenage youth on social issues at
@@ -148,6 +151,7 @@ presenter_3:
   first_name: Dan’l
   is_confirmed: true
   last_name: Lewin
+  organization: Computer History Museum
   primary_email: dlewin@computerhistory.org
   reason: >-
     Dan’l Lewin is interested in including teenage youth more in his museum’s
