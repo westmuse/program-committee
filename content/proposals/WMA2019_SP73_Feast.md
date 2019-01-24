@@ -1,6 +1,5 @@
 ---
 title: 'Seeking Advice: Rethinking Community Advisory Committees'
-ID: '72'
 author: Terra Feast
 date: '2018-12-13 14:06:51 -0000'
 categories:
@@ -66,6 +65,7 @@ submitter:
   is_moderator: true
   is_presenting: false
   last_name: Feast
+  organization: Boise Art Museum
   primary_email: terra@boiseartmuseum.org
   secondary_email: terra.feast@gmail.com
   telephone: '208-345-8330, ext. 118'
@@ -90,20 +90,22 @@ presenter_1:
   first_name: Robert
   is_confirmed: false
   last_name: Hirai
+  organization: Consular Office of Japan
   primary_email: robert.hirai@gmail.com
   reason: >-
-    Mr. Hirai served on the Boise Art Museum’s Community Advisory Committee in
-    2016 for the exhibition Minidoka: Artist As Witness. He is heavily involved
-    in the local community and served as the president of the Boise Valley
-    Japanese American Citizens League before being appointed Honorary Consul
-    General of Japan in Idaho. As a past member of an advisory group at BAM, Mr.
-    Hirai will provide a unique perspective on the importance of including
-    community members in conversations about exhibitions.
+    Mr. Hirai served on the Boise Art Museum's Community Advisory Committee in
+    2016 for the exhibition _Minidoka: Artist As Witness_. He is heavily
+    involved in the local community and served as the president of the Boise
+    Valley Japanese American Citizens League before being appointed Honorary
+    Consul General of Japan in Idaho. As a past member of an advisory group at
+    BAM, Mr. Hirai will provide a unique perspective on the importance of
+    including community members in conversations about exhibitions.
   telephone: 208-870-4558
   title: Honorary Consul General of Japan in Idaho
 presenter_2:
-  first_name: Representative from an institution with an on-going advisory group
-  last_name: Ann Hanniball (possible)
+  first_name: Representative from an institution with an on-going advisory group.
+  last_name: 'Possible: Ann Hanniball'
+  organization: Natural History Museum of Utah
   primary_email: hanniball@nhmu.utah.edu
   reason: >-
     Ann Hannibal acts as liaison to the Indian Advisory Committees. The Indian
@@ -113,8 +115,10 @@ presenter_2:
   telephone: 801-581-4889
   title: Associate Director
 presenter_3:
-  first_name: Representative
+  first_name: ''
   is_confirmed: false
+  last_name: TBD
+  organization: Seattle Art Museum
   primary_email: communityprograms@seattleartmuseum.org
   reason: >-
     After utilizing advisory groups for select exhibitions and programs, SAM has
