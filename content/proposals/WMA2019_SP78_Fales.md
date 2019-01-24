@@ -1,6 +1,5 @@
 ---
 title: Welcoming Refugees and New Americans to Museums
-ID: '78'
 author: Melanie Fales
 date: '2018-12-13 14:06:51 -0000'
 categories:
@@ -71,6 +70,7 @@ submitter:
   is_moderator: true
   is_presenting: true
   last_name: Fales
+  organization: Boise Art Museum
   primary_email: melanie@boiseartmuseum.org
   telephone: (208) 345-8330 x 111
   title: Executive Director/CEO
@@ -80,6 +80,7 @@ moderator:
   is_confirmed: true
   is_presenting: true
   last_name: Fales
+  organization: Boise Art Museum
   primary_email: melanie@boiseartmuseum.org
   reason: >-
     Boise is an official refugee community, and BAM has made some progress
@@ -96,6 +97,7 @@ presenter_1:
   first_name: Morgan
   is_confirmed: false
   last_name: Wells
+  organization: Tucson Museum of Art
   primary_email: mwells@tucsonmuseumofart.org
   reason: >-
     Tucson has a large refugee population, and Morgan developed a program called
@@ -113,6 +115,7 @@ presenter_2:
   first_name: Ann W.
   is_confirmed: false
   last_name: Wolfe (or her assign)
+  organization: Nevada Museum of Art
   primary_email: ann.wolfe@nevadaart.org
   reason: >-
     Reno is an official refugee community. The museum has curated exhibitions
@@ -124,6 +127,7 @@ presenter_3:
   first_name: Laura
   is_confirmed: false
   last_name: Christian
+  organization: Discovery Children's Museum
   primary_email: into@DiscoveryKidsLV.org
   reason: >-
     This Las Vegas children’s museum mounted an exhibit, “Torn from Home: My
