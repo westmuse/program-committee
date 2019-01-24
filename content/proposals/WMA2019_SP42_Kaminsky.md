@@ -26,10 +26,10 @@ objectives: >-
   Attendees will explore strategies that meaningfully engage visitors with their
   surroundings. We will discuss example projects across institutions of
   different sizes and that use physical exhibits as vehicles to nurture human
-  connections with particular places. _ _
+  connections with particular places.
 
 
-  _Session Objectives: _ 
+  _Session Objectives:_
 
 
   * Gain new insights from museum professionals working to bring the inside out
