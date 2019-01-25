@@ -21,13 +21,12 @@ objectives: >-
 
 
   1. Be introduced to established leadership and organizational models and be
-  able to connect with at least one for further investigation _ _Bolman and
-  Deal's **Four Frames** from the classic leadership text **Reframing
-  Organizations**, first published 25 years ago and now in its 6th edition. 
-  Influencer model and the sources of influence from **Influencer: The New
-  Science of Leading Change**, 2013.  **Creating Magic**,  Others or substitutes
-  to be determined with further consultation with the panel and recommendations
-  from WMA
+  able to connect with at least one for further investigation: Bolman and Deal's
+  **Four Frames** from the classic leadership text **Reframing Organizations**,
+  first published 25 years ago and now in its 6th edition.  Influencer model and
+  the sources of influence from **Influencer: The New Science of Leading
+  Change**, 2013.  **Creating Magic**,  Others or substitutes to be determined
+  with further consultation with the panel and recommendations from WMA
 
   2. Be inspired to take time and care in how changes are proposed and
   implemented at their museums _ Instead of complaining about
