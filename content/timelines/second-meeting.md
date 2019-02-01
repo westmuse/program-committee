@@ -18,7 +18,7 @@ If you prefer to make reservations over the phone, please call the Grove Hotel a
 
 ## Meetings:
 
-Both days of PC Meeting will be held at Boise Art Museum
+Both days of PC Meeting will be held at Boise Art Museum in the BAM Library
 
 Friday, March 8, 2019: 10am - 5:00pm
 Saturday, March 9, 2019: 10am - 3:00pm. We will do our best to finish by 3pm. However, adjournment is dependent on a completed agenda.
