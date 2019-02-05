@@ -7,7 +7,7 @@ var fs = require('fs'); //to access filewrite
    var options = {
       method: 'GET',
       json: true,
-      url: 'https://gist.githubusercontent.com/5easypieces/4ce57c27bbbfe7728c81fb6548801b0e/raw/285fe99d0851c1d3bb013aca0fc64916bc81feae/wma_proposals.json',
+      url: 'https://gist.githubusercontent.com/5easypieces/4ce57c27bbbfe7728c81fb6548801b0e/raw/062f578311d7e2da09a92b1ebc22f2073e94c5bc/wma_proposals.json',
 
      };
 
@@ -21,10 +21,10 @@ var fs = require('fs'); //to access filewrite
 
 
       //Split up the JSON response
-      console.log(obj.Responses.Proposal.length);
-      for (var j=0; j<obj.Responses.Proposal.length; j++) {
+      console.log(obj.Proposal.length);
+      for (var j=0; j<obj.Proposal.length; j++) {
 
-        myObj = obj.Responses.Proposal[j];
+        myObj = obj.Proposal[j];
 
 
 

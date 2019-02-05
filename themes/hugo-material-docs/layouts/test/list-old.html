@@ -19,34 +19,31 @@
 
 	<article class="article">
 		<div class="wrapper">
+			{{.Content}}
+			<h1>All {{ .Title }}</h1>
 
-			
+			{{ range .Data.Pages }}
+			<a href="{{ .Permalink }}" title="{{ .Title }}">
+				<h2>{{ .Title }}</h2>
+			</a>
 
-			{{end}}
+			<br>
+			{{ printf "%s" .Summary | markdownify }}
 
-
-
-
-
-			<ul>
-				<li><a href="{{.Params.download_link}}" target="_blank">Download all proposals as Word docs</a></li>
-				<li><a href="/tags/">Proposals by Audience</a></li>
-				<li><a href="/categories">Proposals by Professional Level</a></li>
-				<li><a href="/docs/Workshops.zip">Download all Workshop Proposals</a></li>
-
-			<ul>
-				<hr>
-			{{ range sort .Data.Pages.ByTitle }}
-			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
-
-
-
+			<hr>
 			{{ end }}
-			</ul>
 
+			<aside class="copyright" role="note">
+				{{ with .Site.Params.copyright }}
+				&copy; {{ now.Format "2006" }} {{ . }} &ndash;
+				{{ end }}
+				Documentation built with
+				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using the
+				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+			</aside>
 		</div>
 	</article>
-
 
 	<div class="results" role="status" aria-live="polite">
 		<div class="scrollable">

@@ -20,7 +20,11 @@
 	<article class="article">
 		<div class="wrapper">
 
-			
+			<h1>All {{ .Title }}</h1>
+			{{ range $.Site.Data.proposals.Proposal }}
+
+				<h2>{{ .audience }}</h2>
+				<p>hello{{ .submitter.first_name }}</p>
 
 			{{end}}
 

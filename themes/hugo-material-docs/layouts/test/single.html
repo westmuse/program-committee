@@ -1,0 +1,59 @@
+{{ partial "head" . }}
+
+{{ if (eq (trim .Site.Params.provider " " | lower) "github") | and (isset .Site.Params "repo_url") }}
+	{{ $repo_id := replace .Site.Params.repo_url "https://github.com/" ""}}
+	{{ .Scratch.Set "repo_id" $repo_id }}
+{{ end }}
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	{{ partial "header" . }}
+</header>
+
+<main class="main">
+	<div class="drawer">
+		{{ partial "drawer" . }}
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>{{ .Params.session_title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+		<h3>ID: {{.File.BaseFileName}}</h3>
+
+			{{ .Params.session_desc }}
+			<h2>Session Information</h2>
+			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
+			<p><strong>Objectives:</strong> {{.Params.session_objectives | markdownify }}</p>
+			<p><strong>Engagement:</strong> {{.Params.engagement | markdownify }}</p>
+			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
+
+			<h2>{{.Params.submitter.first_name }}</h2>
+
+</div>
+
+		<div style="min-height: 80px"></div>
+<p>{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}</p>
+			<footer class="footer">
+				{{ partial "footer" . }}
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+{{ partial "footer_js" . }}
