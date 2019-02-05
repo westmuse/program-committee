@@ -21,6 +21,17 @@
 		<div class="wrapper">
 
 			<h1>All {{ .Title }}</h1>
+			{{ range $.Site.Data.proposals.Proposal }}
+
+				<h2>{{ .audience }}</h2>
+				<p>hello{{ .submitter.first_name }}</p>
+
+			{{end}}
+
+
+
+
+
 			<ul>
 				<li><a href="{{.Params.download_link}}" target="_blank">Download all proposals as Word docs</a></li>
 				<li><a href="/tags/">Proposals by Audience</a></li>

@@ -1,0 +1,27 @@
++++
+ID = ""
+timestamp = ""
+form_email = ""
+session_title = ""
+session_desc = ""
+session_unique = ""
+session_objectives = ""
+engagement = ""
+audience = ""
+level = ""
+other_comments = ""
+theme_relationship = ""
+theme_comments = ""
+
+[submitter]
+first_name = ""
+last_name = ""
+title = ""
+institution = ""
+location = ""
+tel = ""
+email = ""
+email2 = ""
+is_mod = ""
+is_pres = ""
++++
