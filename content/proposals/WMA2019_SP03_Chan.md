@@ -1,6 +1,5 @@
 ---
 title: 'Beyond the Plexiglas® Ceiling:  A Discussion of Women’s Roles in Exhibits'
-ID: '03'
 author: SueSan Chan
 date: '2018-12-10 11:59:45 -0000'
 categories:
@@ -49,6 +48,7 @@ submitter:
   is_moderator: true
   is_presenting: false
   last_name: Chan
+  organization: Washington State Historical Society
   primary_email: suesan.chan@wshs.wa.gov
   telephone: 253.7998.5872
   title: Exhibit Designer
@@ -67,6 +67,7 @@ presenter_1:
   first_name: Gwen
   is_confirmed: true
   last_name: Whiting
+  organization: Washington State Historical Society
   primary_email: gwen.whiting@wshs.wa.gov
   reason: >-
     Gwen Whiting is the lead curator at the Washington State Historical Society.
@@ -80,6 +81,7 @@ presenter_2:
   first_name: Elizabeth K.
   is_confirmed: false
   last_name: Mauro
+  organization: 'Art Installation, LLC'
   primary_email: elizabeth@artinstallation.com
   reason: >-
     In the last twenty-six years, Elizabeth has completed over 850 installations

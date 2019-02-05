@@ -14,9 +14,11 @@ description: >-
   from chair to chair in a pre-determined sequence whereby information and
   business card exchange will occur. These are fun, fast-paced, timed intervals
   concluding with everyone meeting each other briefly. At the conclusion,
-  mingling will continue. Speed Networking has occurred the past three years at
-  the WMA conference as a stand-alone, free, event aligned with the opening
-  evening festivities.
+  mingling will continue. 
+
+
+  Speed Networking has occurred the past three years at the WMA conference as a
+  stand-alone, free, event aligned with the opening evening festivities.
 uniqueness: >-
   There is nothing else like this during the conference. This program provides
   structured one on one introductions in a fun, relaxed, jovial environment.
@@ -61,6 +63,7 @@ moderator:
   is_confirmed: true
   is_presenting: true
   last_name: Comba
+  organization: Pomona College Museum of Art
   reason: >-
     Steve is able to wrangle large groups of people with aplomb, humor, and
     enthusiasm. He will be in costume.
@@ -74,4 +77,6 @@ presenter_4: {}
 keynote_suggestions: ''
 other_suggestions: ''
 ---
-"Speed networking" is a structured format specifically designed to accelerate contacts in timed intervals signaled with a whistle. This event begins with a brief overview of very specific instructions on how the program works. Chairs are pre-setup across from each other in pairs enabling participants to move from chair to chair in a pre-determined sequence whereby information and business card exchange will occur. These are fun, fast-paced, timed intervals concluding with everyone meeting each other briefly. At the conclusion, mingling will continue.||*Speed Networking has occurred the past three years at the WMA conference as a stand-alone, free, event aligned with the opening evening festivities.
+"Speed networking" is a structured format specifically designed to accelerate contacts in timed intervals signaled with a whistle. This event begins with a brief overview of very specific instructions on how the program works. Chairs are pre-setup across from each other in pairs enabling participants to move from chair to chair in a pre-determined sequence whereby information and business card exchange will occur. These are fun, fast-paced, timed intervals concluding with everyone meeting each other briefly. At the conclusion, mingling will continue.
+
+Speed Networking has occurred the past three years at the WMA conference as a stand-alone, free, event aligned with the opening evening festivities.

@@ -1,6 +1,5 @@
 ---
 title: 'We’re Engaged: Turning museum friends with benefits into museum partnerships'
-ID: '77'
 author: Amber  Beierle
 date: '2018-12-13 14:06:51 -0000'
 categories:
@@ -48,6 +47,7 @@ submitter:
   first_name: Amber
   is_moderator: true
   last_name: Beierle
+  organization: Old Idaho Penitentiary (Idaho State Historical Society)
   primary_email: amber.beierle@ishs.idaho.gov
   secondary_email: amber.beierle@gmail.com
   telephone: 208-488-7480
@@ -59,6 +59,7 @@ presenter_1:
   first_name: Brandi
   is_confirmed: true
   last_name: Burns
+  organization: Boise Arts & History Department
   primary_email: bburns@cityofboise.org
   reason: >-
     Brandi served as the Boise City Historian and has cultivated many
@@ -72,7 +73,9 @@ presenter_1:
   title: History Programs Manager
 presenter_2:
   first_name: Noble
+  is_confirmed: true
   last_name: Hardesty
+  organization: Swell Artist Collective
   primary_email: noble@swellboise.com
   reason: >-
     Noble and the Swell Collective are engaged in an ongoing partnership with
@@ -85,6 +88,7 @@ presenter_3:
   first_name: Terra
   is_confirmed: true
   last_name: Feast
+  organization: Boise Art Museum
   primary_email: Terra@boiseartmuseum.org
   reason: >-
     With well over ten years of museum experience, Terra brings fresh and
@@ -98,6 +102,7 @@ presenter_4:
   first_name: Annie
   is_confirmed: true
   last_name: Gavica
+  organization: Basque Museum & Cultural Center
   primary_email: annieg@basquemuseum.eus
   reason: >-
     Annie currently serves as the Executive Director of  the Basque Museum and

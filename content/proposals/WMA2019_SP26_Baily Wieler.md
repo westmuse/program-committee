@@ -2,7 +2,6 @@
 title: >-
   Good Trustee/Bad Trustee: Recruit, Engage & Empower the Best Leaders for your
   Museum's Board
-ID: '25'
 author: Mary Baily Wieler
 date: '2018-12-13 14:06:51 -0000'
 categories:
@@ -63,6 +62,7 @@ submitter:
   is_moderator: true
   is_presenting: false
   last_name: Baily Wieler
+  organization: Museum Trustee Association
   primary_email: mary@museumtrustee.org
   secondary_email: hannah@museumtrustee.org
   telephone: 410-402-0954
@@ -73,6 +73,7 @@ moderator:
   is_confirmed: true
   is_presenting: false
   last_name: Baily Wieler
+  organization: Museum Trustee Association
   reason: >-
     Ms. Baily Wieler is an experienced board member in her roles at the Walters
     Art Museum and Park City Museum as well as recruiter of trustees as
@@ -85,11 +86,12 @@ presenter_1:
   first_name: Lee
   is_confirmed: true
   last_name: Peterson
+  organization: Heard Museum
   primary_email: Lee.w.peterson@gmail.com
   reason: >-
     In his roles as past Chairman of the Heard Museum and current Chairman of
     the Museum Trustee Association, Mr. Peterson has played an active role in
-    trustee recruitment for two very different organizations ? an art museum and
+    trustee recruitment for two very different organizations: an art museum and
     a museum service organization. Lee is experienced in recruiting strong
     trustees and building relationships in order to see opportunities for upward
     movement within a board as well as using new recruits to fill gaps. His term
@@ -101,12 +103,13 @@ presenter_2:
   first_name: Maureen
   is_confirmed: false
   last_name: Pecht King
+  organization: Mingei International Museum
   primary_email: Mking42@me.com
   reason: >-
-    Ms. King?s 20+ years of experience at the Mingei International Museum as a
+    Ms. King's 20+ years of experience at the Mingei International Museum as a
     development staff member, past Chairman, and current Co-Chairman of the
     museum?s Capital Campaign have provided her with a broad understanding of a
-    museum?s goals. This understanding, as well as her long-term involvement,
+    museum's goals. This understanding, as well as her long-term involvement,
     have given her a keen awareness of the steps needed to identify and foster
     an engaged and productive trustee. Maureen is an excellent example of a good
     trustee and a vocal advocate for her museum?s efforts.
@@ -116,6 +119,7 @@ presenter_3:
   first_name: Barron
   is_confirmed: true
   last_name: Collier
+  organization: 'Buffalo Bill Center of the West (Cody, WY)'
   primary_email: bcollierii@me.com
   reason: >-
     Through his involvement in both museum and education association boards, Mr.
