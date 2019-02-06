@@ -1,7 +1,8 @@
-{\rtf1\utf-8\deff0
+{\rtf1\ansi\deff0
   {\fonttbl
     {\f0\fswiss Chicago;}
-    {\f2\froman New York;}{\f3\fswiss Geneva;}
+    {\f2\froman New York;}
+    {\f3\fswiss Geneva;}
     {\f4\fmodern Monaco;}
     {\f11\fnil Cairo;}
     {\f13\fnil Zapf Dingbats;}
@@ -45,10 +46,30 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 
 
 {{ range sort .Data.Pages }}
+\fs25 \f0 \fi0
+{\pard \b \fs40 {{- .Params.session_title | plainify -}} \par}
+{\pard \sb100 \fs30 {{- .File.BaseFileName -}} \par}
 
- \pard \f50 ID: {{.File.BaseFileName}} \par
+{\pard \sb180 \sa180 {{.Params.session_desc}} \par}
 
- {{.Params.session_desc|markdownify}}
+{\pard \b \fs30 \sa180 Session Information \par}
+{\pard \sb180 \sa180 {\b Uniqueness:} {{.Params.session_unique | plainify }} \par}
+{\pard \sb180 \sa180 {\b Objectives:} {{.Params.session_objectives | plainify }} \par}
+{\pard \sb180 \sa180 {\b Relationship to Theme:} {{.Params.theme_relationship | plainify }} \par}
+{{- with .Params.theme_comments -}}
+  {\pard \sb180 \sa180 {\b Additional Theme Comments:} {{ . | plainify  }} \par}
+{{- end -}}
+
+{\pard \b \fs30 \sa180 Audience \par}
+{\pard \sb180 \sa180 {\b Audience:} {{.Params.audience | plainify }} \par}
+{\pard \sb180 \sa180 {\b Professional Level:} {{.Params.level | plainify }} \par}
+{{- with .Params.other_comments -}}
+  {\pard \sb180 \sa180 {\b Other Comments:} {{ . | markdownify }} \par}
+{{end}}
+
+
+
+
 
 
 \page
