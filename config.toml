@@ -8,19 +8,19 @@ canonifyurls = true
 googleAnalytics = ""
 
 [mediaTypes]
-  [mediaTypes."text/plain"]
-    suffixes = ["txt"]
+  [mediaTypes."application/rtf"]
+    suffixes = ["rtf"]
 
 [outputFormats]
 	[outputFormats.downloadable]
 	  baseName = "index"
 		isPlainText = true
-		mediaType = "text/plain"
+		mediaType = "application/rtf"
 		path = ""
 
 [outputs]
 	home = ["HTML", "JSON"]
-	
+
 
 
 [params]
