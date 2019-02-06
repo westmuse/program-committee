@@ -1,0 +1,14 @@
+This is the list downloadable template.
+
+{{ range sort .Data.Pages }}
+================================================================
+ ID: {{.File.BaseFileName}}
+ {{- .Params.session_title -}}
+ 
+================================================================
+
+
+
+{{ end }}
+
+Just to see if it works properly.

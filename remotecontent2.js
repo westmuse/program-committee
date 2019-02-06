@@ -17,14 +17,14 @@ var fs = require('fs'); //to access filewrite
 
        var obj = body; //The actual JSON from the API
        console.log("Start converting API to files");
-
+       console.log(obj);
 
 
       //Split up the JSON response
-      console.log(obj.Proposal.length);
-      for (var j=0; j<obj.Proposal.length; j++) {
+      console.log(obj.length);
+      for (var j=0; j<obj.length; j++) {
 
-        myObj = obj.Proposal[j];
+        myObj = obj[j];
 
 
 
@@ -54,7 +54,7 @@ var fs = require('fs'); //to access filewrite
            //delete toFrontmatter['content'];   //Deleting the stuff that I do not need to put into the frontmatter
            //var obj2 = tomlify(toFrontmatter, {delims: true}); //Creating the frontmatter
            //obj2 = obj2 +"\n" + markdowntext; //Putting it all togeter
-          var file = __dirname + '/content/proposals-round2/' + 'WMA2019_SP' + myObj["ID"] +'.md';//I have set up a slug as the file name in my CMS and don't forget to create the directory structure in advance.
+          var file = __dirname + '/content/test/' + 'WMA2019_SP' + myObj["ID"] +'.md';//I have set up a slug as the file name in my CMS and don't forget to create the directory structure in advance.
            fs.writeFile(file, full_proposal, function (err) {  //writing it out to the filesystem
                 if (err) {
                     console.error(err);

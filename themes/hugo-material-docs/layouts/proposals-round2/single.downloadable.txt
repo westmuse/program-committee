@@ -1,0 +1,5 @@
+Here's some basic text.
+
+{{.Params.session_desc}}
+
+Just to see if it works properly.

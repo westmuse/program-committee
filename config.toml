@@ -7,6 +7,22 @@ canonifyurls = true
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = ""
 
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
+
+[outputFormats]
+	[outputFormats.downloadable]
+	  baseName = "index"
+		isPlainText = true
+		mediaType = "text/plain"
+		path = ""
+
+[outputs]
+	home = ["HTML", "JSON"]
+	
+
+
 [params]
 	# General information
 	author = "Western Museums Association"
