@@ -1,4 +1,8 @@
-{\rtf1\ansi\deff0
+{\rtf1\ansi\deff0 \deflang1033 \plain \fs26 \widowctrl \hyphauto \ftnbj
+
+{\header \pard\qc\plain\f2\fs22\i
+[ WMA2019 / {\b p.\chpgn} ]
+\par}
   {\fonttbl
     {\f0\fswiss Chicago;}
     {\f2\froman New York;}
@@ -59,7 +63,7 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{- with .Params.theme_comments -}}
   {\pard \sb180 \sa180 {\b Additional Theme Comments:} {{ . | plainify  }} \par}
 {{- end -}}
-\page
+
 {\pard \b \fs30 \sa180 Audience \par}
 {\pard {\b Audience:} {{.Params.audience | plainify }} \par}
 {\pard \sa180 {\b Professional Level:} {{.Params.level | plainify }} \par}
@@ -68,6 +72,7 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{end}}
 
 {\pard \b \fs30 \sa180 Participants \par}
+\cols3 \colsx567 \linebetcol
 
 
 {\pard \sb180 {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \par}
@@ -175,6 +180,29 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {\pard \sa180 \par}
 {{ end }}
 
+\sectd\sect
+
+  {\pard \b \fs30 \sa180 Participant Justifications \par}
+  {{ with .Params.submitter.justification }}
+    {\pard {\b {{ $.Params.submitter.first_name}} {{ $.Params.submitter.last_name}}: } {{. | plainify }} \par}
+  {{ end }}
+  {{ with .Params.moderator.justification }}
+    {\pard {\b {{ $.Params.moderator.first_name }} {{ $.Params.moderator.last_name }}: } {{. | plainify }} \par}
+  {{ end }}
+  {{ with .Params.pres_1.justification }}
+    {\pard {\b {{ $.Params.pres_1.first_name }} {{ $.Params.pres_1.last_name }}: } {{. | plainify }} \par}
+  {{ end }}
+  {{ with .Params.pres_2.justification }}
+    {\pard {\b {{ $.Params.pres_2.first_name }} {{ $.Params.pres_2.last_name }}: } {{. | plainify }} \par}
+  {{ end }}
+  {{ with .Params.pres_3.justification }}
+    {\pard {\b {{ $.Params.pres_3.first_name }} {{ $.Params.pres_3.last_name }}: } {{. | plainify }} \par}
+  {{ end }}
+  {{ with .Params.pres_4.justification }}
+    {\pard {\b {{ $.Params.pres_4.first_name }} {{ $.Params.pres_4.last_name }}: } {{. | plainify }} \par}
+  {{ end }}
+
+
 
 
 
@@ -190,7 +218,7 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 
 {{ end }}
 
-Just to see if it works properly.
+
 
 
 }
