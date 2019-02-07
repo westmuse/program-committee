@@ -59,12 +59,70 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{- with .Params.theme_comments -}}
   {\pard \sb180 \sa180 {\b Additional Theme Comments:} {{ . | plainify  }} \par}
 {{- end -}}
-
+\page
 {\pard \b \fs30 \sa180 Audience \par}
-{\pard \sb180 \sa180 {\b Audience:} {{.Params.audience | plainify }} \par}
-{\pard \sb180 \sa180 {\b Professional Level:} {{.Params.level | plainify }} \par}
+{\pard {\b Audience:} {{.Params.audience | plainify }} \par}
+{\pard \sa180 {\b Professional Level:} {{.Params.level | plainify }} \par}
 {{- with .Params.other_comments -}}
   {\pard \sb180 \sa180 {\b Other Comments:} {{ . | markdownify }} \par}
+{{end}}
+
+{\pard \b \fs30 \sa180 Participants \par}
+
+
+{\pard \sb180 {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \par}
+{\pard {{.Params.submitter.title}} \par}
+{\pard {{.Params.submitter.institution}} \par}
+{\pard {{.Params.submitter.location}} \par}
+{{- with .Params.submitter.email -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{{- with .Params.submitter.email2 -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{{- with .Params.submitter.tel -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{\pard \sa180 \par}
+
+{{ if .Params.moderator.last_name }}
+
+{\pard \sb180 {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \par}
+{\pard {{.Params.moderator.title}} \par}
+{\pard {{.Params.moderator.institution}} \par}
+{\pard {{.Params.moderator.location}} \par}
+{{- with .Params.moderator.email -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{{- with .Params.moderator.email2 -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{{- with .Params.moderator.tel -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{\pard \sa180 \par}
+{{ end }}
+
+{{ if .Params.pres_1.last_name }}
+
+{\pard \sb180 {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \par}
+{\pard {{.Params.pres_1.title}} \par}
+{\pard {{.Params.pres_1.institution}} \par}
+{\pard {{.Params.pres_1.location}} \par}
+{{- with .Params.pres_1.email -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{{- with .Params.pres_1.email2 -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{{- with .Params.pres_1.tel -}}
+  {\pard {{ . }} \par}
+{{ end }}
+{\pard \sa180 \par}
+
+
+
+
 {{end}}
 
 
