@@ -1,8 +1,6 @@
 {\rtf1\ansi\deff0 \deflang1033 \plain \fs26 \widowctrl \hyphauto \ftnbj
 
-{\header \pard\qc\plain\f2\fs22\i
-[ WMA2019 / {\b p.\chpgn} ]
-\par}
+
   {\fonttbl
     {\f0\fswiss Chicago;}
     {\f2\froman New York;}
@@ -64,145 +62,164 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
   {\pard \sb180 \sa180 {\b Additional Theme Comments:} {{ . | plainify  }} \par}
 {{- end -}}
 
-{\pard \b \fs30 \sa180 Audience \par}
+{\pard \b \fs30 \sa180 \keepn Audience \par}
 {\pard {\b Audience:} {{.Params.audience | plainify }} \par}
 {\pard \sa180 {\b Professional Level:} {{.Params.level | plainify }} \par}
 {{- with .Params.other_comments -}}
   {\pard \sb180 \sa180 {\b Other Comments:} {{ . | markdownify }} \par}
 {{end}}
 
-{\pard \b \fs30 \sa180 Participants \par}
-\cols3 \colsx567 \linebetcol
+{\pard \b \fs30 \sa180 \keepn Participants \par}
+
+\sectd\sect
+
+\cols2 \linebetcol
+
+{\pard \sb180 \sa180 \keep {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \line
+{{.Params.submitter.title}} \line
+{{.Params.submitter.institution}} \line
+{{.Params.submitter.location}} \line
+{{ with .Params.submitter.email }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.submitter.email2 }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.submitter.tel }}
+{{ . }} \line
+{{ end }}
+\par}
 
 
-{\pard \sb180 {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \par}
-{\pard {{.Params.submitter.title}} \par}
-{\pard {{.Params.submitter.institution}} \par}
-{\pard {{.Params.submitter.location}} \par}
-{{- with .Params.submitter.email -}}
-  {\pard {{ . }} \par}
-{{ end }}
-{{- with .Params.submitter.email2 -}}
-  {\pard {{ . }} \par}
-{{ end }}
-{{- with .Params.submitter.tel -}}
-  {\pard {{ . }} \par}
-{{ end }}
-{\pard \sa180 \par}
+{{- if .Params.moderator.last_name -}}
 
-{{ if .Params.moderator.last_name }}
-
-{\pard \sb180 {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \par}
-{\pard {{.Params.moderator.title}} \par}
-{\pard {{.Params.moderator.institution}} \par}
-{\pard {{.Params.moderator.location}} \par}
-{{- with .Params.moderator.email -}}
-  {\pard {{ . }} \par}
+{\pard \sb180 \sa180 \keep {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \line
+{{.Params.moderator.title}} \line
+{{.Params.moderator.institution}} \line
+{{.Params.moderator.location}} \line
+{{ with .Params.moderator.email }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.moderator.email2 -}}
-  {\pard {{ . }} \par}
+{{ with .Params.moderator.email2 }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.moderator.tel -}}
-  {\pard {{ . }} \par}
+{{ with .Params.moderator.tel }}
+{{ . }} \line
 {{ end }}
-{\pard \sa180 \par}
+\par}
 {{ end }}
 
-{{ if .Params.pres_1.last_name }}
+{{- if .Params.pres_1.last_name -}}
 
-{\pard \sb180 {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \par}
-{\pard {{.Params.pres_1.title}} \par}
-{\pard {{.Params.pres_1.institution}} \par}
-{\pard {{.Params.pres_1.location}} \par}
-{{- with .Params.pres_1.email -}}
-  {\pard {{ . }} \par}
+{\pard \sb180 \sa180 \keep {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \line
+{{.Params.pres_1.title}} \line
+{{.Params.pres_1.institution}} \line
+{{.Params.pres_1.location}} \line
+{{ with .Params.pres_1.email }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.pres_1.email2 -}}
-  {\pard {{ . }} \par}
+{{ with .Params.pres_1.email2 }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.pres_1.tel -}}
-  {\pard {{ . }} \par}
+{{ with .Params.pres_1.tel }}
+{{ . }} \line
 {{ end }}
-{\pard \sa180 \par}
+\par}
 {{ end }}
 
 {{ if .Params.pres_2.last_name }}
 
-{\pard \sb180 {\b {{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}} }(Presenter) \par}
-{\pard {{.Params.pres_2.title}} \par}
-{\pard {{.Params.pres_2.institution}} \par}
-{\pard {{.Params.pres_2.location}} \par}
-{{- with .Params.pres_2.email -}}
-  {\pard {{ . }} \par}
+{\pard \sb180 \sa180 \keep {\b {{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}} }(Presenter) \line
+{{.Params.pres_2.title}} \line
+{{.Params.pres_2.institution}} \line
+{{.Params.pres_2.location}} \line
+{{ with .Params.pres_2.email }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.pres_2.email2 -}}
-  {\pard {{ . }} \par}
+{{ with .Params.pres_2.email2 }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.pres_2.tel -}}
-  {\pard {{ . }} \par}
+{{ with .Params.pres_2.tel }}
+{{ . }} \line
 {{ end }}
-{\pard \sa180 \par}
+\par}
 {{ end }}
 
 {{ if .Params.pres_3.last_name }}
 
-{\pard \sb180 {\b {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }(Presenter) \par}
-{\pard {{.Params.pres_3.title}} \par}
-{\pard {{.Params.pres_3.institution}} \par}
-{\pard {{.Params.pres_3.location}} \par}
-{{- with .Params.pres_3.email -}}
-  {\pard {{ . }} \par}
+{\pard \sb180 \sa180 \keep {\b {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }(Presenter) \line
+{{.Params.pres_3.title}} \line
+{{.Params.pres_3.institution}} \line
+{{.Params.pres_3.location}} \line
+{{ with .Params.pres_3.email }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.pres_3.email2 -}}
-  {\pard {{ . }} \par}
+{{ with .Params.pres_3.email2 }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.pres_3.tel -}}
-  {\pard {{ . }} \par}
+{{ with .Params.pres_3.tel }}
+{{ . }} \line
 {{ end }}
-{\pard \sa180 \par}
+\par}
 {{ end }}
 
 {{ if .Params.pres_4.last_name }}
 
-{\pard \sb180 {\b {{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}} }(Presenter) \par}
-{\pard {{.Params.pres_4.title}} \par}
-{\pard {{.Params.pres_4.institution}} \par}
-{\pard {{.Params.pres_4.location}} \par}
-{{- with .Params.pres_4.email -}}
-  {\pard {{ . }} \par}
+{\pard \sb180 \sa180 \keep {\b {{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}} }(Presenter) \line
+{{.Params.pres_4.title}} \line
+{{.Params.pres_4.institution}} \line
+{{.Params.pres_4.location}} \line
+{{ with .Params.pres_4.email }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.pres_4.email2 -}}
-  {\pard {{ . }} \par}
+{{ with .Params.pres_4.email2 }}
+{{ . }} \line
 {{ end }}
-{{- with .Params.pres_4.tel -}}
-  {\pard {{ . }} \par}
+{{ with .Params.pres_4.tel }}
+{{ . }} \line
 {{ end }}
-{\pard \sa180 \par}
+\par}
 {{ end }}
 
 \sectd\sect
 
-  {\pard \b \fs30 \sa180 Participant Justifications \par}
-  {{ with .Params.submitter.justification }}
-    {\pard {\b {{ $.Params.submitter.first_name}} {{ $.Params.submitter.last_name}}: } {{. | plainify }} \par}
-  {{ end }}
-  {{ with .Params.moderator.justification }}
-    {\pard {\b {{ $.Params.moderator.first_name }} {{ $.Params.moderator.last_name }}: } {{. | plainify }} \par}
-  {{ end }}
-  {{ with .Params.pres_1.justification }}
-    {\pard {\b {{ $.Params.pres_1.first_name }} {{ $.Params.pres_1.last_name }}: } {{. | plainify }} \par}
-  {{ end }}
-  {{ with .Params.pres_2.justification }}
-    {\pard {\b {{ $.Params.pres_2.first_name }} {{ $.Params.pres_2.last_name }}: } {{. | plainify }} \par}
-  {{ end }}
-  {{ with .Params.pres_3.justification }}
-    {\pard {\b {{ $.Params.pres_3.first_name }} {{ $.Params.pres_3.last_name }}: } {{. | plainify }} \par}
-  {{ end }}
-  {{ with .Params.pres_4.justification }}
-    {\pard {\b {{ $.Params.pres_4.first_name }} {{ $.Params.pres_4.last_name }}: } {{. | plainify }} \par}
-  {{ end }}
+{\pard \b \fs30 \sa180 Participant Justifications \par}
+{{ $.Scratch.Add "pres" (slice .Params.submitter.first_name .Params.submitter.last_name) }}
+{{ with .Params.submitter.justification }}
+{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+{{ $.Scratch.Add "pres" (slice .Params.moderator.first_name .Params.moderator.last_name) }}
+{{ with .Params.moderator.justification }}
+{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
 
 
+{{ $.Scratch.Add "pres" (slice .Params.pres_1.first_name .Params.pres_1.last_name) }}
+{{ with .Params.pres_1.justification }}
+{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+{{ $.Scratch.Add "pres" (slice .Params.pres_2.first_name .Params.pres_2.last_name) }}
+{{ with .Params.pres_2.justification }}
+{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+{{ $.Scratch.Add "pres" (slice .Params.pres_3.first_name .Params.pres_3.last_name) }}
+{{ with .Params.pres_3.justification }}
+{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+{{ $.Scratch.Add "pres" (slice .Params.pres_4.first_name .Params.pres_4.last_name) }}
+{{ with .Params.pres_4.justification }}
+{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
 
 
 
