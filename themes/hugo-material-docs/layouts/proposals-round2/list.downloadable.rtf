@@ -71,11 +71,10 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 
 {\pard \b \fs30 \sa180 \keepn Participants \par}
 
-\sectd\sect
+\trowd\trgaph180\cellx5000\cellx10000
 
-\cols2 \linebetcol
 
-{\pard \sb180 \sa180 \keep {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \line
+\pard\intbl {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \line
 {{.Params.submitter.title}} \line
 {{.Params.submitter.institution}} \line
 {{.Params.submitter.location}} \line
@@ -88,12 +87,12 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ with .Params.submitter.tel }}
 {{ . }} \line
 {{ end }}
-\par}
+\cell
 
 
 {{- if .Params.moderator.last_name -}}
 
-{\pard \sb180 \sa180 \keep {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \line
+\pard\intbl {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \line
 {{.Params.moderator.title}} \line
 {{.Params.moderator.institution}} \line
 {{.Params.moderator.location}} \line
@@ -106,12 +105,16 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ with .Params.moderator.tel }}
 {{ . }} \line
 {{ end }}
-\par}
+\cell
 {{ end }}
+
+
+\row
+\trowd\trgaph180\cellx5000\cellx10000
 
 {{- if .Params.pres_1.last_name -}}
 
-{\pard \sb180 \sa180 \keep {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \line
+\pard\intbl {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \line
 {{.Params.pres_1.title}} \line
 {{.Params.pres_1.institution}} \line
 {{.Params.pres_1.location}} \line
@@ -124,12 +127,15 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ with .Params.pres_1.tel }}
 {{ . }} \line
 {{ end }}
-\par}
+\cell
 {{ end }}
+
+
+
 
 {{ if .Params.pres_2.last_name }}
 
-{\pard \sb180 \sa180 \keep {\b {{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}} }(Presenter) \line
+\pard\intbl {\b {{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}} }(Presenter) \line
 {{.Params.pres_2.title}} \line
 {{.Params.pres_2.institution}} \line
 {{.Params.pres_2.location}} \line
@@ -142,12 +148,15 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ with .Params.pres_2.tel }}
 {{ . }} \line
 {{ end }}
-\par}
+\cell
 {{ end }}
+\row
+
+\trowd\trgaph180\cellx5000\cellx10000
 
 {{ if .Params.pres_3.last_name }}
 
-{\pard \sb180 \sa180 \keep {\b {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }(Presenter) \line
+\pard\intbl {\b {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }(Presenter) \line
 {{.Params.pres_3.title}} \line
 {{.Params.pres_3.institution}} \line
 {{.Params.pres_3.location}} \line
@@ -160,12 +169,13 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ with .Params.pres_3.tel }}
 {{ . }} \line
 {{ end }}
-\par}
+\cell
 {{ end }}
+
 
 {{ if .Params.pres_4.last_name }}
 
-{\pard \sb180 \sa180 \keep {\b {{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}} }(Presenter) \line
+\pard\intbl {\b {{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}} }(Presenter) \line
 {{.Params.pres_4.title}} \line
 {{.Params.pres_4.institution}} \line
 {{.Params.pres_4.location}} \line
@@ -178,40 +188,41 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ with .Params.pres_4.tel }}
 {{ . }} \line
 {{ end }}
-\par}
+\cell
 {{ end }}
 
-\sectd\sect
+\row
+
 
 {\pard \b \fs30 \sa180 Participant Justifications \par}
 {{ $.Scratch.Add "pres" (slice .Params.submitter.first_name .Params.submitter.last_name) }}
 {{ with .Params.submitter.justification }}
-{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
 {{ end }}
 {{ $.Scratch.Delete "pres" }}
 
 {{ $.Scratch.Add "pres" (slice .Params.moderator.first_name .Params.moderator.last_name) }}
 {{ with .Params.moderator.justification }}
-{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
 {{ end }}
 {{ $.Scratch.Delete "pres" }}
 
 
 {{ $.Scratch.Add "pres" (slice .Params.pres_1.first_name .Params.pres_1.last_name) }}
 {{ with .Params.pres_1.justification }}
-{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
 {{ end }}
 {{ $.Scratch.Delete "pres" }}
 
 {{ $.Scratch.Add "pres" (slice .Params.pres_2.first_name .Params.pres_2.last_name) }}
 {{ with .Params.pres_2.justification }}
-{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
 {{ end }}
 {{ $.Scratch.Delete "pres" }}
 
 {{ $.Scratch.Add "pres" (slice .Params.pres_3.first_name .Params.pres_3.last_name) }}
 {{ with .Params.pres_3.justification }}
-{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
 {{ end }}
 {{ $.Scratch.Delete "pres" }}
 
