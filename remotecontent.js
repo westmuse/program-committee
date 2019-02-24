@@ -21,7 +21,7 @@ var fs = require('fs'); //to access filewrite
 
 
       //Split up the JSON response
-      console.log(obj.Proposal.length);
+      console.log(obj.Proposal.length + " total submissions");
       for (var j=0; j<obj.Proposal.length; j++) {
 
         myObj = obj.Proposal[j];
