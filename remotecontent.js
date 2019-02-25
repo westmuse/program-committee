@@ -54,7 +54,7 @@ var fs = require('fs'); //to access filewrite
            //delete toFrontmatter['content'];   //Deleting the stuff that I do not need to put into the frontmatter
            //var obj2 = tomlify(toFrontmatter, {delims: true}); //Creating the frontmatter
            //obj2 = obj2 +"\n" + markdowntext; //Putting it all togeter
-          var file = __dirname + '/content/proposals-round2/' + 'WMA2019_SP' + myObj["ID"] +'.md';//I have set up a slug as the file name in my CMS and don't forget to create the directory structure in advance.
+          var file = __dirname + '/content/proposals-round2/' + myObj["ID"] +'.md';//I have set up a slug as the file name in my CMS and don't forget to create the directory structure in advance.
            fs.writeFile(file, full_proposal, function (err) {  //writing it out to the filesystem
                 if (err) {
                     console.error(err);
