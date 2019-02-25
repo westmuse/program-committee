@@ -1,0 +1,26 @@
+{
+  "name": "wma-proposals",
+  "version": "1.0.0",
+  "description": "One Paragraph of project description goes here",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5easypieces/wma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5easypieces/wma/issues"
+  },
+  "homepage": "https://github.com/5easypieces/wma#readme",
+  "dependencies": {
+    "request": "^2.88.0",
+    "to-markdown": "^3.1.1",
+    "tomlify-j0.4": "^3.0.0"
+  },
+  "devDependencies": {}
+}
