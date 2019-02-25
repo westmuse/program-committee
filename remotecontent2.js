@@ -17,7 +17,7 @@ var fs = require('fs'); //to access filewrite
 
        var obj = body; //The actual JSON from the API
        console.log("Start converting API to files");
-       console.log(obj);
+    
 
 
       //Split up the JSON response
