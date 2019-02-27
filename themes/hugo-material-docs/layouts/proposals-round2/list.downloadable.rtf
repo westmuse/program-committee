@@ -1,0 +1,252 @@
+{\rtf1\ansi\deff0 \deflang1033 \plain \fs26 \widowctrl \hyphauto \ftnbj
+
+
+  {\fonttbl
+    {\f0\fswiss Chicago;}
+    {\f2\froman New York;}
+    {\f3\fswiss Geneva;}
+    {\f4\fmodern Monaco;}
+    {\f11\fnil Cairo;}
+    {\f13\fnil Zapf Dingbats;}
+    {\f14\fnil Bookman;}
+    {\f15\fnil N Helvetica Narrow;}
+    {\f16\fnil Palatino;}{\f18\fnil Zapf Chancery;}
+    {\f20\froman Times;}
+    {\f21\fswiss Helvetica;}
+    {\f22\fmodern Courier;}
+    {\f23\ftech Symbol;}
+    {\f33\fnil Avant Garde;}
+    {\f34\fnil New Century Schlbk;}
+    {\f1297\fnil GoudyHundred;}
+    {\f1602\fnil BlackChancery;}
+    {\f2515\fnil MT Extra;}
+    {\f4950\fnil TTYFont;}
+    {\f11132\fnil InsigniaLQmono;}
+    {\f11133\fnil InsigniaLQprop;}
+    {\f32500\fnil VT320;}
+    {\f32525\fnil VT100;}
+  }
+  {\colortbl\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;}
+  {\stylesheet{\s250\li720 \f21\fs20\ul \sbasedon0\snext0 heading 6;}{\s251\li720 \b\f21\fs20 \sbasedon0\snext0 heading 5;}{\s252\li360 \f21\ul \sbasedon0\snext0 heading 4;}{\s253\li360 \b\f21 \sbasedon0\snext0 heading 3;}{\s254\sb120 \b\f21 \sbasedon0\snext0 heading 2;}{\s255\sb240 \b\f21\ul \sbasedon0\snext0 heading 1;}{\f21 \sbasedon222\snext0 Normal;}{\s2 \b\f21\cf1 \sbasedon0\snext2 Anchor;}}
+  {\info
+    {\author Western Museums Association}
+  }
+
+
+\margl720\margr720\ftnbj\fracwidth \sectd \sbknone\linemod0\linex0\cols1\endnhere \pard\plain \s255\sb240 \b\f21\ul Heading 1\par
+\pard\plain \f21 This is the first normal paragraph!\par
+\pard\plain \s254\sb120 \b\f21 Heading 2\par
+\pard\plain \s253\li360 \b\f21 Heading 3\par
+\pard\plain \s252\li360 \f21\ul Heading 4\par
+\pard\plain \s251\li720 \b\f21\fs20 Heading 5\par
+\pard\plain \s250\li720 \f21\fs20\ul Heading 6\par
+\pard\plain \f21 This is a chunk of normal text.\par
+This is a chunk of normal text with specials, &, <, and >.\par
+This is a second paragraph.\par
+This is text with embedded {\b bold}, {\i italic}, and {\ul underline} styles.\par
+Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
+
+
+{{ range sort .Data.Pages }}
+\fs25 \f0 \fi0
+{\pard \b \fs40 {{- .Params.session_title | plainify -}} \par}
+{\pard \sb100 \fs30 {{- .File.BaseFileName -}} \par}
+
+{\pard \sb180 \sa180 {{.Params.session_desc}} \par}
+
+{\pard \b \fs30 \sa180 Session Information \par}
+{\pard \sb180 \sa180 {\b Uniqueness:} {{.Params.session_unique | plainify }} \par}
+{\pard \sb180 \sa180 {\b Objectives:} {{.Params.session_objectives | plainify }} \par}
+{\pard \sb180 \sa180 {\b Relationship to Theme:} {{.Params.theme_relationship | plainify }} \par}
+{{- with .Params.theme_comments -}}
+  {\pard \sb180 \sa180 {\b Additional Theme Comments:} {{ . | plainify  }} \par}
+{{- end -}}
+
+{\pard \b \fs30 \sa180 \keepn Audience \par}
+{\pard {\b Audience:} {{.Params.audience | plainify }} \par}
+{\pard \sa180 {\b Professional Level:} {{.Params.level | plainify }} \par}
+{{- with .Params.other_comments -}}
+  {\pard \sb180 \sa180 {\b Other Comments:} {{ . | markdownify }} \par}
+{{end}}
+
+{\pard \b \fs30 \sa180 \keepn Participants \par}
+
+\trowd\trgaph180\cellx5000\cellx10000
+
+
+\pard\intbl {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \line
+{{.Params.submitter.title}} \line
+{{.Params.submitter.institution}} \line
+{{.Params.submitter.location}} \line
+{{ with .Params.submitter.email }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.submitter.email2 }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.submitter.tel }}
+{{ . }} \line
+{{ end }}
+\cell
+
+
+{{- if .Params.moderator.last_name -}}
+
+\pard\intbl {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \line
+{{.Params.moderator.title}} \line
+{{.Params.moderator.institution}} \line
+{{.Params.moderator.location}} \line
+{{ with .Params.moderator.email }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.moderator.email2 }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.moderator.tel }}
+{{ . }} \line
+{{ end }}
+\cell
+{{ end }}
+
+
+\row
+\trowd\trgaph180\cellx5000\cellx10000
+
+{{- if .Params.pres_1.last_name -}}
+
+\pard\intbl {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \line
+{{.Params.pres_1.title}} \line
+{{.Params.pres_1.institution}} \line
+{{.Params.pres_1.location}} \line
+{{ with .Params.pres_1.email }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.pres_1.email2 }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.pres_1.tel }}
+{{ . }} \line
+{{ end }}
+\cell
+{{ end }}
+
+
+
+
+{{ if .Params.pres_2.last_name }}
+
+\pard\intbl {\b {{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}} }(Presenter) \line
+{{.Params.pres_2.title}} \line
+{{.Params.pres_2.institution}} \line
+{{.Params.pres_2.location}} \line
+{{ with .Params.pres_2.email }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.pres_2.email2 }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.pres_2.tel }}
+{{ . }} \line
+{{ end }}
+\cell
+{{ end }}
+\row
+
+\trowd\trgaph180\cellx5000\cellx10000
+
+{{ if .Params.pres_3.last_name }}
+
+\pard\intbl {\b {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }(Presenter) \line
+{{.Params.pres_3.title}} \line
+{{.Params.pres_3.institution}} \line
+{{.Params.pres_3.location}} \line
+{{ with .Params.pres_3.email }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.pres_3.email2 }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.pres_3.tel }}
+{{ . }} \line
+{{ end }}
+\cell
+{{ end }}
+
+
+{{ if .Params.pres_4.last_name }}
+
+\pard\intbl {\b {{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}} }(Presenter) \line
+{{.Params.pres_4.title}} \line
+{{.Params.pres_4.institution}} \line
+{{.Params.pres_4.location}} \line
+{{ with .Params.pres_4.email }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.pres_4.email2 }}
+{{ . }} \line
+{{ end }}
+{{ with .Params.pres_4.tel }}
+{{ . }} \line
+{{ end }}
+\cell
+{{ end }}
+
+\row
+
+
+{\pard \b \fs30 \sa180 Participant Justifications \par}
+{{ $.Scratch.Add "pres" (slice .Params.submitter.first_name .Params.submitter.last_name) }}
+{{ with .Params.submitter.justification }}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+{{ $.Scratch.Add "pres" (slice .Params.moderator.first_name .Params.moderator.last_name) }}
+{{ with .Params.moderator.justification }}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+
+{{ $.Scratch.Add "pres" (slice .Params.pres_1.first_name .Params.pres_1.last_name) }}
+{{ with .Params.pres_1.justification }}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+{{ $.Scratch.Add "pres" (slice .Params.pres_2.first_name .Params.pres_2.last_name) }}
+{{ with .Params.pres_2.justification }}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+{{ $.Scratch.Add "pres" (slice .Params.pres_3.first_name .Params.pres_3.last_name) }}
+{{ with .Params.pres_3.justification }}
+{\pard \sa180 {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+{{ $.Scratch.Add "pres" (slice .Params.pres_4.first_name .Params.pres_4.last_name) }}
+{{ with .Params.pres_4.justification }}
+{\pard {\b {{ delimit ($.Scratch.Get "pres") " " }}: } {{ . | plainify }} \par}
+{{ end }}
+{{ $.Scratch.Delete "pres" }}
+
+
+
+
+
+
+
+
+
+
+\page
+
+
+{{ end }}
+
+
+
+
+}
