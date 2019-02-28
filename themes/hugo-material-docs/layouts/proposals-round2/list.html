@@ -21,14 +21,7 @@
 		<div class="wrapper">
 
 			<h1>All {{ .Title }}</h1>
-			<ul>
-				<li><a href="{{.Params.download_link}}" target="_blank">Download all proposals as Word docs</a></li>
-				<li><a href="/tags/">Proposals by Audience</a></li>
-				<li><a href="/categories">Proposals by Professional Level</a></li>
-				<li><a href="/proposals-round2/index.rtf">Download all Workshop Proposals</a></li>
 
-			<ul>
-				<hr>
 			{{ range sort .Data.Pages.ByTitle }}
 			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Params.session_title }}</a></li>
 
