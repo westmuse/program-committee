@@ -84,7 +84,7 @@ googleAnalytics = ""
 
 
 [[menu.main]]
-	name   = "Session Proposals"
+	name   = "Round 1 Proposals"
 	url    = "proposals/"
 	weight = 40
 
