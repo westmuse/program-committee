@@ -12,6 +12,18 @@ var fs = require('fs'); //to access filewrite
 
      };
 
+     function cleanstring(dirty){
+       var smartchr = [ "’","‘","“","”","–","—","…",'„', '‚' , '«','»', '‹', '›'];
+       var correctchr = ["'", "'", '"', '"', '-', '-', '...', '"', "'", '"', '"', "'", "'"];
+        var thestring = dirty;
+       var regex;
+       for (var i = 0; i < smartchr.length; i++) {
+          regex = new RegExp(smartchr[i], "g");
+          thestring = thestring.replace(regex, correctchr[i]);
+        }
+         return thestring;
+       }
+
    //Request
    request(options, function (error, response, body) {
        if (error) throw new Error(error);
@@ -27,8 +39,7 @@ var fs = require('fs'); //to access filewrite
       //Split up the JSON response
       console.log(obj.Proposal.length + " total submissions");
       for (var j=0; j<obj.Proposal.length; j++) {
-        const myReplacer = (key, val) => key === "reaction" ? val.replace(/\\/g, "\\\\") : val;
-        const myReviver = (key, val) => val.replace(/\\\\/g, "\\");
+
 
 
 
@@ -44,12 +55,14 @@ var fs = require('fs'); //to access filewrite
 
 
 
-        var escaped = jsesc(stringified);
-        var double_escaped = escaped.replace(/\\/g, "\\\\");
 
-        console.log(double_escaped);
-        parsed = JSON.parse(double_escaped);
-        myObj = parsed.replace(/\\\\/g, "\\");
+
+
+        var escaped = cleanstring(stringified)
+        console.log(escaped);
+        var myObj = JSON.parse(escaped);
+
+
         console.log(myObj);
 
 

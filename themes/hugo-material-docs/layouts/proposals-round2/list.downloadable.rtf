@@ -1,4 +1,4 @@
-{\rtf1\ansi\deff0 \deflang1033 \plain \fs26 \widowctrl \hyphauto \ftnbj
+{\rtf1\utf8 \deflang1033 \plain \fs26 \widowctrl \hyphauto \ftnbj
 
 
   {\fonttbl
@@ -49,7 +49,9 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 
 {{ range sort .Data.Pages }}
 \fs25 \f0 \fi0
-{\pard \b \fs40 {{- .Params.session_title | plainify -}} \par}
+{\pard \b \fs40 {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
+
+
 {\pard \sb100 \fs30 {{- .File.BaseFileName -}} \par}
 
 {\pard \sb180 \sa180 {{.Params.session_desc}} \par}
