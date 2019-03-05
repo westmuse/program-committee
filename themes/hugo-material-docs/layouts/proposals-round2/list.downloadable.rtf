@@ -32,21 +32,6 @@
     {\author Western Museums Association}
   }
 
-
-\margl720\margr720\ftnbj\fracwidth \sectd \sbknone\linemod0\linex0\cols1\endnhere \pard\plain \s255\sb240 \b\f21\ul Heading 1\par
-\pard\plain \f21 This is the first normal paragraph!\par
-\pard\plain \s254\sb120 \b\f21 Heading 2\par
-\pard\plain \s253\li360 \b\f21 Heading 3\par
-\pard\plain \s252\li360 \f21\ul Heading 4\par
-\pard\plain \s251\li720 \b\f21\fs20 Heading 5\par
-\pard\plain \s250\li720 \f21\fs20\ul Heading 6\par
-\pard\plain \f21 This is a chunk of normal text.\par
-This is a chunk of normal text with specials, &, <, and >.\par
-This is a second paragraph.\par
-This is text with embedded {\b bold}, {\i italic}, and {\ul underline} styles.\par
-Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
-
-
 {{ range sort .Data.Pages }}
 \fs25 \f0 \fi0
 {\pard \b \fs40 {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
@@ -110,11 +95,11 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 \cell
 {{ end }}
 
-
+{{- if .Params.pres_1.last_name -}}
 \row
 \trowd\trgaph180\cellx5000\cellx10000
 
-{{- if .Params.pres_1.last_name -}}
+
 
 \pard\intbl {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \line
 {{.Params.pres_1.title}} \line
@@ -130,7 +115,7 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ . }} \line
 {{ end }}
 \cell
-{{ end }}
+
 
 
 
@@ -154,9 +139,11 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ end }}
 \row
 
+{{ end }}
+{{ if .Params.pres_3.last_name }}
 \trowd\trgaph180\cellx5000\cellx10000
 
-{{ if .Params.pres_3.last_name }}
+
 
 \pard\intbl {\b {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }(Presenter) \line
 {{.Params.pres_3.title}} \line
@@ -172,7 +159,7 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ . }} \line
 {{ end }}
 \cell
-{{ end }}
+
 
 
 {{ if .Params.pres_4.last_name }}
@@ -194,7 +181,7 @@ Here is the {\cf1 anchor} style. And here is the {\cf5 Image} style.\par
 {{ end }}
 
 \row
-
+{{ end }}
 
 {\pard \b \fs30 \sa180 Participant Justifications \par}
 {{ $.Scratch.Add "pres" (slice .Params.submitter.first_name .Params.submitter.last_name) }}
