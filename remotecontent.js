@@ -2,7 +2,7 @@ var fs = require('fs'); //to access filewrite
        var toMarkdown = require ('to-markdown'); //to convert HTML to Markdown
        var request = require("request"); //to request the JSON file from the server
        var tomlify = require('tomlify-j0.4'); //to add the frontmatter
-        var jsesc = require('jsesc');
+      
 
    //Request options
    var options = {
