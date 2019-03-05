@@ -2,7 +2,7 @@ var fs = require('fs'); //to access filewrite
        var toMarkdown = require ('to-markdown'); //to convert HTML to Markdown
        var request = require("request"); //to request the JSON file from the server
        var tomlify = require('tomlify-j0.4'); //to add the frontmatter
-      
+
 
    //Request options
    var options = {
@@ -81,11 +81,11 @@ return jsonString;
 
       //  cleaned = cleanstring(stringified);
         escaped = escapeSpecialChars(stringified);
-        console.log(escaped);
+      //  console.log(escaped);
         var myObj = JSON.parse(escaped);
 
 
-        console.log(myObj);
+    //    console.log(myObj);
 
 
 
@@ -126,11 +126,11 @@ return jsonString;
                 if (err) {
                     console.error(err);
                 } else {
-                    console.log("Done converting API", myObj["ID"]);
+                  //  console.log("Done converting API", myObj["ID"]);
                 }
            });
 
       }
   //  }
-        console.log("Skipped that loop");
+      //  console.log("Skipped that loop");
      });
