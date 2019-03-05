@@ -13,7 +13,7 @@ googleAnalytics = ""
 
 [outputFormats]
 	[outputFormats.downloadable]
-	  baseName = "index"
+	  baseName = "proposals"
 		isPlainText = true
 		mediaType = "application/rtf"
 		path = ""

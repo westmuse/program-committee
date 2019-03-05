@@ -21,6 +21,11 @@
 		<div class="wrapper">
 
 			<h1>All {{ .Title }}</h1>
+		<br>
+			{{ with  .OutputFormats.Get "downloadable" -}}
+<a href="{{ .Permalink }}">Download all proposals as a text document</a>
+{{- end }}
+<hr>
 
 			{{ range sort .Data.Pages.ByTitle }}
 			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Params.session_title }}</a></li>
