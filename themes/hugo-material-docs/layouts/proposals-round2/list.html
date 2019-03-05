@@ -22,9 +22,13 @@
 
 			<h1>All {{ .Title }}</h1>
 		<br>
+			<ul>
+
 			{{ with  .OutputFormats.Get "downloadable" -}}
-<a href="{{ .Permalink }}">Download all proposals as a text document</a>
+<li><a href="{{ .Permalink }}">Download all proposals as a text document</a></li>
 {{- end }}
+			<li><a href="/docs/WMA2019_Round2_ScoringSheet.xlsx">Round 2 Scoring Sheet</a></li>
+		</ul>
 <hr>
 
 			{{ range sort .Data.Pages.ByTitle }}
