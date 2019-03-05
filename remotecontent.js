@@ -8,13 +8,13 @@ var fs = require('fs'); //to access filewrite
    var options = {
       method: 'GET',
       json: true,
-      url: 'https://gist.github.com/5easypieces/982158a2df83f2912ba5d27a9d9a44c7/raw/',
+      url: 'https://gist.github.com/5easypieces/4ce57c27bbbfe7728c81fb6548801b0e/raw/',
 
      };
 
      function cleanstring(dirty){
-       var smartchr = [ "’","‘","“","”","–","—","…",'„', '‚' , '«','»', '‹', '›'];
-       var correctchr = ["'", "'", '"', '"', '-', '-', '...', '"', "'", '"', '"', "'", "'"];
+       var smartchr = [ "’", "‘", "“", "”", "–", "—", "…"];
+       var correctchr = ["'", "'", '"', '"', '-', '-', '...'];
         var thestring = dirty;
        var regex;
        for (var i = 0; i < smartchr.length; i++) {
@@ -22,7 +22,27 @@ var fs = require('fs'); //to access filewrite
           thestring = thestring.replace(regex, correctchr[i]);
         }
          return thestring;
-       }
+      }
+
+      function escapeSpecialChars(jsonString) {
+        jsonString = jsonString.replace(/…/g, "...");
+        jsonString = jsonString.replace(/\\n/g, "");
+        jsonString = jsonString.replace(/\n/g, "");
+        jsonString = jsonString.replace(/\\r/g, "\\r");
+        jsonString = jsonString.replace(/\\t/g, "\\t");
+        jsonString = jsonString.replace(/\\f/g, "");
+        jsonString = jsonString.replace(/“/g, '\\"');
+        jsonString = jsonString.replace(/”/g, '\\"');
+        jsonString = jsonString.replace(/‘/g, "'");
+        jsonString = jsonString.replace(/’/g, "'");
+
+        jsonString = jsonString.replace(/ {1,}- {1,}/g, "*");
+      jsonString = jsonString.replace(/ {1,}/g," ");
+
+return jsonString;
+      }
+
+
 
    //Request
    request(options, function (error, response, body) {
@@ -58,7 +78,9 @@ var fs = require('fs'); //to access filewrite
 
 
 
-        var escaped = cleanstring(stringified)
+
+      //  cleaned = cleanstring(stringified);
+        escaped = escapeSpecialChars(stringified);
         console.log(escaped);
         var myObj = JSON.parse(escaped);
 
