@@ -1,4 +1,4 @@
-{\rtf1\utf8 \deflang1033 \plain \fs26 \widowctrl \hyphauto \ftnbj
+{\rtf1\ansi \deflang1033 \plain \fs26 \widowctrl \hyphauto \ftnbj
 
 
   {\fonttbl
@@ -55,7 +55,7 @@
 {{- with .Params.other_comments -}}
   {\pard \sb180 \sa180 {\b Other Comments:} {{ . | markdownify }} \par}
 {{end}}
-
+\page
 {\pard \b \fs30 \sa180 \keepn Participants \par}
 
 \trowd\trgaph180\cellx5000\cellx10000
@@ -82,7 +82,9 @@
 \pard\intbl {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \line
 {{.Params.moderator.title}} \line
 {{.Params.moderator.institution}} \line
-{{.Params.moderator.location}} \line
+{{ with .Params.moderator.location}}
+{{ . }} \line
+{{ end }}
 {{ with .Params.moderator.email }}
 {{ . }} \line
 {{ end }}
@@ -104,7 +106,9 @@
 \pard\intbl {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \line
 {{.Params.pres_1.title}} \line
 {{.Params.pres_1.institution}} \line
-{{.Params.pres_1.location}} \line
+{{if or (.Params.pres1_location) (isset .Params.pres_1 "location") }}
+{{ .Params.pres_1.location }}\line
+{{ end }}
 {{ with .Params.pres_1.email }}
 {{ . }} \line
 {{ end }}
@@ -125,7 +129,9 @@
 \pard\intbl {\b {{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}} }(Presenter) \line
 {{.Params.pres_2.title}} \line
 {{.Params.pres_2.institution}} \line
-{{.Params.pres_2.location}} \line
+{{with .Params.pres_2.location}}
+{{ . }}\line
+{{ end }}
 {{ with .Params.pres_2.email }}
 {{ . }} \line
 {{ end }}
@@ -148,7 +154,9 @@
 \pard\intbl {\b {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }(Presenter) \line
 {{.Params.pres_3.title}} \line
 {{.Params.pres_3.institution}} \line
-{{.Params.pres_3.location}} \line
+{{with .Params.pres_3.location}}
+{{ . }}\line
+{{ end }}
 {{ with .Params.pres_3.email }}
 {{ . }} \line
 {{ end }}
@@ -167,7 +175,9 @@
 \pard\intbl {\b {{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}} }(Presenter) \line
 {{.Params.pres_4.title}} \line
 {{.Params.pres_4.institution}} \line
-{{.Params.pres_4.location}} \line
+{{with .Params.pres_4.location}}
+{{ . }}\line
+{{ end }}
 {{ with .Params.pres_4.email }}
 {{ . }} \line
 {{ end }}
