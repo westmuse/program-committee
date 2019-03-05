@@ -2,12 +2,13 @@ var fs = require('fs'); //to access filewrite
        var toMarkdown = require ('to-markdown'); //to convert HTML to Markdown
        var request = require("request"); //to request the JSON file from the server
        var tomlify = require('tomlify-j0.4'); //to add the frontmatter
+        var jsesc = require('jsesc');
 
    //Request options
    var options = {
       method: 'GET',
       json: true,
-      url: 'https://gist.github.com/5easypieces/4ce57c27bbbfe7728c81fb6548801b0e/raw/',
+      url: 'https://gist.github.com/5easypieces/982158a2df83f2912ba5d27a9d9a44c7/raw/',
 
      };
 
@@ -15,7 +16,10 @@ var fs = require('fs'); //to access filewrite
    request(options, function (error, response, body) {
        if (error) throw new Error(error);
 
-       var obj = body; //The actual JSON from the API
+
+       var obj = body;
+
+
        console.log("Start converting API to files");
 
 
@@ -23,8 +27,36 @@ var fs = require('fs'); //to access filewrite
       //Split up the JSON response
       console.log(obj.Proposal.length + " total submissions");
       for (var j=0; j<obj.Proposal.length; j++) {
+        const myReplacer = (key, val) => key === "reaction" ? val.replace(/\\/g, "\\\\") : val;
+        const myReviver = (key, val) => val.replace(/\\\\/g, "\\");
 
-        myObj = obj.Proposal[j];
+
+
+
+
+
+
+
+        var stringified = JSON.stringify(obj.Proposal[j] );
+
+
+
+
+
+
+        var escaped = jsesc(stringified);
+        var double_escaped = escaped.replace(/\\/g, "\\\\");
+
+        console.log(double_escaped);
+        parsed = JSON.parse(double_escaped);
+        myObj = parsed.replace(/\\\\/g, "\\");
+        console.log(myObj);
+
+
+
+
+
+
 
 
 
