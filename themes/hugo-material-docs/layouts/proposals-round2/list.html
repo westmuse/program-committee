@@ -32,7 +32,7 @@
 <hr>
 
 			{{ range sort .Data.Pages.ByTitle }}
-			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Params.session_title }}</a></li>
+			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Params.session_title }} - {{.File.BaseFileName}}</a></li>
 
 
 
