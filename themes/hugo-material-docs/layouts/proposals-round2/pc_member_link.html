@@ -1,0 +1,4 @@
+{{- range $index, $element := .Params.pc_members }}
+  {{ if gt $index 0 }} & {{ end }}
+  <a href="/pc_members/{{ urlize . }}">{{ . }}</a>
+{{ end }}

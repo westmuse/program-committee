@@ -27,6 +27,10 @@
 			<h1>{{ .Params.session_title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 		<h3>ID: {{.File.BaseFileName}}</h3>
 
+{{ .Render "pc_member_link" }}
+
+
+
 			{{ .Params.session_desc }}
 			<h2>Session Information</h2>
 			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>

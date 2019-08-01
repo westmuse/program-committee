@@ -8,7 +8,7 @@ canonifyurls = true
 googleAnalytics = ""
 
 [taxonomies]
-  pc-member = "pc-members"
+  pc_member = "pc_members"
   tag = "tags"
   category = "categories"
 
