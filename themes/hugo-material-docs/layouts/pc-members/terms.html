@@ -1,0 +1,56 @@
+{{ partial "head" . }}
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	{{ partial "header" . }}
+</header>
+
+<main class="main">
+	<div class="drawer">
+		{{ partial "drawer" . }}
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>{{ .Title }}</h1>
+
+<div class="person-block" style="display: grid; grid-template-columns: repeat(auto-fill, 260px);">
+			{{ range sort .Data.Pages ".File.TranslationBaseName" }}
+
+
+			<div class="wma-participant">
+				<p><a href="{{ .Permalink }}" title="{{ .Title }}"><strong>{{.Params.first_name}} {{.Params.last_name}}</strong></a> {{ if .Params.chair }}<strong>(Chair)</strong>{{end}}<br>
+					<span>{{.Params.org_title}}<br>{{.Params.organization}}</span><br>
+					<span>{{.Params.state}}</span><br>
+					{{ with .Params.email }}<span>{{.}}</span><br>{{end}}
+					{{ with .Params.phone }}<span>{{.}}</span><br>{{end}}
+					{{ with .Params.moderator.telephone }}<span>{{.}}</span><br>{{end}}
+				</p>
+
+			</div>
+			{{ end }}
+</div>
+
+
+		</div>
+	</article>
+
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+{{ partial "footer_js" . }}
