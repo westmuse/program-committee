@@ -1,4 +1,15 @@
-{{- range $index, $element := .Params.pc_members }}
-  {{ if gt $index 0 }} & {{ end }}
-  <a href="/pc_members/{{ urlize . }}">{{ . }}</a>
+<p>
+
+
+{{ $taxo := "pc_members" }} <!-- Use the plural form here -->
+{{ with .Param $taxo }}
+    <strong>Assignee{{ if gt (len .) 1 }}s{{ end }}:</strong>
+    {{ range $index, $pc_member := . }}
+        {{- if gt $index 0 }}, {{ end -}}
+        {{ with $.Site.GetPage (printf "/%s/%s" $taxo $pc_member) -}}
+            <a href="{{ .Permalink }}">{{ .Params.title }}({{.Params.email}})</a>
+        {{- end -}}
+    {{- end -}}
 {{ end }}
+
+</p>
