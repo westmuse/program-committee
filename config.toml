@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Western Museums Association Program Committee"
+title = "Western Museums Association Program Committeee"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
