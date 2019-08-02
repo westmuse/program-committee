@@ -25,7 +25,8 @@
 	<article class="article">
 		<div class="wrapper">
 			<h1>{{ .Title }}</h1>
-			
+
+<p>{{.File.Path}}</p>
 			<div class="wma-participant">
 				<p>
 					<span>{{.Params.org_title}}<br>{{.Params.organization}}</span><br>
@@ -36,6 +37,14 @@
 				</p>
 
 			</div>
+
+
+<ul>
+   {{ range .Site.Taxonomies.pc_member }}
+   <li>here{{ .Name }}</li>
+   {{ end }}
+</ul>
+
 
 
 

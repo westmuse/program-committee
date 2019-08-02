@@ -7,7 +7,7 @@
     {{ range $index, $pc_member := . }}
         {{- if gt $index 0 }}, {{ end -}}
         {{ with $.Site.GetPage (printf "/%s/%s" $taxo $pc_member) -}}
-            <a href="{{ .Permalink }}">{{ .Params.title }}({{.Params.email}})</a>
+            <a href="{{ .Permalink }}">{{ .Params.title }}</a>
         {{- end -}}
     {{- end -}}
 {{ end }}
