@@ -163,7 +163,7 @@
 
 	<!-- ========Program Committee========== -->
 	<h2>Program Committee</h2>
-	{{ $related := .Site.Pages.RelatedIndices . "assignee"  }}
+	{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
 <p>{{ printf "%s" $related }}</p>
 	<ul>
 		{{ range  $related }}
