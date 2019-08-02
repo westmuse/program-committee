@@ -9,5 +9,6 @@ email: 'rfaust@sfmoma.org'
 phone: '858.342.1606'
 chair: FALSE
 year: '2019'
+assignee: 'rachaelfaust'
 
 ---

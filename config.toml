@@ -7,6 +7,16 @@ canonifyurls = true
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = ""
 
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = true
+  [[related.indices]]
+    name = "assignee"
+    weight = 1
+    includeNewer = true
+
+
 [mediaTypes]
   [mediaTypes."application/rtf"]
     suffixes = ["rtf"]

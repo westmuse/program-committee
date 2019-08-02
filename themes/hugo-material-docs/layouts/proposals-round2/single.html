@@ -27,6 +27,7 @@
 			<h1>{{ .Params.session_title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 		<h3>ID: {{.File.BaseFileName}}</h3>
 
+
 			{{ .Params.session_desc }}
 			<h2>Session Information</h2>
 			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
@@ -160,7 +161,15 @@
 	{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
 	{{ with .Params.other_suggestions }}<p><strong>Other Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
 
-
+	<!-- ========Program Committee========== -->
+	<h2>Program Committee</h2>
+	{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
+	
+	<ul>
+		{{ range  $related }}
+			<li><a href="{{.Permalink}}">{{ .Params.title }}</a></li>
+		{{ end }}
+	</ul>
 
 </div>
 
