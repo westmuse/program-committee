@@ -36,7 +36,13 @@
 
 			</div>
 
-{{ $assignedto := where (.Site.RegularPages.RelatedIndices . "assignee" ) "Type" "pc-members" }}
+{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
+
+<ul>
+	{{ range  $related }}
+		<li><a href="{{.Permalink}}">{{ .Params.session_title }}</a></li>
+	{{ end }}
+</ul>
 
 </div>
 
