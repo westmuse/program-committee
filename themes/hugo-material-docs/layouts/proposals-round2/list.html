@@ -31,7 +31,8 @@
 		</ul>
 <hr>
 
-			{{ range sort .Data.Pages.ByTitle }} 
+<ul>
+			{{ range sort .Data.Pages.ByTitle }}
 			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Params.session_title }} - {{.File.BaseFileName}}</a></li>
 
 
@@ -41,6 +42,12 @@
 
 		</div>
 	</article>
+	<div style="min-height: 80px"></div>
+<p>{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}</p>
+		<footer class="footer">
+			{{ partial "footer" . }}
+		</footer>
+
 
 
 	<div class="results" role="status" aria-live="polite">

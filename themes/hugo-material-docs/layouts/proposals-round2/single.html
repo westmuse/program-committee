@@ -164,7 +164,7 @@
 	<!-- ========Program Committee========== -->
 	<h2>Program Committee</h2>
 	{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
-	
+
 	<ul>
 		{{ range  $related }}
 			<li><a href="{{.Permalink}}">{{ .Params.title }}</a></li>
@@ -172,14 +172,15 @@
 	</ul>
 
 </div>
+</article>
 
 		<div style="min-height: 80px"></div>
 <p>{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}</p>
 			<footer class="footer">
 				{{ partial "footer" . }}
 			</footer>
-		</div>
-	</article>
+
+
 
 	<div class="results" role="status" aria-live="polite">
 		<div class="scrollable">
