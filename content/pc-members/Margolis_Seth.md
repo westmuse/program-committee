@@ -9,5 +9,6 @@ email: 'smargolis@museumofflight.org'
 phone: '(206) 768-7116'
 chair: FALSE
 year: '2019'
+assignee: 'sethmargolis'
 
 ---
