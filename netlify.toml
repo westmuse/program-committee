@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "node remotecontent.js && hugo"
+command = "hugo"
 
 [context.production.environment]
 HUGO_VERSION = "0.56.3"
