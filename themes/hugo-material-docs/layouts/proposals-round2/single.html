@@ -164,7 +164,7 @@
 	<!-- ========Program Committee========== -->
 	<h2>Program Committee</h2>
 	{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
-<p>{{ printf "%s" $related }}</p>
+
 	<ul>
 		{{ range  $related }}
 			<li><a href="{{.Permalink}}">{{ .Params.title }}</a></li>
