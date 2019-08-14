@@ -4,9 +4,9 @@ date: 2018-12-12T15:40:06.000Z
 draft: false
 abstract: This website is the main resource for the WMA Program Committee.
 ---
-**Thank you for being on the Western Museums Association 2019 Program Committee! **
+**Thank you for being on the Western Museums Association 2019 Program Committee!** 
 
-This website is the main resource for the WMA Program Committee. Information about hotel reservations, the actual session proposals, follow up notes from the meetings, etc. can all be found here. Please use the navigation menu to the left (or in the "hamburger" menu if you're on a smaller screen) to maneuver about.
+This website is the main resource for the **WMA Program Committee.** Information about hotel reservations, the actual session proposals, follow up notes from the meetings, etc. can all be found here. Please use the navigation menu to the left (or in the "hamburger" menu if you're on a smaller screen) to maneuver about.
 
 The best place to start is [Reviewing Guidelines & Process](https://pc.westmuse.org/pc-materials/) - followed by [All Proposals](/proposals/).
 
