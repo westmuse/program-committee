@@ -83,6 +83,11 @@ googleAnalytics = ""
 	weight = 20
 
 [[menu.main]]
+  name = "Documents and Downloads"
+  url = "pc-materials/downloads/"
+  weight = 15
+
+[[menu.main]]
 	name   = "Timelines & Meeting Agendas"
 	url    = "timelines/"
 	weight = 25
