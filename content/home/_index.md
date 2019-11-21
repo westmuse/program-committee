@@ -4,7 +4,7 @@ date: 2018-12-12T15:40:06.000Z
 draft: false
 abstract: This website is the main resource for the WMA Program Committee.
 ---
-**Thank you for being on the Western Museums Association 2019 Program Committee!** 
+**Thank you for being on the Western Museums Association 2020 Program Committee!** 
 
 This website is the main resource for the WMA Program Committee**.** Information about hotel reservations, the actual session proposals, follow up notes from the meetings, etc. can all be found here. Please use the navigation menu to the left (or in the "hamburger" menu if you're on a smaller screen) to maneuver about.
 
@@ -14,14 +14,14 @@ You can view your assigned proposals via the [assignments document](https://pc.w
 
 ## PC Roster
 
-Here's the 2019 PC Roster, which includes members; contact information:
+Here's the 2020 PC Roster, which includes members; contact information:
 [Doc: Roster](/images/uploads/wma2019-pc-roster.xlsx)
 
 ## Important Dates:
 
-* January 18, 2019: Contact your proposers by this date
-* January 25-26, 2019: First PC Meeting in Boise
-* February 8, 2019: Contact your proposers by this date
-* February 15, 2019: Proposal resubmissions due
-* March 8-9, 2019: Second PC Meeting in Boise
-* October 4-7, 2019: WMA 2018 in Boise
+* January 3, 2020: Contact your proposers by this date
+* January 10-11, 2020: First PC Meeting in Portland
+* January 31, 2020: Contact your proposers by this date
+* February 14, 2020: Proposal resubmissions due
+* March 13-14, 2020: Second PC Meeting in Portland
+* October 8-11, 2020: WMA 2020 in Portland
