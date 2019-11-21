@@ -14,7 +14,7 @@ To make reservations online, please visit and follow the below instructions:
 
 <http://www.portland.hilton.com>
 
-In the upper right hand corner, enter the dates of your stay and click the "more options" link. In the group code box, please enter the 3-letter code: WMP. You may also call 1-800-HILTONS and speak with a reservations agent to book a room.
+In the upper right hand corner, enter the dates of your stay and click the "more options" link. In the group code box, please enter the 3-letter code: WMA. You may also call 1-800-HILTONS and speak with a reservations agent to book a room.
 
 ## Meetings:
 
