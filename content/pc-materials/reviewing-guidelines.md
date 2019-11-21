@@ -41,6 +41,6 @@ Is the proposal articulated clearly in 75 words or less? Did the proposer feel t
 Ideally, a session description should give readers:
 
 1. What the topic/issue is;
-2. Whyit relates to them (very important!);
+2. Why it relates to them (very important!);
 3. What aspect of the topic the session presenters will present, or how they will present;
 4. What delegates will learn from the session, what solutions/knowledge they will come away with.
