@@ -22,18 +22,13 @@
 
 			<h1>All {{ .Title }}</h1>
 			<ul>
-				{{ with  .OutputFormats.Get "downloadable" -}}
-					<li><a href="{{ .Permalink }}">Download all proposals as a text document</a></li>
-				{{- end }}
-		
+				
+				<li><a href="/docs/Workshops.zip">Download all Workshop Proposals</a></li>
 
 			<ul>
 				<hr>
-			{{ range (.Pages.ByParam "sort_id") }}
-
-
-
-			<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
+			{{ range sort .Data.Pages.ByTitle }}
+			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
 
 
 

@@ -24,15 +24,15 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>{{ .Params.session_title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+			<h1>{{ .Params.session_title }}</h1>
 		<h3>ID: {{.Params.ID}}</h3>
 
 			{{ .Content }}
 			<h2>Session Information</h2>
-			<p><strong>Format:</strong> {{.Params.session_format | markdownify }}</p>
+			<p><strong>Format:</strong> {{.Params.session_type | markdownify }}</p>
 			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
 			<p><strong>Objectives:</strong> {{.Params.session_objectives | markdownify }}</p>
-			<p><strong>Engagement:</strong>NOPE {{.Params.engagement | markdownify }}</p>
+			<p><strong>Engagement:</strong> {{.Params.session_engagement | markdownify }}</p>
 			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
 			{{ with .Params.theme_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
