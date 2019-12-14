@@ -21,13 +21,14 @@
 		<div class="wrapper">
 
 			<h1>All {{ .Title }}</h1>
-			<ul>
+	<!--		<ul>
 				{{ with  .OutputFormats.Get "downloadable" -}}
 					<li><a href="{{ .Permalink }}">Download all proposals as a text document</a></li>
 				{{- end }}
-		
+
 
 			<ul>
+				-->
 				<hr>
 			{{ range (.Pages.ByParam "sort_id") }}
 
