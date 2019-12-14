@@ -29,8 +29,8 @@
 
 			<ul>
 				<hr>
-			{{ range sort .Data.Pages.ByTitle }}
-			<li><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></li>
+			{{ range .Pages }}
+			<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.session_title }}</a></li>
 
 
 

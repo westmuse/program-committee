@@ -28,11 +28,11 @@
 		<h3>ID: {{.File.BaseFileName}}</h3>
 
 
-			{{ .Params.session_desc }}
+			{{ .Params.session_desc |safeHTML }}
 			<h2>Session Information</h2>
-			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
-			<p><strong>Objectives:</strong> {{.Params.session_objectives | markdownify }}</p>
-			<p><strong>Engagement:</strong> {{.Params.engagement | markdownify }}</p>
+			<p><strong>Uniqueness:</strong> {{.Params.session_unique | safeHTML }}</p>
+			<p><strong>Objectives:</strong> {{.Params.session_objectives | safeHTML }}</p>
+			<p><strong>Engagement:</strong> {{.Params.engagement | safeHTML }}</p>
 			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
 			{{ with .Params.theme_comments }}<p><strong>Additional Theme Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 

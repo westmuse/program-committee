@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/5easypieces/wma#readme",
   "dependencies": {
+    "file-rename": "^1.0.2",
+    "recursive-copy": "^2.0.10",
+    "replace": "^1.1.1",
+    "replace-ext": "^1.0.0",
+    "replace-in-file": "^4.2.0",
     "request": "^2.88.0",
     "to-markdown": "^3.1.1",
     "tomlify-j0.4": "^3.0.0"

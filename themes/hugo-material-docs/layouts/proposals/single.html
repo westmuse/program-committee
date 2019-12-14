@@ -24,20 +24,21 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
-		<h3>ID: {{.File.BaseFileName}}</h3>
+			<h1>{{ .Params.session_title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+		<h3>ID: {{.Params.ID}}</h3>
 
 			{{ .Content }}
 			<h2>Session Information</h2>
-			<p><strong>Uniqueness:</strong> {{.Params.uniqueness | markdownify }}</p>
-			<p><strong>Objectives:</strong> {{.Params.objectives | markdownify }}</p>
-			<p><strong>Engagement:</strong> {{.Params.engagement | markdownify }}</p>
+			<p><strong>Format:</strong> {{.Params.session_format | markdownify }}</p>
+			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
+			<p><strong>Objectives:</strong> {{.Params.session_objectives | markdownify }}</p>
+			<p><strong>Engagement:</strong>NOPE {{.Params.engagement | markdownify }}</p>
 			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
-			{{ with .Params.additional_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
+			{{ with .Params.theme_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 			<h2>Audience</h2>
-			<p><strong>Audience:</strong> {{ delimit .Params.tags ", " }}</p>
-			<p><strong>Professional Level:</strong> {{ delimit .Params.categories ", " }}</p>
+			<p><strong>Audience:</strong> {{ .Params.audience }}</p>
+			<p><strong>Professional Level:</strong> {{ .Params.level }}</p>
 			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 
@@ -46,17 +47,17 @@
 			<div class="person-block" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start;">
 <!-- ========submitter========== -->
 			<div class="wma-participant">
-			<p><strong>{{.Params.submitter.first_name}} {{.Params.submitter.last_name}}</strong> (Submitter{{- if .Params.submitter.is_moderator -}} &nbsp;&amp; Moderator{{- end -}})<br>
-			<span>{{.Params.submitter.title}}<br>{{.Params.submitter.organization}}</span><br>
-			<span>{{.Params.submitter.city}}</span><br>
+			<p><strong>{{.Params.submitter.first_name}} {{.Params.submitter.last_name}}</strong> (Submitter{{- if eq .Params.submitter.is_mod "true"}} &nbsp;&amp; Moderator{{- end -}})<br>
+			<span>{{.Params.submitter.title}}<br>{{.Params.submitter.institution}}</span><br>
+			<span>{{.Params.submitter.location}}</span><br>
 
-				{{ with .Params.submitter.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-				{{ with .Params.submitter.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-				{{ with .Params.submitter.telephone }}<span>{{.}}</span><br>{{end}}
+				{{ with .Params.submitter.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+				{{ with .Params.submitter.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+				{{ with .Params.submitter.tel }}<span>{{.}}</span><br>{{end}}
 			</p>
 
 			<span>
-				{{ if .Params.submitter.is_presenting }}
+				{{ if eq .Params.submitter.is_pres "true"}}
 					{{.Params.submitter.first_name}} {{.Params.submitter.last_name}} <strong>is</strong> presenting as well.
 				{{else}}
 					{{.Params.submitter.first_name}} {{.Params.submitter.last_name}} <strong>is not</strong> presenting.
@@ -71,14 +72,14 @@
 
 			<div class="wma-participant">
 				<p><strong>{{.Params.moderator.first_name}} {{.Params.moderator.last_name}}</strong> (Moderator)<br>
-					<span>{{.Params.moderator.title}}<br>{{.Params.moderator.organization}}</span><br>
-					<span>{{.Params.moderator.city}}</span><br>
-					{{ with .Params.moderator.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.moderator.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.moderator.telephone }}<span>{{.}}</span><br>{{end}}
+					<span>{{.Params.moderator.title}}<br>{{.Params.moderator.institution}}</span><br>
+					<span>{{.Params.moderator.location}}</span><br>
+					{{ with .Params.moderator.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.moderator.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.moderator.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
 				<span>
-					{{ if .Params.moderator.is_presenting }}
+					{{ if eq .Params.moderator.is_pres "true"}}
 						{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is</strong> presenting as well.
 					{{else}}
 						{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is not</strong> presenting.
@@ -89,72 +90,72 @@
 		{{ end }}
 
 <!-- ========Presenter 1========== -->
-		{{ if $.Params.presenter_1.last_name }}{{- $.Scratch.Set "presenter_1" "presenter1" -}}{{ end }}
-		{{ if eq ($.Scratch.Get "presenter_1") "presenter1" }}
+		{{ if $.Params.pres_1.last_name }}{{- $.Scratch.Set "pres_1" "presenter1" -}}{{ end }}
+		{{ if eq ($.Scratch.Get "pres_1") "presenter1" }}
 			<div class="wma-participant">
-				<p><strong>{{.Params.presenter_1.first_name}} {{.Params.presenter_1.last_name}}</strong> (Panelist)<br>
-					<span>{{.Params.presenter_1.title}}<br>{{.Params.presenter_1.organization}}</span><br>
-					{{ with .Params.presenter_1.city }}<span>{{.}}</span><br>{{end}}
-					{{ with .Params.presenter_1.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.presenter_1.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.presenter_1.telephone }}<span>{{.}}</span><br>{{end}}
+				<p><strong>{{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}}</strong> (Panelist)<br>
+					<span>{{.Params.pres_1.title}}<br>{{.Params.pres_1.institution}}</span><br>
+					{{ with .Params.pres_1.location }}<span>{{.}}</span><br>{{end}}
+					{{ with .Params.pres_1.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.pres_1.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.pres_1.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.presenter_1.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if .Params.pres_1.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
 <!-- ========Presenter 2========== -->
-		{{ if $.Params.presenter_2.last_name }}{{- $.Scratch.Set "presenter_2" "presenter2" -}}{{ end }}
-		{{ if eq ($.Scratch.Get "presenter_2") "presenter2" }}
+		{{ if $.Params.pres_2.last_name }}{{- $.Scratch.Set "pres_2" "presenter2" -}}{{ end }}
+		{{ if eq ($.Scratch.Get "pres_2") "presenter2" }}
 			<div class="wma-participant">
-				<p><strong>{{.Params.presenter_2.first_name}} {{.Params.presenter_2.last_name}}</strong> (Panelist)<br>
-					<span>{{.Params.presenter_2.title}}<br>{{.Params.presenter_2.organization}}</span><br>
-					{{ with .Params.presenter_2.city }}<span>{{.}}</span><br>{{end}}
-					{{ with .Params.presenter_2.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.presenter_2.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.presenter_2.telephone }}<span>{{.}}</span><br>{{end}}
+				<p><strong>{{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}}</strong> (Panelist)<br>
+					<span>{{.Params.pres_2.title}}<br>{{.Params.pres_2.institution}}</span><br>
+					{{ with .Params.pres_2.city }}<span>{{.}}</span><br>{{end}}
+					{{ with .Params.pres_2.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.pres_2.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.pres_2.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.presenter_2.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if .Params.pres_2.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
 <!-- ========Presenter 3========== -->
-		{{ if $.Params.presenter_3.last_name }}{{- $.Scratch.Set "presenter_3" "presenter3" -}}{{ end }}
-		{{ if eq ($.Scratch.Get "presenter_3") "presenter3" }}
+		{{ if $.Params.pres_3.last_name }}{{- $.Scratch.Set "pres_3" "presenter3" -}}{{ end }}
+		{{ if eq ($.Scratch.Get "pres_3") "presenter3" }}
 			<div class="wma-participant">
-				<p><strong>{{.Params.presenter_3.first_name}} {{.Params.presenter_3.last_name}}</strong> (Panelist)<br>
-					<span>{{.Params.presenter_3.title}}<br>{{.Params.presenter_3.organization}}</span><br>
-					{{ with .Params.presenter_3.city }}<span>{{.}}</span><br>{{end}}
-					{{ with .Params.presenter_3.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.presenter_3.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.presenter_3.telephone }}<span>{{.}}</span><br>{{end}}
+				<p><strong>{{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}}</strong> (Panelist)<br>
+					<span>{{.Params.pres_3.title}}<br>{{.Params.pres_3.institution}}</span><br>
+					{{ with .Params.pres_3.city }}<span>{{.}}</span><br>{{end}}
+					{{ with .Params.pres_3.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.pres_3.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.pres_3.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.presenter_3.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if .Params.pres_3.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
 <!-- ========Presenter 4========== -->
-		{{ if $.Params.presenter_4.last_name }}{{- $.Scratch.Set "presenter_4" "presenter4" -}}{{ end }}
-		{{ if eq ($.Scratch.Get "presenter_4") "presenter4" }}
+		{{ if $.Params.pres_4.last_name }}{{- $.Scratch.Set "pres_4" "presenter4" -}}{{ end }}
+		{{ if eq ($.Scratch.Get "pres_4") "presenter4" }}
 			<div class="wma-participant">
-				<p><strong>{{.Params.presenter_4.first_name}} {{.Params.presenter_4.last_name}}</strong> (Panelist)<br>
-					<span>{{.Params.presenter_4.title}}<br>{{.Params.presenter_4.organization}}</span><br>
-					{{ with .Params.presenter_4.city }}<span>{{.}}</span><br>{{end}}
-					{{ with .Params.presenter_4.primary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.presenter_4.secondary_email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.presenter_4.telephone }}<span>{{.}}</span><br>{{end}}
+				<p><strong>{{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}}</strong> (Panelist)<br>
+					<span>{{.Params.pres_4.title}}<br>{{.Params.pres_4.institution}}</span><br>
+					{{ with .Params.pres_4.city }}<span>{{.}}</span><br>{{end}}
+					{{ with .Params.pres_4.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.pres_4.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+					{{ with .Params.pres_4.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.presenter_4.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if .Params.pres_4.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 	</div>
 
-	{{ with or .Params.moderator.reason .Params.presenter_1.reason }}<h2>Participant Justifications</h2>{{end}}
+	{{ with or .Params.moderator.reason .Params.pres_1.reason }}<h2>Participant Justifications</h2>{{end}}
 	{{ with .Params.moderator.reason }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
-	{{ with .Params.presenter_1.reason }}<p><strong>{{$.Params.presenter_1.first_name}} {{$.Params.presenter_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
-	{{ with .Params.presenter_2.reason }}<p><strong>{{$.Params.presenter_2.first_name}} {{$.Params.presenter_2.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
-	{{ with .Params.presenter_3.reason }}<p><strong>{{$.Params.presenter_3.first_name}} {{$.Params.presenter_3.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
-	{{ with .Params.presenter_4.reason }}<p><strong>{{$.Params.presenter_4.first_name}} {{$.Params.presenter_4.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.pres_1.reason }}<p><strong>{{$.Params.pres_1.first_name}} {{$.Params.pres_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.pres_2.reason }}<p><strong>{{$.Params.pres_2.first_name}} {{$.Params.pres_2.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.pres_3.reason }}<p><strong>{{$.Params.pres_3.first_name}} {{$.Params.pres_3.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.pres_4.reason }}<p><strong>{{$.Params.pres_4.first_name}} {{$.Params.pres_4.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 
 	{{ with or .Params.keynote_suggestions .Params.other_suggestions }}<h2>Additional Information</h2>{{ end }}
 	{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
