@@ -7,5 +7,5 @@ weight: 15
 
 Below are some critical documents for your use as a program committee member.
 
-* [Program Committee Session Assignments](https://pc.westmuse.org/docs/WMA2019_assignments.xlsx)
-* [Program Committee Roster](/images/uploads/wma2019-pc-roster.xlsx)
+* [Program Committee Session Assignments](/files/wma2020_round1_pc_assignments_final.xlsx)
+* [Program Committee Roster](/files/wma2020-pc-roster.xlsx)
