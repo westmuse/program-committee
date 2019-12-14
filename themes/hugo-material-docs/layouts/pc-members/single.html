@@ -37,10 +37,10 @@
 			</div>
 
 {{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
-
+<h2>Assigned Panels:</h2>
 <ul>
 	{{ range  $related }}
-		<li><a href="{{.Permalink}}">{{ .Params.session_title }}</a></li>
+		<li><a href="{{.Permalink}}">{{ .Params.ID }}: {{ .Params.session_title }}</a></li>
 	{{ end }}
 </ul>
 

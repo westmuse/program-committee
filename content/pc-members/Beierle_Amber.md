@@ -9,5 +9,6 @@ email: 'amber.beierle@ishs.idaho.gov'
 phone: '(208) 848-7480'
 chair: FALSE
 year: '2019'
+assignee: 'amberbeierle'
 
 ---

@@ -9,5 +9,6 @@ email: 'lmadsen@boisestate.edu'
 phone: ''
 chair: FALSE
 year: '2019'
+assignee: 'lesliemadsen'
 
 ---

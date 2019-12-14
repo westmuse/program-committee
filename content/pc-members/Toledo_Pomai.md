@@ -9,5 +9,6 @@ email: 'members@iolanipalace.org'
 phone: '808-522-0827'
 chair: FALSE
 year: '2019'
+assignee: 'pomaitoledo'
 
 ---

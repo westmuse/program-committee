@@ -9,5 +9,6 @@ email: 'dkersting@latah.id.us'
 phone: '208.882.1004'
 chair: TRUE
 year: '2019'
+assignee: 'dulcekersting'
 
 ---

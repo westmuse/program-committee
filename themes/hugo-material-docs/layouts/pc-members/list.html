@@ -29,7 +29,7 @@
 				<p><a href="{{ .Permalink }}" title="{{ .Title }}"><strong>{{.Params.first_name}} {{.Params.last_name}}</strong></a> {{ if .Params.chair }}<strong>(Chair)</strong>{{end}}<br>
 					<span>{{.Params.org_title}}<br>{{.Params.organization}}</span><br>
 					<span>{{.Params.state}}</span><br>
-					{{ with .Params.email }}<span>{{.}}</span><br>{{end}}
+					{{ with .Params.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.phone }}<span>{{.}}</span><br>{{end}}
 					{{ with .Params.moderator.telephone }}<span>{{.}}</span><br>{{end}}
 				</p>

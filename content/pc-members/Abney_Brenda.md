@@ -9,5 +9,6 @@ email: 'brenda_abney@tempe.gov'
 phone: ''
 chair: FALSE
 year: '2019'
+assignee: 'brendaabney'
 
 ---

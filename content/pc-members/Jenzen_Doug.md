@@ -7,7 +7,8 @@ organization: 'Dunes Center'
 state: 'CA'
 email: 'doug@dunescenter.org '
 phone: ''
-chair: FALSE
+chair: TRUE
 year: '2019'
+assignee: 'dougjenzen'
 
 ---

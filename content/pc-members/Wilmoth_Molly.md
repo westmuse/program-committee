@@ -7,7 +7,8 @@ organization: 'Washington State Historical Society'
 state: 'WA'
 email: 'molly.wilmoth@wshs.wa.gov'
 phone: ''
-chair: TRUE
+chair: FALSE
 year: '2019'
+assignee: 'mollywilmoth'
 
 ---
