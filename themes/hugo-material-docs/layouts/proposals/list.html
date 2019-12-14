@@ -29,8 +29,11 @@
 
 			<ul>
 				<hr>
-			{{ range .Pages }}
-			<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.session_title }}</a></li>
+			{{ range (.Pages.ByParam "ID") }}
+
+
+
+			<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
 
 
 
