@@ -13,7 +13,10 @@
           </div>
           <div class="stretch">
             <div class="title">
-              {{ .NextInSection.Title }}
+              {{ if .NextInSection.Title }}{{.}}
+              {{ else }}
+                {{ .NextInSection.Params.session_title }}
+              {{ end }}
             </div>
           </div>
         </div>
@@ -30,7 +33,10 @@
         <div class="page">
           <div class="stretch">
             <div class="title">
-              {{ .PrevInSection.Title }}
+              {{ if .PrevInSection.Title }}{{.}}
+              {{ else }}
+                {{ .PrevInSection.Params.session_title }}
+              {{ end }}
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
