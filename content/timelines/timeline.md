@@ -20,7 +20,7 @@ weight: 10
 
 ## February 2020
 
-* February 14 – Resubmissions due to through WMA session resubmittal website
+* February 14 – Resubmissions due through WMA session resubmittal website
 
 ## March 2020
 
