@@ -38,10 +38,10 @@
 
 {{ range sort .Data.Pages }}
 \fs25 \f0 \fi0
-{\pard \b \fs40 {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
+{\pard \b \fs40 {{- .Params.session_title -}} \par}
 
 
-{\pard \sb100 \fs30 {{- .File.BaseFileName -}} \par}
+{\pard \sb100 \fs30 {{- .Params.ID -}} \par}
 
 {\pard \sb180 \sa180 {{.Params.session_desc}} \par}
 
@@ -110,7 +110,7 @@
 \pard\intbl {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \line
 {{.Params.pres_1.title}} \line
 {{.Params.pres_1.institution}} \line
-{{if or (.Params.pres1_location) (isset .Params.pres_1 "location") }}
+{{if or (.Params.pres1.location) (isset .Params.pres_1 "location") }}
 {{ .Params.pres_1.location }}\line
 {{ end }}
 {{ with .Params.pres_1.email }}
