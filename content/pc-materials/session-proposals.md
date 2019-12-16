@@ -25,4 +25,4 @@ Each PC member must read ALL of the proposals submitted. Please be sure to bring
 * [Round 1 Scoring Sheet](/files/WMA2020_Round1_ScoringSheet_final.xlsx)
 * [Feedback Template](/files/WMA2020_Feedback-Template.docx)
 * [Proposal Assignments](/files/WMA2020_round1_pc_assignments_final.xlsx)
-* [Session Structures](<How to Review Session Proposals >)
+* [Session Structures](/files/session-structures-1.pdf)
