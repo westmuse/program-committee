@@ -24,20 +24,11 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>{{ .Title }}</h1>
-			<div class="wma-participant">
-				<p>
-					<span>{{.Params.org_title}}<br>{{.Params.organization}}</span><br>
-					<span>{{.Params.state}}</span><br>
-					{{ with .Params.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-					{{ with .Params.phone }}<span>{{.}}</span><br>{{end}}
-					{{ with .Params.moderator.telephone }}<span>{{.}}</span><br>{{end}}
-				</p>
+			<h1>Proposals in the {{ .Title }} track: </h1>
 
-			</div>
 
-{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
-<h2>Assigned Panels:</h2>
+{{ $related := .Site.RegularPages.RelatedIndices . "session_track_id"  }}
+
 <ul>
 	{{ range  $related }}
 		<li><a href="{{.Permalink}}">{{ .Params.ID }}: {{ .Params.session_title }}</a></li>

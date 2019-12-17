@@ -27,11 +27,17 @@
 			<h1>{{ .Params.session_title }}</h1>
 		<h3>ID: {{.Params.ID}}</h3>
 		<p><strong>Assigned to: </strong>
-			{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
+			{{ $assignees := .Site.RegularPages.RelatedIndices . "assignee"  }}
 
-			{{ range  $related }}
+			{{ range  $assignees }}
 				<a href="{{.Permalink}}">{{ .Title }}</a>
 			{{ end }}
+		<p><strong>Track: </strong>
+			{{ $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  }}
+
+				{{ range  $tracks }}
+					<a href="{{.Permalink}}">{{ .Title }}</a>
+				{{ end }}
 
 
 			{{ .Content }}
@@ -46,6 +52,7 @@
 			<h2>Audience</h2>
 			<p><strong>Audience:</strong> {{ .Params.audience }}</p>
 			<p><strong>Professional Level:</strong> {{ .Params.level }}</p>
+			<p><strong>Scalability:</strong> {{ .Params.session_scalability }}</p>
 			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 
