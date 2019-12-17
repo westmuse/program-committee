@@ -3,6 +3,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   {{ if .NextInSection }}
+
       <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}">
         <span class="direction">
           Previous
@@ -13,9 +14,12 @@
           </div>
           <div class="stretch">
             <div class="title">
-              {{ if .NextInSection.Title }}{{.}}
+              {{ if .NextInSection.Title }}
+                {{.NextInSection.Params.title}}
+
               {{ else }}
                 {{ .NextInSection.Params.session_title }}
+                <span>this does not have a title</span>
               {{ end }}
             </div>
           </div>
@@ -33,7 +37,8 @@
         <div class="page">
           <div class="stretch">
             <div class="title">
-              {{ if .PrevInSection.Title }}{{.}}
+              {{ if .PrevInSection.Title }}
+                {{.PrevInSection.Params.title }}
               {{ else }}
                 {{ .PrevInSection.Params.session_title }}
               {{ end }}
