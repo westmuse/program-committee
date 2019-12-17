@@ -25,7 +25,7 @@
 	<article class="article">
 		<div class="wrapper">
 			{{ range where .Site.Pages "Section" "home" }}
-				<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+				<h1>{{ .Title }}</h1>
 
 				{{ .Content }}
 			{{ end }}
