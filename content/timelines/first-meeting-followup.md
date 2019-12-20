@@ -16,7 +16,7 @@ When you reach out to your assigned Proposers, please title the subject line as 
 2. Ask Proposer to rewrite their proposals taking into account the notes from the Program Committee. Remind them that they must confirm their list of speakers.
 3. When instructing proposers how to resubmit their session, please ask them to resubmit their session referencing their proposal number, i.e."WMA2020_SP02".
 
-The proposals must be resubmitted to the [WMA resubmission website](https://forms.gle/NFXRDMawzrzbviPF8) no later than February 14, 2019. The material must be prepared and resubmitted in a timely manner for review, thus late resubmissions cannot be accepted.
+The proposals must be resubmitted to the [WMA resubmission website](https://forms.gle/NFXRDMawzrzbviPF8) no later than February 14, 2020. The material must be prepared and resubmitted in a timely manner for review, thus late resubmissions cannot be accepted.
 
 ## 2020 Session Notes (from the January meeting):
 
