@@ -9,5 +9,5 @@ Below are some critical documents for your use as a program committee member.
 
 * [Program Committee Session Assignments](/files/wma2020_round1_pc_assignments_final.xlsx)
 * [Program Committee Roster](/files/wma2020-pc-roster.xlsx)
-* [WMA 2019 Survey Results](/files/...)
+* [WMA 2019 Survey Results](/files/wma2019-survey-results.pdf)
 
