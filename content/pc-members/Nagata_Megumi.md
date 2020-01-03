@@ -9,5 +9,5 @@ email: mnagata@kingcounty.gov
 phone: 000-000-0000
 chair: false
 year: '2019'
+assignee: 'meguminegata'
 ---
-
