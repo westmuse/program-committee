@@ -1,7 +1,7 @@
 ---
-title: 'Leslie Madsen Brooks'
+title: 'Leslie Madsen'
 first_name: 'Leslie'
-last_name: 'Madsen Brooks'
+last_name: 'Madsen'
 org_title: 'Professor'
 organization: 'Boise State'
 state: 'ID'
