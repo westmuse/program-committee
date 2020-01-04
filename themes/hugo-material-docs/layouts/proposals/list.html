@@ -23,10 +23,12 @@
 			<h1>All {{ .Title }}</h1>
 		<br>
 			<ul>
+				{{ with .Resources.Match "**.pdf" }}
+					{{ range . }}
+						<li><a href="{{ .RelPermalink }}" target="_blank">Download all proposals as a single PDF</a></li>
+					{{ end }}
+				{{ end }}
 
-			{{ with  .OutputFormats.Get "downloadable" -}}
-<li><a href="{{ .Permalink }}">Download all proposals as a text document</a></li>
-{{- end }}
 			<!--<li><a href="/docs/WMA2019_Round2_ScoringSheet.xlsx">Round 2 Scoring Sheet</a></li>-->
 		</ul>
 

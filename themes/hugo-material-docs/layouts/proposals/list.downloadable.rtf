@@ -43,7 +43,7 @@
 
 {\pard \sb100 \fs30 {{- .File.BaseFileName -}} \par}
 
-{\pard \sb180 \sa180 {{.Params.session_desc}} \par}
+{\pard \sb180 \sa180 {{.Params.session_desc | plainify}} \par}
 
 {\pard \b \fs30 \sa180 Session Information \par}
 {\pard \sb180 \sa180 {\b Uniqueness:} {{.Params.session_unique | plainify }} \par}
@@ -57,7 +57,7 @@
 {\pard {\b Audience:} {{.Params.audience | plainify }} \par}
 {\pard \sa180 {\b Professional Level:} {{.Params.level | plainify }} \par}
 {{- with .Params.other_comments -}}
-  {\pard \sb180 \sa180 {\b Other Comments:} {{ . | markdownify }} \par}
+  {\pard \sb180 \sa180 {\b Other Comments:} {{ . | plainify }} \par}
 {{end}}
 \page
 {\pard \b \fs30 \sa180 \keepn Participants \par}
@@ -65,38 +65,38 @@
 \trowd\trgaph180\cellx5000\cellx10000
 
 
-\pard\intbl {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \line
-{{.Params.submitter.title}} \line
-{{.Params.submitter.institution}} \line
-{{.Params.submitter.location}} \line
+\pard\intbl {\b {{.Params.submitter.first_name | plainify}} {{.Params.submitter.last_name | plainify}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \line
+{{.Params.submitter.title | plainify}} \line
+{{.Params.submitter.institution | plainify}} \line
+{{.Params.submitter.location | plainify}} \line
 {{ with .Params.submitter.email }}
-{{ . }} \line
+{{ . | plainify}} \line
 {{ end }}
 {{ with .Params.submitter.email2 }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.submitter.tel }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 \cell
 
 
 {{- if .Params.moderator.last_name -}}
 
-\pard\intbl {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \line
-{{.Params.moderator.title}} \line
-{{.Params.moderator.institution}} \line
+\pard\intbl {\b {{.Params.moderator.first_name | plainify}} {{.Params.moderator.last_name | plainify}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \line
+{{.Params.moderator.title | plainify}} \line
+{{.Params.moderator.institution | plainify}} \line
 {{ with .Params.moderator.location}}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.moderator.email }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.moderator.email2 }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.moderator.tel }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 \cell
 {{ end }}
@@ -107,20 +107,20 @@
 
 
 
-\pard\intbl {\b {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }(Presenter) \line
-{{.Params.pres_1.title}} \line
-{{.Params.pres_1.institution}} \line
+\pard\intbl {\b {{.Params.pres_1.first_name | plainify}} {{.Params.pres_1.last_name | plainify}} }(Presenter) \line
+{{.Params.pres_1.title | plainify}} \line
+{{.Params.pres_1.institution | plainify}} \line
 {{if or (.Params.pres1_location) (isset .Params.pres_1 "location") }}
-{{ .Params.pres_1.location }}\line
+{{ .Params.pres_1.location | plainify }}\line
 {{ end }}
 {{ with .Params.pres_1.email }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.pres_1.email2 }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.pres_1.tel }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 \cell
 
@@ -130,20 +130,20 @@
 
 {{ if .Params.pres_2.last_name }}
 
-\pard\intbl {\b {{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}} }(Presenter) \line
-{{.Params.pres_2.title}} \line
-{{.Params.pres_2.institution}} \line
+\pard\intbl {\b {{.Params.pres_2.first_name | plainify}} {{.Params.pres_2.last_name | plainify}} }(Presenter) \line
+{{.Params.pres_2.title | plainify}} \line
+{{.Params.pres_2.institution | plainify}} \line
 {{with .Params.pres_2.location}}
-{{ . }}\line
+{{ . | plainify }}\line
 {{ end }}
 {{ with .Params.pres_2.email }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.pres_2.email2 }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.pres_2.tel }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 \cell
 {{ end }}
@@ -155,20 +155,20 @@
 
 
 
-\pard\intbl {\b {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }(Presenter) \line
-{{.Params.pres_3.title}} \line
-{{.Params.pres_3.institution}} \line
+\pard\intbl {\b {{.Params.pres_3.first_name | plainify}} {{.Params.pres_3.last_name | plainify}} }(Presenter) \line
+{{.Params.pres_3.title | plainify}} \line
+{{.Params.pres_3.institution | plainify}} \line
 {{with .Params.pres_3.location}}
-{{ . }}\line
+{{ . | plainify }}\line
 {{ end }}
 {{ with .Params.pres_3.email }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.pres_3.email2 }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.pres_3.tel }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 \cell
 
@@ -176,20 +176,20 @@
 
 {{ if .Params.pres_4.last_name }}
 
-\pard\intbl {\b {{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}} }(Presenter) \line
-{{.Params.pres_4.title}} \line
-{{.Params.pres_4.institution}} \line
+\pard\intbl {\b {{.Params.pres_4.first_name | plainify}} {{.Params.pres_4.last_name | plainify}} }(Presenter) \line
+{{.Params.pres_4.title | plainify}} \line
+{{.Params.pres_4.institution | plainify}} \line
 {{with .Params.pres_4.location}}
-{{ . }}\line
+{{ . | plainify }}\line
 {{ end }}
 {{ with .Params.pres_4.email }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.pres_4.email2 }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 {{ with .Params.pres_4.tel }}
-{{ . }} \line
+{{ . | plainify }} \line
 {{ end }}
 \cell
 {{ end }}

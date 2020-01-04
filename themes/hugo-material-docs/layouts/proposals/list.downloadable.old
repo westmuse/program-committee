@@ -36,10 +36,10 @@
     {\author Western Museums Association}
   }
 
-{{ range where .Pages "Section" "proposals" }}
+{{ range (.Pages.ByParam "sort_id") }}
 \fs25 \f0 \fi0
-{\pard \b \fs40 {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
-{\pard \b \fs40 TESTING \par}
+{\pard \b \fs40 {{- .Params.session_title | plainify -}} \par}
+
 
 {\pard \sb100 \fs30 {{- .File.BaseFileName -}} \par}
 
