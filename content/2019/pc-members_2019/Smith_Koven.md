@@ -9,5 +9,4 @@ email: koven@kovenjsmith.com
 phone: (917) 727-2612
 chair: false
 year: '2019'
-assignee: 'kovensmith'
 ---
