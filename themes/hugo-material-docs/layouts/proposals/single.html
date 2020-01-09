@@ -164,12 +164,12 @@
 		{{ end }}
 	</div>
 
-	{{ with or .Params.moderator.reason .Params.pres_1.reason }}<h2>Participant Justifications</h2>{{end}}
-	{{ with .Params.moderator.reason }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
-	{{ with .Params.pres_1.reason }}<p><strong>{{$.Params.pres_1.first_name}} {{$.Params.pres_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
-	{{ with .Params.pres_2.reason }}<p><strong>{{$.Params.pres_2.first_name}} {{$.Params.pres_2.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
-	{{ with .Params.pres_3.reason }}<p><strong>{{$.Params.pres_3.first_name}} {{$.Params.pres_3.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
-	{{ with .Params.pres_4.reason }}<p><strong>{{$.Params.pres_4.first_name}} {{$.Params.pres_4.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with or .Params.moderator.justification .Params.pres_1.justification }}<h2>Participant Justifications</h2>{{end}}
+	{{ with .Params.moderator.justification }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.pres_1.justification }}<p><strong>{{$.Params.pres_1.first_name}} {{$.Params.pres_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.pres_2.justification }}<p><strong>{{$.Params.pres_2.first_name}} {{$.Params.pres_2.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.pres_3.justification }}<p><strong>{{$.Params.pres_3.first_name}} {{$.Params.pres_3.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+	{{ with .Params.pres_4.justification }}<p><strong>{{$.Params.pres_4.first_name}} {{$.Params.pres_4.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 
 	{{ with or .Params.keynote_suggestions .Params.other_suggestions }}<h2>Additional Information</h2>{{ end }}
 	{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
