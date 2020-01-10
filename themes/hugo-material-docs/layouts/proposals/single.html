@@ -99,7 +99,7 @@
 						{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is not</strong> presenting.
 					{{end}}
 				</span><br>
-				<span><em>({{ if .Params.moderator.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.moderator.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
@@ -114,7 +114,7 @@
 					{{ with .Params.pres_1.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.pres_1.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.pres_1.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.pres_1.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
@@ -129,7 +129,7 @@
 					{{ with .Params.pres_2.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.pres_2.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.pres_2.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.pres_2.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
@@ -144,7 +144,7 @@
 					{{ with .Params.pres_3.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.pres_3.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.pres_3.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.pres_3.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
@@ -159,7 +159,7 @@
 					{{ with .Params.pres_4.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.pres_4.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.pres_4.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.pres_4.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 	</div>
