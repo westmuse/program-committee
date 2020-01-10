@@ -165,6 +165,7 @@
 	</div>
 
 	{{ with or .Params.moderator.justification .Params.pres_1.justification }}<h2>Participant Justifications</h2>{{end}}
+	{{ with .Params.submitter.justification }}<p><strong>{{$.Params.submitter.first_name}} {{$.Params.submitter.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 	{{ with .Params.moderator.justification }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 	{{ with .Params.pres_1.justification }}<p><strong>{{$.Params.pres_1.first_name}} {{$.Params.pres_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 	{{ with .Params.pres_2.justification }}<p><strong>{{$.Params.pres_2.first_name}} {{$.Params.pres_2.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}

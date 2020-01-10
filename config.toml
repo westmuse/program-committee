@@ -111,6 +111,10 @@ googleAnalytics = ""
 	name   = "Committee Members"
 	url    = "pc-members/"
 	weight = 30
+[[menu.main]]
+  name   = "Proposals by Track"
+  url    = "tracks/"
+  weight = 50
 
 [blackfriday]
 	smartypants	= true
