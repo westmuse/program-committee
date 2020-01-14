@@ -11,7 +11,7 @@ Below are some critical documents for your use as a program committee member.
 * [Program Committee Roster](/files/wma2020-pc-roster.xlsx)
 * [WMA 2019 Annual Meeting Survey Results](/files/wma2019-survey-results.pdf)
 
-WMA Staff Email Templates
+WMA Staff Email Templates (for reference only)
 * [WMA 2020 January Decline / Acceptance Email Template](/files/wma2020_PC_January_Emails)
 
 
