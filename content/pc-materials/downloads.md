@@ -11,4 +11,4 @@ Below are some critical documents for your use as a program committee member.
 * [Program Committee Roster](/files/wma2020-pc-roster.xlsx)
 * [WMA 2019 Annual Meeting Survey Results](/files/wma2019-survey-results.pdf)
 
-[Prelim Scores](https://docs.google.com/spreadsheets/d/1XCbrRJvtjWVHh7ctMPNBYFvQm69_ZEdyC7E4enk5m6g/edit?usp=sharing)
+
