@@ -25,20 +25,34 @@
 	<article class="article">
 		<div class="wrapper">
 			<h1>{{ .Params.session_title }}</h1>
-		<h3>ID: {{.File.BaseFileName}}</h3>
+		<h3>ID: {{.Params.ID}}</h3>
+		<p><strong>Assigned to: </strong>
+			{{ $assignees := .Site.RegularPages.RelatedIndices . "assignee"  }}
+
+			{{ range  $assignees }}
+				<a href="{{.Permalink}}">{{ .Title }}</a>
+			{{ end }}
+		<p><strong>Track: </strong>
+			{{ $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  }}
+
+				{{ range  $tracks }}
+					<a href="{{.Permalink}}">{{ .Title }}</a>
+				{{ end }}
 
 
-			{{ .Params.session_desc |safeHTML }}
+			{{ .Content }}
 			<h2>Session Information</h2>
-			<p><strong>Uniqueness:</strong> {{.Params.session_unique | safeHTML }}</p>
-			<p><strong>Objectives:</strong> {{.Params.session_objectives | safeHTML }}</p>
-			<p><strong>Engagement:</strong> {{.Params.engagement | safeHTML }}</p>
+			<p><strong>Format:</strong> {{.Params.session_type | markdownify }}</p>
+			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
+			<p><strong>Objectives:</strong> {{.Params.session_objectives | markdownify }}</p>
+			<p><strong>Engagement:</strong> {{.Params.session_engagement | markdownify }}</p>
 			<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
-			{{ with .Params.theme_comments }}<p><strong>Additional Theme Comments: </strong> {{ . | markdownify  }}</p>{{end}}
+			{{ with .Params.theme_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 			<h2>Audience</h2>
 			<p><strong>Audience:</strong> {{ .Params.audience }}</p>
 			<p><strong>Professional Level:</strong> {{ .Params.level }}</p>
+			<p><strong>Scalability:</strong> {{ .Params.session_scalability }}</p>
 			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 
@@ -47,7 +61,7 @@
 			<div class="person-block" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start;">
 <!-- ========submitter========== -->
 			<div class="wma-participant">
-			<p><strong>{{.Params.submitter.first_name}} {{.Params.submitter.last_name}}</strong> (Submitter{{- if .Params.submitter.is_mod -}} &nbsp;&amp; Moderator{{- end -}})<br>
+			<p><strong>{{.Params.submitter.first_name}} {{.Params.submitter.last_name}}</strong> (Submitter{{- if eq .Params.submitter.is_mod "true"}} &nbsp;&amp; Moderator{{- end -}})<br>
 			<span>{{.Params.submitter.title}}<br>{{.Params.submitter.institution}}</span><br>
 			<span>{{.Params.submitter.location}}</span><br>
 
@@ -57,7 +71,7 @@
 			</p>
 
 			<span>
-				{{ if .Params.submitter.is_pres }}
+				{{ if eq .Params.submitter.is_pres "true"}}
 					{{.Params.submitter.first_name}} {{.Params.submitter.last_name}} <strong>is</strong> presenting as well.
 				{{else}}
 					{{.Params.submitter.first_name}} {{.Params.submitter.last_name}} <strong>is not</strong> presenting.
@@ -79,13 +93,13 @@
 					{{ with .Params.moderator.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
 				<span>
-					{{ if .Params.moderator.is_pres }}
+					{{ if eq .Params.moderator.is_pres "true"}}
 						{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is</strong> presenting as well.
 					{{else}}
 						{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is not</strong> presenting.
 					{{end}}
 				</span><br>
-				<span><em>({{ if .Params.moderator.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.moderator.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
@@ -100,7 +114,7 @@
 					{{ with .Params.pres_1.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.pres_1.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.pres_1.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.pres_1.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
@@ -115,7 +129,7 @@
 					{{ with .Params.pres_2.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.pres_2.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.pres_2.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.pres_2.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
@@ -130,7 +144,7 @@
 					{{ with .Params.pres_3.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.pres_3.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.pres_3.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.pres_3.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 
@@ -145,12 +159,13 @@
 					{{ with .Params.pres_4.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
 					{{ with .Params.pres_4.tel }}<span>{{.}}</span><br>{{end}}
 				</p>
-				<span><em>({{ if .Params.pres_4.is_confirmed }}confirmed{{else}}not confirmed{{end}})</em></span>
+				<span><em>({{ if eq .Params.pres_4.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
 			</div>
 		{{ end }}
 	</div>
 
-	{{ with or .Params.submitter.justification .Params.moderator.justification .Params.pres_1.justification }}<h2>Participant Justifications</h2>{{end}}
+	{{ with or .Params.moderator.justification .Params.pres_1.justification }}<h2>Participant Justifications</h2>{{end}}
+	{{ with .Params.submitter.justification }}<p><strong>{{$.Params.submitter.first_name}} {{$.Params.submitter.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 	{{ with .Params.moderator.justification }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 	{{ with .Params.pres_1.justification }}<p><strong>{{$.Params.pres_1.first_name}} {{$.Params.pres_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 	{{ with .Params.pres_2.justification }}<p><strong>{{$.Params.pres_2.first_name}} {{$.Params.pres_2.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
@@ -161,26 +176,17 @@
 	{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
 	{{ with .Params.other_suggestions }}<p><strong>Other Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
 
-	<!-- ========Program Committee========== -->
-	<h2>Program Committee</h2>
-	{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
 
-	<ul>
-		{{ range  $related }}
-			<li><a href="{{.Permalink}}">{{ .Params.title }}</a></li>
-		{{ end }}
-	</ul>
 
 </div>
-</article>
 
 		<div style="min-height: 80px"></div>
 <p>{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}</p>
 			<footer class="footer">
 				{{ partial "footer" . }}
 			</footer>
-
-
+		</div>
+	</article>
 
 	<div class="results" role="status" aria-live="polite">
 		<div class="scrollable">
