@@ -22,7 +22,7 @@ Both days of PC Meeting will be held at Oregon Historical Society
 
 Friday, March 13, 2020: 10am - 5:00pm Saturday, March 14, 2020: 10am - 3:00pm. We will do our best to finish by 3pm. However, adjournment is dependent on a completed agenda.
 
-Please go to the Program Committee Materials and Guidelines page to view the Guides for PC Members - especially the How to Review Session Proposals page, which includes the the PC Session Assignments. Of course, you are going to want to read the Revised Session Proposals (posted in late February)!
+Please go to the Program Committee Materials and Guidelines page to view the Guides for PC Members - especially the How to Review Session Proposals page, which includes the the PC Session Assignments. Of course, you are going to want to read the Revised Session Proposals and score them using the Round 2 Scoring Sheet (posted in late February)!
 
 ## Agenda:
 
