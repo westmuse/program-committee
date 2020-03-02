@@ -99,6 +99,11 @@ googleAnalytics = ""
 	weight = 25
 
 [[menu.main]]
+	name   = "Round 2 Proposals"
+	url    = "proposals-round2/"
+	weight = 30
+
+[[menu.main]]
 	name   = "Round 1 Proposals"
 	url    = "proposals/"
 	weight = 40

@@ -29,11 +29,23 @@
 
 {{ $related := .Site.RegularPages.RelatedIndices . "session_track_id"  }}
 
+<h3>Round 1:</h3>
 <ul>
 	{{ range  $related }}
-		<li><a href="{{.Permalink}}">{{ .Params.ID }}: {{ .Params.session_title }}</a></li>
+		{{ if eq .Section "proposals" }}
+			<li><a href="{{.Permalink}}">{{ .Params.ID }}: {{ .Params.session_title }}</a></li>
+		{{ end }}
 	{{ end }}
 </ul>
+<h3>Round 2:</h3>
+<ul>
+	{{ range  $related }}
+		{{ if eq .Section "proposals-round2" }}
+			<li><a href="{{.Permalink}}">{{ .Params.ID }}: {{ .Params.session_title }}</a></li>
+		{{ end }}
+	{{ end }}
+</ul>
+
 
 </div>
 
