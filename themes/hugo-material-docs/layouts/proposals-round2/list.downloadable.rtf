@@ -64,7 +64,7 @@
 \trowd\trgaph180\cellx5000\cellx10000
 
 
-\pard\intbl {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if .Params.submitter.is_mod }}, Moderator{{ end }}{{- if .Params.submitter.is_pres -}}, Presenter{{ end }}) \line
+\pard\intbl {\b {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} } (Submitter{{ if eq .Params.submitter.is_mod "true" }}, Moderator{{ end }}{{- if eq .Params.submitter.is_pres "true" -}}, Presenter{{ end }}) \line
 {{.Params.submitter.title}} \line
 {{.Params.submitter.institution}} \line
 {{.Params.submitter.location}} \line
@@ -82,7 +82,7 @@
 
 {{- if .Params.moderator.last_name -}}
 
-\pard\intbl {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if .Params.moderator.is_pres -}}, Presenter{{ end }}) \line
+\pard\intbl {\b {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} } (Moderator {{- if eq .Params.moderator.is_pres "true" -}}, Presenter{{ end }}) \line
 {{.Params.moderator.title}} \line
 {{.Params.moderator.institution}} \line
 {{ with .Params.moderator.location}}
@@ -97,6 +97,7 @@
 {{ with .Params.moderator.tel }}
 {{ . }} \line
 {{ end }}
+({{ if eq .Params.moderator.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) \line
 \cell
 {{ end }}
 
@@ -121,6 +122,7 @@
 {{ with .Params.pres_1.tel }}
 {{ . }} \line
 {{ end }}
+({{ if eq .Params.pres_1.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})\line
 \cell
 
 
@@ -144,6 +146,7 @@
 {{ with .Params.pres_2.tel }}
 {{ . }} \line
 {{ end }}
+({{ if eq .Params.pres_2.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})\line
 \cell
 {{ end }}
 \row
@@ -169,6 +172,7 @@
 {{ with .Params.pres_3.tel }}
 {{ . }} \line
 {{ end }}
+({{ if eq .Params.pres_3.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})\line
 \cell
 
 
@@ -190,6 +194,7 @@
 {{ with .Params.pres_4.tel }}
 {{ . }} \line
 {{ end }}
+({{ if eq .Params.pres_4.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})\line
 \cell
 {{ end }}
 
