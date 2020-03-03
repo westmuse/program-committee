@@ -29,23 +29,22 @@
   {\colortbl\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;}
   {\stylesheet{\s250\li720 \f21\fs20\ul \sbasedon0\snext0 heading 6;}{\s251\li720 \b\f21\fs20 \sbasedon0\snext0 heading 5;}{\s252\li360 \f21\ul \sbasedon0\snext0 heading 4;}{\s253\li360 \b\f21 \sbasedon0\snext0 heading 3;}{\s254\sb120 \b\f21 \sbasedon0\snext0 heading 2;}{\s255\sb240 \b\f21\ul \sbasedon0\snext0 heading 1;}{\f21 \sbasedon222\snext0 Normal;}{\s2 \b\f21\cf1 \sbasedon0\snext2 Anchor;}}
   {\header \pard\qc\plain\f2\fs22\i
-[ WMA Spring 2020  / {\b p.\chpgn} ]
+[ WMA Spring 2020 - Round 2 / {\b p.\chpgn} ]
 \par}
 
   {\info
     {\author Western Museums Association}
   }
 
-{{ range where .Pages "Section" "proposals" }}
-\fs25 \f0 \fi0
-{\pard \b \fs40 {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
-{\pard \b \fs40 TESTING \par}
+{{ range where .Pages "Section" "proposals-round2" }}
+\fs20 \f0 \fi0
+{\pard \b \fs35 {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
 
-{\pard \sb100 \fs30 {{- .File.BaseFileName -}} \par}
+{\pard \sb100 \fs25 {{- .File.BaseFileName -}} \par}
 
 {\pard \sb180 \sa180 {{.Params.session_desc}} \par}
 
-{\pard \b \fs30 \sa180 Session Information \par}
+{\pard \b \fs25 \sa180 Session Information \par}
 {\pard \sb180 \sa180 {\b Uniqueness:} {{.Params.session_unique | plainify }} \par}
 {\pard \sb180 \sa180 {\b Objectives:} {{.Params.session_objectives | plainify }} \par}
 {\pard \sb180 \sa180 {\b Relationship to Theme:} {{.Params.theme_relationship | plainify }} \par}
@@ -53,14 +52,14 @@
   {\pard \sb180 \sa180 {\b Additional Theme Comments:} {{ . | plainify  }} \par}
 {{- end -}}
 
-{\pard \b \fs30 \sa180 \keepn Audience \par}
+{\pard \b \fs25 \sa180 \keepn Audience \par}
 {\pard {\b Audience:} {{.Params.audience | plainify }} \par}
 {\pard \sa180 {\b Professional Level:} {{.Params.level | plainify }} \par}
 {{- with .Params.other_comments -}}
   {\pard \sb180 \sa180 {\b Other Comments:} {{ . | markdownify }} \par}
 {{end}}
-\page
-{\pard \b \fs30 \sa180 \keepn Participants \par}
+
+{\pard \b \fs25 \sa180 \keepn Participants \par}
 
 \trowd\trgaph180\cellx5000\cellx10000
 
