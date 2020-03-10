@@ -8,7 +8,7 @@ weight: 40
 ---
 ## Hotel Information
 
-Please reserve your hotel room at the Portland Hilton Downtown through our room block - **\*WMA will be held financially responsible for all rooms in the block that are not reserved**.* Please let WMA staff know if you experience any issues with hotel reservations, or are making other arrangements. **\*The deadline for room reservations is Friday, February 7, 2020**.*
+Please reserve your hotel room at the Portland Hilton Downtown through our room block - **\*WMA will be held financially responsible for all rooms in the block that are not reserved**. *Please let WMA staff know if you experience any issues with hotel reservations, or are making other arrangements. **\*The deadline for room reservations is Friday, February 7, 2020**.*
 
 To make reservations online, please visit and follow the below instructions:
 
@@ -26,29 +26,31 @@ Please go to the Program Committee Materials and Guidelines page to view the Gui
 
 ## Agenda:
 
-**Friday, March 13, 2020 Oregon Historical Society**
+**Friday, March 13** 
 
-* 9:30 am – Walk as a group to Oregon Historical Society (meet in Hilton lobby)
-* 10:00 am – Welcome, Introductions, Dinner Plans, and Review Agenda
+* 9:30 am – Walk as a group to Oregon Historical Society (meet in Hilton lobby)\
+* 10:00 am – Welcome, Dinner Plans, and Review Agenda
 * 10:15 am – Session Proposal Review
-* 12:30 pm – Lunch break
+* 12:30 pm – Lunch break (provided by WMA)
 * 1:00 pm – Session Proposal Review
 * 3:00 pm – Break
 * 3:15 pm – Session Proposal Review
 * 4:40 pm – Review Tracks, Schedule Layout, and Process
 * 5:00 pm – Adjourn
-* 6:45 pm – Group Dinner: TBD (pay own way)
+* 6:45 pm – Group Dinner: Imperial (pay own way)
 
-**Saturday, March 14, 2020 Oregon Historical Society**
+**Saturday, March 14**
 
 * 9:30 am – Walk as a group to Oregon Historical Society (meet in Hilton lobby)
-* 10:00 am – Welcome and Review Agenda
-* 10:15 am – Build Session Schedule
+* 10:00 am – Welcome, Dinner Plans, and Review Agenda
+* 10:15 am – Build Annual Meeting Session Schedule
 * 12:00 pm – Lunch break (provided by WMA)
 * 1:00 pm – Review and Finalize WMA 2020 Session Schedule
-* 1:30 pm – Brainstorm additional WMA 2020 activities and programming
+* 1:30 pm – Workshops
+* 1:45 pm – Brainstorm additional activities and programming
 * 2:30 pm – Program Committee Process Discussion
-* 2:45 pm – Identify Sub-Committee Work (Tours, Poster Session, and Program)
-* 2:55 pm – Wrap Up/Next Steps
+* 2:45 pm – Identify Sub-Committee Assignments            \
+                  • Editing Preliminary Program\
+                  • Poster Session proposal review
+* 2:50 pm – Wrap Up/Next Steps
 * 3:00 pm – Adjourn
-* 3:05 pm – Tour museum (TBD)
