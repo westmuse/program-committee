@@ -10,6 +10,7 @@ Below are some critical documents for your use as a program committee member.
 * [Program Committee Session Assignments](/files/wma2020_round1_pc_assignments_final.xlsx)
 * [Program Committee Roster](/files/wma2020-pc-roster.xlsx)
 * [WMA 2019 Annual Meeting Survey Results](/files/wma2019-survey-results.pdf)
+* [WMA 2020 Round 2 Scoring Sheet] (/files/2020_Round2_Scores.xlsx)
 
 WMA Staff Email Templates (for reference only).
 
