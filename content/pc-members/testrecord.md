@@ -8,7 +8,7 @@ state: 'TST'
 email: 'test@test.test'
 phone: '(555) 555-5555'
 chair: 
-active: true
+active: 
 assignee: 'testrecord'
 
 ---
