@@ -1,4 +1,4 @@
 ---
-title: ''
-audience: ''
+title: 'Mid-Career'
+audience: 'midcareer'
 ---
