@@ -20,6 +20,9 @@ googleAnalytics = ""
   [[related.indices]]
     name = "audience"
     weight = 1
+  [[related.indices]]
+    name = "level"
+    weight = 1
 
 
 
