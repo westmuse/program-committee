@@ -40,7 +40,7 @@
 				{{ end }}
 
 
-			{{ .Content | markdownify }}
+			{{ .Content }}
 			<h2>Session Information</h2>
 			<p><strong>Format:</strong> {{.Params.session_type | markdownify }}</p>
 			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
