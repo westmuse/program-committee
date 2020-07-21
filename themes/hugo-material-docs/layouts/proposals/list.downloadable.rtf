@@ -53,7 +53,8 @@
 {{- end -}}
 
 {\pard \b \fs25 \sa180 \keepn Audience \par}
-{\pard {\b Audience:} {{range .Params.audience }}{{.}},{{end}} \par}
+{\pard {\b Audience:} {{ $audience := .Site.RegularPages.RelatedIndices . "audience"  }}
+{{ range  $audience }}{{ .Title }},{{ end }} \par}
 {\pard \sa180 {\b Professional Level:} {{ range .Params.level }}{{.}},{{end}} \par}
 {{- with .Params.other_comments -}}
   {\pard \sb180 \sa180 {\b Other Comments:} {{ . | markdownify }} \par}
