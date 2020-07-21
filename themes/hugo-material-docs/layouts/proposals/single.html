@@ -58,7 +58,14 @@
 				{{ end }}
 				</ul>
 			</p>
-			<p><strong>Professional Level:</strong> {{ .Params.level }}</p>
+			<p><strong>Professional Level:</strong>
+				{{ $level := .Site.RegularPages.RelatedIndices . "level"  }}
+				<ul>
+				{{ range  $level }}
+					<li><a href="{{.Permalink}}">{{ .Title }}</a></li>
+				{{ end }}
+				</ul>
+			</p>
 			<p><strong>Scalability:</strong> {{ .Params.session_scalability }}</p>
 			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
