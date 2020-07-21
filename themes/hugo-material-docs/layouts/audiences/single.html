@@ -26,16 +26,10 @@
 		<div class="wrapper">
 			<h1>{{ .Title }}</h1>
 
-			<span>{{.Params.org_title}}<br>{{.Params.organization}}</span><br>
-			<span>{{.Params.state}}</span><br>
-			{{ with .Params.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
-			{{ with .Params.phone }}<span>{{.}}</span><br>{{end}}
-			{{ with .Params.moderator.telephone }}<span>{{.}}</span><br>{{end}}
-<hr>
-<h2>Proposals assigned to {{.Params.first_name}}:</h2>
 
-{{ $related := .Site.RegularPages.RelatedIndices . "assignee"  }}
-<h3>Round 1:</h3>
+
+{{ $related := .Site.RegularPages.RelatedIndices . "audience"  }}
+
 <ul>
 	{{ range  $related }}
 		{{ if eq .Section "proposals" }}
@@ -43,14 +37,7 @@
 		{{ end }}
 	{{ end }}
 </ul>
-<h3>Round 2:</h3>
-<ul>
-	{{ range  $related }}
-		{{ if eq .Section "proposals-round2" }}
-			<li><a href="{{.Permalink}}">{{ .Params.ID }}: {{ .Params.session_title }}</a></li>
-		{{ end }}
-	{{ end }}
-</ul>
+
 
 </div>
 
