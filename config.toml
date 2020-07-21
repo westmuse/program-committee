@@ -18,14 +18,11 @@ googleAnalytics = ""
     name = "session_track_id"
     weight = 1
   [[related.indices]]
-    name = "audience"
-    weight = 1
-  [[related.indices]]
     name = "level"
     weight = 1
-
-
-
+  [[related.indices]]
+    name = "audience"
+    weight = 1
 
 [mediaTypes]
   [mediaTypes."application/rtf"]

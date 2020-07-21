@@ -1,4 +1,4 @@
 ---
 title: 'Emerging Professional'
-audience: 'EMP'
+level: 'EMP'
 ---

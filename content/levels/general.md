@@ -1,4 +1,4 @@
 ---
 title: 'General Audience'
-audience: 'general'
+level: 'general'
 ---

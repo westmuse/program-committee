@@ -1,4 +1,4 @@
 ---
 title: 'Senior Level'
-audience: 'seniorlevel'
+level: 'seniorlevel'
 ---

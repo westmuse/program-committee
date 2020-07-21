@@ -53,15 +53,17 @@
 			<p><strong>Audiences:</strong>
 				{{ $audience := .Site.RegularPages.RelatedIndices . "audience"  }}
 				<ul>
+
 				{{ range  $audience }}
 					<li><a href="{{.Permalink}}">{{ .Title }}</a></li>
 				{{ end }}
 				</ul>
 			</p>
 			<p><strong>Professional Level:</strong>
-				{{ $level := .Site.RegularPages.RelatedIndices . "level"  }}
+				{{ $level := .Site.RegularPages.RelatedIndices . "level" }}
+
 				<ul>
-				{{ range  $level }}
+				{{ range $level }}
 					<li><a href="{{.Permalink}}">{{ .Title }}</a></li>
 				{{ end }}
 				</ul>
