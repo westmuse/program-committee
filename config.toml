@@ -17,6 +17,9 @@ googleAnalytics = ""
   [[related.indices]]
     name = "session_track_id"
     weight = 1
+  [[related.indices]]
+    name = "audience"
+    weight = 1
 
 
 

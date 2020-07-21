@@ -50,7 +50,14 @@
 			{{ with .Params.theme_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 			<h2>Audience</h2>
-			<p><strong>Audience:</strong> {{ .Params.audience }}</p>
+			<p><strong>Audiences:</strong>
+				{{ $audience := .Site.RegularPages.RelatedIndices . "audience"  }}
+				<ul>
+				{{ range  $audience }}
+					<li><a href="{{.Permalink}}">{{ .Title }}</a></li>
+				{{ end }}
+				</ul>
+			</p>
 			<p><strong>Professional Level:</strong> {{ .Params.level }}</p>
 			<p><strong>Scalability:</strong> {{ .Params.session_scalability }}</p>
 			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
