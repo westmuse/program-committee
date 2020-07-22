@@ -27,19 +27,23 @@
 			<h1>{{ .Params.session_title }}</h1>
 		<h3>ID: {{.Params.ID}}</h3>
 		<p><strong>Assigned to: </strong>
-			{{- $assignees := .Site.RegularPages.RelatedIndices . "assignee"  -}}
+			{{- $assignees :=  .Site.RegularPages.RelatedIndices . "assignee"  -}}
 
 			{{- range  $assignees -}}
 			{{- if eq .Section "pc-members" -}}
-				<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
-			{{ end }}
-			{{ end }}
-		<p><strong>Track: </strong>
-			{{ $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  }}
 
-				{{ range  $tracks }}
-					<a href="{{.Permalink}}">{{ .Title }}</a>
-				{{ end }}
+				<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
+			{{- end -}}
+			{{- end }}
+
+		<p><strong>Track: </strong>
+			{{- $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  -}}
+
+				{{- range  $tracks -}}
+					{{- if eq .Section "tracks" -}}
+						<a href="{{.Permalink}}">{{ .Title }}</a>
+					{{- end -}}
+				{{- end }}
 
 
 			{{ .Content }}
