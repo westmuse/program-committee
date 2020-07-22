@@ -27,17 +27,24 @@
 			<h1>{{ .Params.session_title }}</h1>
 		<h3>ID: {{.Params.ID}}</h3>
 		<p><strong>Assigned to: </strong>
-			{{ $assignees := .Site.RegularPages.RelatedIndices . "assignee"  }}
+			{{- $assignees :=  .Site.RegularPages.RelatedIndices . "assignee"  -}}
 
-			{{ range  $assignees }}
+			{{- range  $assignees -}}
+			{{- if eq .Section "pc-members" -}}
+
 				<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
-			{{ end }}
-		<p><strong>Track: </strong>
-			{{ $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  }}
+			{{- end -}}
+			{{- end }}
 
-				{{ range  $tracks }}
-					<a href="{{.Permalink}}">{{ .Title }}</a>
-				{{ end }}
+		<p><strong>Track: </strong>
+			{{- $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  -}}
+
+				{{- range  $tracks -}}
+					{{- if eq .Section "tracks" -}}
+						<a href="{{.Permalink}}">{{ .Title }}</a>
+					{{- end -}}
+				{{- end }}
+			</p>
 
 
 			{{ .Content }}
@@ -53,13 +60,15 @@
 			{{ with .Params.theme_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 			<h2>Audience</h2>
-			<p><strong>Audiences:</strong>
-				{{ $audience := .Site.RegularPages.RelatedIndices . "audience"  }}
+			<p><strong>Audiences: </strong>
+				{{- $audience := .Site.RegularPages.RelatedIndices . "audience"  -}}
 
 
-				{{ range  $audience }}
-					<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
-				{{ end }}
+				{{- range  $audience -}}
+					{{- if eq .Section "audiences" -}}
+						<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
+					{{- end -}}
+				{{- end }}
 
 			</p>
 			<p><strong>Professional Level:</strong>
@@ -67,8 +76,10 @@
 
 
 				{{ range $level }}
-					<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
-				{{ end }}
+					{{- if eq .Section "levels" -}}
+						<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
+					{{- end -}}
+				{{- end }}
 
 			</p>
 			<p><strong>Scalability:</strong> {{ .Params.session_scalability|markdownify }}</p>
