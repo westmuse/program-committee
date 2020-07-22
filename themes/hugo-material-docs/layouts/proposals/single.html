@@ -30,7 +30,7 @@
 			{{ $assignees := .Site.RegularPages.RelatedIndices . "assignee"  }}
 
 			{{ range  $assignees }}
-				<a href="{{.Permalink}}">{{ .Title }}</a>
+				<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
 			{{ end }}
 		<p><strong>Track: </strong>
 			{{ $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  }}
@@ -52,21 +52,21 @@
 			<h2>Audience</h2>
 			<p><strong>Audiences:</strong>
 				{{ $audience := .Site.RegularPages.RelatedIndices . "audience"  }}
-				<ul>
+
 
 				{{ range  $audience }}
-					<li><a href="{{.Permalink}}">{{ .Title }}</a></li>
+					<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
 				{{ end }}
-				</ul>
+
 			</p>
 			<p><strong>Professional Level:</strong>
 				{{ $level := .Site.RegularPages.RelatedIndices . "level" }}
 
-				<ul>
+
 				{{ range $level }}
-					<li><a href="{{.Permalink}}">{{ .Title }}</a></li>
+					<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
 				{{ end }}
-				</ul>
+				
 			</p>
 			<p><strong>Scalability:</strong> {{ .Params.session_scalability|markdownify }}</p>
 			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
