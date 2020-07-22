@@ -43,6 +43,9 @@
 			{{ .Content }}
 			<h2>Session Information</h2>
 			<p><strong>Format:</strong> {{.Params.session_type | markdownify }}</p>
+			{{ if ne .Params.session_fee "" }}
+				<p><strong>Fee:</strong> {{.Params.session_fee}}</p>
+			{{end}}
 			<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
 			<p><strong>Objectives:</strong> {{.Params.session_objectives | markdownify }}</p>
 			<p><strong>Engagement:</strong> {{.Params.session_engagement | markdownify }}</p>
@@ -66,7 +69,7 @@
 				{{ range $level }}
 					<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
 				{{ end }}
-				
+
 			</p>
 			<p><strong>Scalability:</strong> {{ .Params.session_scalability|markdownify }}</p>
 			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
