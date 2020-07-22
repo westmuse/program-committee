@@ -44,6 +44,7 @@
 						<a href="{{.Permalink}}">{{ .Title }}</a>
 					{{- end -}}
 				{{- end }}
+			</p>
 
 
 			{{ .Content }}
@@ -59,13 +60,15 @@
 			{{ with .Params.theme_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 			<h2>Audience</h2>
-			<p><strong>Audiences:</strong>
-				{{ $audience := .Site.RegularPages.RelatedIndices . "audience"  }}
+			<p><strong>Audiences: </strong>
+				{{- $audience := .Site.RegularPages.RelatedIndices . "audience"  -}}
 
 
-				{{ range  $audience }}
-					<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
-				{{ end }}
+				{{- range  $audience -}}
+					{{- if eq .Section "audiences" -}}
+						<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
+					{{- end -}}
+				{{- end }}
 
 			</p>
 			<p><strong>Professional Level:</strong>
@@ -73,8 +76,10 @@
 
 
 				{{ range $level }}
-					<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
-				{{ end }}
+					{{- if eq .Section "levels" -}}
+						<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
+					{{- end -}}
+				{{- end }}
 
 			</p>
 			<p><strong>Scalability:</strong> {{ .Params.session_scalability|markdownify }}</p>
