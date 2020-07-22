@@ -68,7 +68,7 @@
 				{{ end }}
 				</ul>
 			</p>
-			<p><strong>Scalability:</strong> {{ .Params.session_scalability }}</p>
+			<p><strong>Scalability:</strong> {{ .Params.session_scalability|markdownify }}</p>
 			{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
 
