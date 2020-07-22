@@ -33,13 +33,14 @@
 		</ul>
 
 <hr>
-			{{ range (.Pages.ByParam "sort_id") }}
-
-
-
+			{{/* range (.Pages.ByParam "sort_id") */}}
+			<ul>
+			{{ range .Pages.GroupByParam "session_type" "desc"}}
+			<h2>{{.Key}}</h2>
+			{{ range .Pages.ByParam "ID" }}
 			<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
 
-
+			{{ end }}
 
 			{{ end }}
 			</ul>
