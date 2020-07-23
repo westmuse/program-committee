@@ -1,0 +1,217 @@
+{{ partial "head" . }}
+
+<main class="main">
+
+
+	<article class="article">
+		<div class="wrapper">
+
+			<h1>All {{ .Title }}</h1>
+
+				{{ range .Pages.GroupByParam "session_type" "desc"}}
+				<h2>{{.Key}}</h2>
+				{{ range .Pages.ByParam "ID" }}
+					{{ if eq .Params.round_number "Round 1" }}
+						<div class="proposal" style="page-break-after: always">
+							<h1>{{ .Params.session_title }}</h1>
+						<h3>ID: {{.Params.ID}}</h3>
+						<p><strong>Assigned to: </strong>
+							{{- $assignees :=  .Site.RegularPages.RelatedIndices . "assignee"  -}}
+
+							{{- range  $assignees -}}
+							{{- if eq .Section "pc-members" -}}
+
+								<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
+							{{- end -}}
+							{{- end }}
+
+						<p><strong>Track: </strong>
+							{{- $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  -}}
+
+								{{- range  $tracks -}}
+									{{- if eq .Section "tracks" -}}
+										<a href="{{.Permalink}}">{{ .Title }}</a>
+									{{- end -}}
+								{{- end }}
+							</p>
+
+
+							{{ .Content }}
+							<h2>Session Information</h2>
+							<p><strong>Format:</strong> {{.Params.session_type | markdownify }}</p>
+							{{ if ne .Params.session_fee "" }}
+								<p><strong>Fee:</strong> {{.Params.session_fee}}</p>
+							{{end}}
+							<p><strong>Uniqueness:</strong> {{.Params.session_unique | markdownify }}</p>
+							<p><strong>Objectives:</strong> {{.Params.session_objectives | markdownify }}</p>
+							<p><strong>Engagement:</strong> {{.Params.session_engagement | markdownify }}</p>
+							<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
+							{{ with .Params.theme_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
+
+							<h2>Audience</h2>
+							<p><strong>Audiences: </strong>
+								{{- $audience := .Site.RegularPages.RelatedIndices . "audience"  -}}
+
+
+								{{- range  $audience -}}
+									{{- if eq .Section "audiences" -}}
+										<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
+									{{- end -}}
+								{{- end }}
+
+							</p>
+							<p><strong>Professional Level:</strong>
+								{{ $level := .Site.RegularPages.RelatedIndices . "level" }}
+
+
+								{{ range $level }}
+									{{- if eq .Section "levels" -}}
+										<a href="{{.Permalink}}">{{ .Title }}</a>&nbsp;
+									{{- end -}}
+								{{- end }}
+
+							</p>
+							<p><strong>Scalability:</strong> {{ .Params.session_scalability|markdownify }}</p>
+							{{ with .Params.other_comments }}<p><strong>Other Comments: </strong> {{ . | markdownify  }}</p>{{end}}
+
+
+
+							<h2>Participants</h2>
+							<div class="person-block" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start;">
+				<!-- ========submitter========== -->
+							<div class="wma-participant">
+							<p><strong>{{.Params.submitter.first_name}} {{.Params.submitter.last_name}}</strong> (Submitter{{- if eq .Params.submitter.is_mod "true"}} &nbsp;&amp; Moderator{{- end -}})<br>
+							<span>{{.Params.submitter.title}}<br>{{.Params.submitter.institution}}</span><br>
+							<span>{{.Params.submitter.location}}</span><br>
+
+								{{ with .Params.submitter.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+								{{ with .Params.submitter.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+								{{ with .Params.submitter.tel }}<span>{{.}}</span><br>{{end}}
+							</p>
+
+							<span>
+								{{ if eq .Params.submitter.is_pres "true"}}
+									{{.Params.submitter.first_name}} {{.Params.submitter.last_name}} <strong>is</strong> presenting as well.
+								{{else}}
+									{{.Params.submitter.first_name}} {{.Params.submitter.last_name}} <strong>is not</strong> presenting.
+								{{end}}
+							</span>
+
+
+						</div>
+				<!-- ========moderator========== -->
+						{{ if .Params.moderator.last_name }}{{- $.Scratch.Set "moderator" "moderator" -}}{{ end }}
+						{{ if eq ($.Scratch.Get "moderator") "moderator" }}
+
+							<div class="wma-participant">
+								<p><strong>{{.Params.moderator.first_name}} {{.Params.moderator.last_name}}</strong> (Moderator)<br>
+									<span>{{.Params.moderator.title}}<br>{{.Params.moderator.institution}}</span><br>
+									<span>{{.Params.moderator.location}}</span><br>
+									{{ with .Params.moderator.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.moderator.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.moderator.tel }}<span>{{.}}</span><br>{{end}}
+								</p>
+								<span>
+									{{ if eq .Params.moderator.is_pres "true"}}
+										{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is</strong> presenting as well.
+									{{else}}
+										{{.Params.moderator.first_name}} {{.Params.moderator.last_name}} <strong>is not</strong> presenting.
+									{{end}}
+								</span><br>
+								<span><em>({{ if eq .Params.moderator.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
+							</div>
+						{{ end }}
+
+				<!-- ========Presenter 1========== -->
+						{{ if $.Params.pres_1.last_name }}{{- $.Scratch.Set "pres_1" "presenter1" -}}{{ end }}
+						{{ if eq ($.Scratch.Get "pres_1") "presenter1" }}
+							<div class="wma-participant">
+								<p><strong>{{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}}</strong> (Panelist)<br>
+									<span>{{.Params.pres_1.title}}<br>{{.Params.pres_1.institution}}</span><br>
+									{{ with .Params.pres_1.location }}<span>{{.}}</span><br>{{end}}
+									{{ with .Params.pres_1.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.pres_1.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.pres_1.tel }}<span>{{.}}</span><br>{{end}}
+								</p>
+								<span><em>({{ if eq .Params.pres_1.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
+							</div>
+						{{ end }}
+
+				<!-- ========Presenter 2========== -->
+						{{ if $.Params.pres_2.last_name }}{{- $.Scratch.Set "pres_2" "presenter2" -}}{{ end }}
+						{{ if eq ($.Scratch.Get "pres_2") "presenter2" }}
+							<div class="wma-participant">
+								<p><strong>{{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}}</strong> (Panelist)<br>
+									<span>{{.Params.pres_2.title}}<br>{{.Params.pres_2.institution}}</span><br>
+									{{ with .Params.pres_2.location }}<span>{{.}}</span><br>{{end}}
+									{{ with .Params.pres_2.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.pres_2.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.pres_2.tel }}<span>{{.}}</span><br>{{end}}
+								</p>
+								<span><em>({{ if eq .Params.pres_2.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
+							</div>
+						{{ end }}
+
+				<!-- ========Presenter 3========== -->
+						{{ if $.Params.pres_3.last_name }}{{- $.Scratch.Set "pres_3" "presenter3" -}}{{ end }}
+						{{ if eq ($.Scratch.Get "pres_3") "presenter3" }}
+							<div class="wma-participant">
+								<p><strong>{{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}}</strong> (Panelist)<br>
+									<span>{{.Params.pres_3.title}}<br>{{.Params.pres_3.institution}}</span><br>
+									{{ with .Params.pres_3.location }}<span>{{.}}</span><br>{{end}}
+									{{ with .Params.pres_3.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.pres_3.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.pres_3.tel }}<span>{{.}}</span><br>{{end}}
+								</p>
+								<span><em>({{ if eq .Params.pres_3.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
+							</div>
+						{{ end }}
+
+				<!-- ========Presenter 4========== -->
+						{{ if $.Params.pres_4.last_name }}{{- $.Scratch.Set "pres_4" "presenter4" -}}{{ end }}
+						{{ if eq ($.Scratch.Get "pres_4") "presenter4" }}
+							<div class="wma-participant">
+								<p><strong>{{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}}</strong> (Panelist)<br>
+									<span>{{.Params.pres_4.title}}<br>{{.Params.pres_4.institution}}</span><br>
+									{{ with .Params.pres_4.location }}<span>{{.}}</span><br>{{end}}
+									{{ with .Params.pres_4.email }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.pres_4.email2 }}<span><a href="mailto:{{.}}">{{.}}</a></span><br>{{end}}
+									{{ with .Params.pres_4.tel }}<span>{{.}}</span><br>{{end}}
+								</p>
+								<span><em>({{ if eq .Params.pres_4.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}})</em></span>
+							</div>
+						{{ end }}
+					</div>
+
+					{{ with or .Params.moderator.justification .Params.pres_1.justification }}<h2>Participant Justifications</h2>{{end}}
+					{{ with .Params.submitter.justification }}<p><strong>{{$.Params.submitter.first_name}} {{$.Params.submitter.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+					{{ with .Params.moderator.justification }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+					{{ with .Params.pres_1.justification }}<p><strong>{{$.Params.pres_1.first_name}} {{$.Params.pres_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+					{{ with .Params.pres_2.justification }}<p><strong>{{$.Params.pres_2.first_name}} {{$.Params.pres_2.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+					{{ with .Params.pres_3.justification }}<p><strong>{{$.Params.pres_3.first_name}} {{$.Params.pres_3.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+					{{ with .Params.pres_4.justification }}<p><strong>{{$.Params.pres_4.first_name}} {{$.Params.pres_4.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
+
+					{{ with or .Params.keynote_suggestions .Params.other_suggestions }}<h2>Additional Information</h2>{{ end }}
+					{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
+					{{ with .Params.other_suggestions }}<p><strong>Other Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
+
+
+
+				</div>
+
+						</div>
+					{{ end }}
+				{{ end }}
+
+				{{ end }}
+
+				<hr>
+
+
+
+		</div>
+	</article>
+
+
+
+</main>

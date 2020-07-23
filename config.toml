@@ -31,8 +31,8 @@ googleAnalytics = ""
 [outputFormats]
 	[outputFormats.downloadable]
 	  baseName = "proposals"
-		isPlainText = true
-		mediaType = "application/rtf"
+		isPlainText = false
+		mediaType = "text/html"
 		path = ""
 
 
