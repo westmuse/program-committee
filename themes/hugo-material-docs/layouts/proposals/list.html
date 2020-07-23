@@ -33,17 +33,27 @@
 		</ul>
 
 <hr>
-			{{/* range (.Pages.ByParam "sort_id") */}}
-			<ul>
-			{{ range .Pages.GroupByParam "session_type" "desc"}}
-			<h2>{{.Key}}</h2>
-			{{ range .Pages.ByParam "ID" }}
-			<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
+<div class="tabs">
 
-			{{ end }}
+   <div class="tab">
+       <input type="radio" id="tab-1" name="tab-group-1" checked>
+       <label for="tab-1">Tab One</label>
 
-			{{ end }}
-			</ul>
+       <div class="content">
+				 {{/* range (.Pages.ByParam "sort_id") */}}
+				<ul>
+				{{ range .Pages.GroupByParam "session_type" "desc"}}
+				<h2>{{.Key}}</h2>
+				{{ range .Pages.ByParam "ID" }}
+				<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
+
+				{{ end }}
+
+				{{ end }}
+				</ul>
+       </div>
+   </div>
+
 
 		</div>
 	</article>
