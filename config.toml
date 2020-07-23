@@ -102,19 +102,10 @@ googleAnalytics = ""
 	weight = 25
 
 [[menu.main]]
-	name   = "Round 2 Proposals"
-	url    = "proposals-round2/"
-	weight = 30
-
-[[menu.main]]
-	name   = "Round 1 Proposals"
+	name   = "All Proposals"
 	url    = "proposals/"
 	weight = 40
 
-[[menu.main]]
-		name   = "Workshop Proposals"
-		url    = "workshops/"
-		weight = 40
 [[menu.main]]
 	name   = "Committee Members"
 	url    = "pc-members/"
