@@ -21,6 +21,7 @@
     <meta name="author" content="{{ . }}">
     {{ end }}
 
+
     <meta property="og:url" content="{{ .Permalink }}">
     {{ with .Site.Title }}<meta property="og:title" content="{{ . }}">{{ end }}
     {{ with .Site.Params.logo }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
@@ -48,6 +49,9 @@
         font-style: normal;
       }
     </style>
+
+    
+
 
     <link rel="stylesheet" href="{{ "stylesheets/application.css" | absURL }}">
     <link rel="stylesheet" href="{{ "stylesheets/temporary.css" | absURL }}">

@@ -31,28 +31,40 @@
 
 			<!--<li><a href="/docs/WMA2019_Round2_ScoringSheet.xlsx">Round 2 Scoring Sheet</a></li>-->
 		</ul>
-
+		<span style="padding-left: 20px; padding-right: 20px"><a href="#round-1">Round One</a></span>
+		<span style="padding-left: 20px; padding-right: 20px"><a href="#round-2">Round Two</a></span>
 <hr>
-<div class="tabs">
 
-   <div class="tab">
-       <input type="radio" id="tab-1" name="tab-group-1" checked>
-       <label for="tab-1">Tab One</label>
-
-       <div class="content">
-				 {{/* range (.Pages.ByParam "sort_id") */}}
+<section id="round-1">
+	<h2>Round One Proposals and Workshops</h2>
 				<ul>
 				{{ range .Pages.GroupByParam "session_type" "desc"}}
-				<h2>{{.Key}}</h2>
+				<h3>{{.Key}}</h3>
 				{{ range .Pages.ByParam "ID" }}
-				<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
-
+					{{ if eq .Params.round_number "Round 1" }}
+						<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
+					{{ end }}
 				{{ end }}
 
 				{{ end }}
 				</ul>
-       </div>
-   </div>
+				<hr>
+  </section>
+	<section id="round-2">
+		<h2>Round Two Proposals and Workshops</h2>
+				<ul>
+				{{ range .Pages.GroupByParam "session_type" "desc"}}
+				<h3>{{.Key}}</h3>
+				{{ range .Pages.ByParam "ID" }}
+					{{ if eq .Params.round_number "Round 2" }}
+						<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
+					{{ end }}
+				{{ end }}
+
+				{{ end }}
+				</ul>
+  </section>
+
 
 
 		</div>
