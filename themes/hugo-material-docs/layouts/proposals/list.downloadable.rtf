@@ -36,7 +36,7 @@
     {\author Western Museums Association}
   }
 
-{{ range where .Pages "Section" "proposals-round2" }}
+{{ range where .Pages "Section" "proposals" }}
 \fs20 \f0 \fi0
 {\pard \b \fs35 {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
 
