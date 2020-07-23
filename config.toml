@@ -39,7 +39,6 @@ googleAnalytics = ""
 
 [outputs]
 	home = ["HTML", "JSON"]
-  proposals = ["HTML", "RTF"]
 
 
 
