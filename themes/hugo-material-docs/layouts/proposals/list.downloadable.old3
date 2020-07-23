@@ -38,9 +38,11 @@
 
 {{ range where .Pages "Section" "proposals" }}
 \fs20 \f0 \fi0
-{\pard \b \fs35 {{- .Params.ID -}}: {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
+{\pard \b \fs35 {{- .Params.session_title | replaceRE `\\{\\u\w\w\w\w}` `$1` -}} \par}
 
-{\pard \sb180 \sa180 {{.Content | plainify }} \par}
+{\pard \sb100 \fs25 {{- .File.BaseFileName -}} \par}
+
+{\pard \sb180 \sa180 {{.Params.session_desc}} \par}
 
 {\pard \b \fs25 \sa180 Session Information \par}
 {\pard \sb180 \sa180 {\b Uniqueness:} {{.Params.session_unique | plainify }} \par}
