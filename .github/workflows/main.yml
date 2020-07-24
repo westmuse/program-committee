@@ -18,8 +18,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@master
-      - name: Change dir
-        run: cd public/print_output
+    
+
       - uses: docker://pandoc/core:2.9
+        run: cd public/print_output
         with:
           args: "proposals.html -f html -t docx -s -o proposals.docx" # gets appended to pandoc command
