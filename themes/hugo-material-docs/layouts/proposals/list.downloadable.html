@@ -1,19 +1,147 @@
-{{ partial "head" . }}
+<!DOCTYPE html>
+  <!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+  <!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+  <!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+  <!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+
+  <head {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta name="robots" content="noindex,nofollow">
+    <title>{{ .Title }}{{ if not .IsHome }} - {{ .Site.Title }}{{ end }}</title>
+    {{ hugo.Generator }}
+
+    {{ with .Site.Params.description }}
+    <meta name="description" content="{{ . }}">
+    {{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ with .Site.Params.author }}
+    <meta name="author" content="{{ . }}">
+    {{ end }}
+
+
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ with .Site.Title }}<meta property="og:title" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.logo }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+    {{ with .Site.Title }}<meta name="apple-mobile-web-app-title" content="{{ . }}">{{ end }}
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
+    <link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('{{ "fonts/icon.eot?52m981" | absURL }}');
+        src: url('{{ "fonts/icon.eot?#iefix52m981" | absURL }}')
+               format('embedded-opentype'),
+             url('{{ "fonts/icon.woff?52m981" | absURL }}')
+               format('woff'),
+             url('{{ "fonts/icon.ttf?52m981" | absURL }}')
+               format('truetype'),
+             url('{{ "fonts/icon.svg?52m981#icon" | absURL }}')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+
+
+
+    <link rel="stylesheet" href="{{ "stylesheets/application.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "stylesheets/temporary.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "stylesheets/palettes.css" | absURL }}">
+    <link rel="stylesheet" href="{{ with .Site.Params.highlight_css }}{{ . | absURL }}{{ else }}{{ "stylesheets/highlight/highlight.css" | absURL }}{{ end }}">
+
+    {{/* set default values if no custom ones are defined */}}
+    {{ $text := or .Site.Params.font.text "Roboto" }}
+    {{ $code := or .Site.Params.font.code "Roboto Mono" }}
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" | safeURL }}">
+    <style>
+			body {
+	font-family: Georgia, serif;
+	background: none;
+	color: black;
+
+}
+.palette-primary-red {
+	background: none!important;
+	color: black!important;
+}
+h1, h2, h3, h4, a {
+	color: black!important;
+}
+
+#page {
+	width: 100%;
+	margin: 0; padding: 0;
+	background: none;
+}
+#header, #menu-bar, #sidebar, h2#postcomment, form#commentform, #footer {
+	display: none;
+}
+.entry a:after {
+	content: " [" attr(href) "] ";
+}
+#printed-article {
+	border: 1px solid #666;
+	padding: 10px;
+}
+h1 {
+	font-family: Arial, sans-serif;
+
+}
+.article h3 {
+	font-size: 15px;
+	font-family: Arial, sans-serif;
+}
+.article p, .person-block {
+	padding: 5px 5px 5px 15px;
+	margin-top: 0;
+	color: #333333;
+	font-size: 12px;
+}
+.article ul, ol {
+	font-size: 12px;
+	padding-left: 25px;
+}
+.article a {
+	border-bottom: none;
+}
+    </style>
+
+
+    <script src="{{ "javascripts/modernizr.js" | absURL }}"></script>
+
+
+    {{ with .OutputFormats.Get "RSS" }}
+      <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+      <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    {{ end }}
+
+  </head>
+  <body>
+
 
 <main class="main">
 
 
-	<article class="article">
+	<article class="article" id="page">
 		<div class="wrapper">
 
-			<h1>All {{ .Title }}</h1>
+
 
 				{{ range .Pages.GroupByParam "session_type" "desc"}}
-				<h2>{{.Key}}</h2>
+				<h1>{{.Key}}</h1>
 				{{ range .Pages.ByParam "ID" }}
 					{{ if eq .Params.round_number "Round 1" }}
 						<div class="proposal" style="page-break-after: always">
-							<h1>{{ .Params.session_title }}</h1>
+							<h2>{{ .Params.session_title }}</h2>
 						<h3>ID: {{.Params.ID}}</h3>
 						<p><strong>Assigned to: </strong>
 							{{- $assignees :=  .Site.RegularPages.RelatedIndices . "assignee"  -}}
@@ -37,7 +165,7 @@
 
 
 							{{ .Content }}
-							<h2>Session Information</h2>
+							<h3>Session Information</h3>
 							<p><strong>Format:</strong> {{.Params.session_type | markdownify }}</p>
 							{{ if ne .Params.session_fee "" }}
 								<p><strong>Fee:</strong> {{.Params.session_fee}}</p>
@@ -48,7 +176,7 @@
 							<p><strong>Relationship to Theme:</strong> {{.Params.theme_relationship | markdownify }}</p>
 							{{ with .Params.theme_comments }}<p><strong>Additional Comments: </strong> {{ . | markdownify  }}</p>{{end}}
 
-							<h2>Audience</h2>
+							<h3>Audience</h3>
 							<p><strong>Audiences: </strong>
 								{{- $audience := .Site.RegularPages.RelatedIndices . "audience"  -}}
 
@@ -76,7 +204,7 @@
 
 
 
-							<h2>Participants</h2>
+							<h3>Participants</h3>
 							<div class="person-block" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start;">
 				<!-- ========submitter========== -->
 							<div class="wma-participant">
@@ -183,7 +311,7 @@
 						{{ end }}
 					</div>
 
-					{{ with or .Params.moderator.justification .Params.pres_1.justification }}<h2>Participant Justifications</h2>{{end}}
+					{{ with or .Params.moderator.justification .Params.pres_1.justification }}<h3>Participant Justifications</h3>{{end}}
 					{{ with .Params.submitter.justification }}<p><strong>{{$.Params.submitter.first_name}} {{$.Params.submitter.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 					{{ with .Params.moderator.justification }}<p><strong>{{$.Params.moderator.first_name}} {{$.Params.moderator.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 					{{ with .Params.pres_1.justification }}<p><strong>{{$.Params.pres_1.first_name}} {{$.Params.pres_1.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
@@ -191,7 +319,7 @@
 					{{ with .Params.pres_3.justification }}<p><strong>{{$.Params.pres_3.first_name}} {{$.Params.pres_3.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 					{{ with .Params.pres_4.justification }}<p><strong>{{$.Params.pres_4.first_name}} {{$.Params.pres_4.last_name}}: </strong> {{. | markdownify }}</p>{{ end }}
 
-					{{ with or .Params.keynote_suggestions .Params.other_suggestions }}<h2>Additional Information</h2>{{ end }}
+					{{ with or .Params.keynote_suggestions .Params.other_suggestions }}<h3>Additional Information</h3>{{ end }}
 					{{ with .Params.keynote_suggestions }}<p><strong>Keynote Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
 					{{ with .Params.other_suggestions }}<p><strong>Other Suggestions: </strong> {{ . | markdownify }}</p>{{end}}
 
