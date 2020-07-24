@@ -22,7 +22,8 @@ jobs:
       - run: chmod +x public/print_output/
       - uses: docker://pandoc/core:2.9
         with:
-          args: "-f html -t docx public/print_output/proposals.html -o ./public/print_output/proposals.docx" # gets appended to pandoc command
+          args: "-f html -t docx public/print_output/proposals.html -o proposals.docx" # gets appended to pandoc command
+      - run: git mv proposals.docx public/print_output/
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
