@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Change dir
         run: echo "cd public/print_output"
-      - uses: docker://pandoc/core:2.9
+      - name: Pandoc Document Converter
+      - uses: Ender-events/pandoc@master
         with:
           args: "proposals.html -f html -t docx -s -o proposals.docx" # gets appended to pandoc command
