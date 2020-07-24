@@ -23,6 +23,5 @@ jobs:
         run: ls
       - name: Pandoc Document Converter
         uses: docker://pandoc/core:2.9
-        working-directory: public/print_output
         with:
           args: "proposals.html -f html -t docx -s -o proposals.docx" # gets appended to pandoc command
