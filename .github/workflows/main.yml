@@ -16,10 +16,10 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      - name: Check out repository 
+      - name: Check out repository
         uses: actions/checkout@v2
       - name: Change dir
-        run: cd public/print_output/
+        run: cd public/print_output/proposals.html
       - uses: docker://pandoc/core:2.9
         with:
           args: "proposals.html -f html -t docx -s -o proposals.docx" # gets appended to pandoc command
