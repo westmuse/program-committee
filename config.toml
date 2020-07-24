@@ -33,7 +33,7 @@ googleAnalytics = ""
 	  baseName = "proposals"
 		isPlainText = false
 		mediaType = "text/html"
-		path = ""
+		path = "../print_output"
 
 
 

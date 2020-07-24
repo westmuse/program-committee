@@ -12,7 +12,8 @@ npm-debug.log
 
 
 
-/public
+public/*
+!public/print_output/
 
 ## OS Files
 # Windows
