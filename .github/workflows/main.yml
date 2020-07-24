@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Change dir
         run: cd public/print_output
+      - name: List dir contents
         run: ls
       - name: Pandoc Document Converter
         uses: docker://pandoc/core:2.9
