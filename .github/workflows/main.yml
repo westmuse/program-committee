@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: cd public/print_output
       - run: ls
+      - run: chmod +x public/print_output/proposals.html
       - uses: docker://pandoc/core:2.9
         with:
-          args: "westmuse/public/print_output/proposals.html -f html -t docx -s -o public/print_output/proposals.docx" # gets appended to pandoc command
+          args: "public/print_output/proposals.html -f html -t docx -s -o public/print_output/proposals.docx" # gets appended to pandoc command
