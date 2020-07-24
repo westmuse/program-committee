@@ -29,6 +29,6 @@ jobs:
           author_name: Koven Smith
           author_email: koven@kovenjsmith.com
           message: "Convert HTML proposals list to docx"
-          add: "proposals.docx"
+          add: "public/print_output/proposals.docx"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
