@@ -21,6 +21,6 @@ jobs:
       - name: Change dir
         run: echo "cd public/print_output"
       - name: Pandoc Document Converter
-      - uses: Ender-events/pandoc@master
+        uses: Ender-events/pandoc@master
         with:
           args: "proposals.html -f html -t docx -s -o proposals.docx" # gets appended to pandoc command
