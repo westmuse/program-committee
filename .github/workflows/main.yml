@@ -23,3 +23,12 @@ jobs:
       - uses: docker://pandoc/core:2.9
         with:
           args: "-f html -t docx public/print_output/proposals.html -o proposals.docx" # gets appended to pandoc command
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Koven Smith
+          author_email: koven@kovenjsmith.com
+          message: "Convert HTML proposals list to docx"
+          add: "proposals.docx"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
