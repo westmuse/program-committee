@@ -23,7 +23,7 @@ jobs:
     - name: Check out repository 
       uses: actions/checkout@v2
     - name: Change dir
-      run: cd /public/print_output
+      run: cd public/print_output
  
 
     # Pandoc conversion
