@@ -19,7 +19,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Change dir
-        run: echo "cd public/print_output"
+        run: cd public/print_output
+        run: ls
       - name: Pandoc Document Converter
         uses: docker://pandoc/core:2.9
         working-directory: public/print_output
