@@ -21,4 +21,4 @@ jobs:
       - run: ls
       - uses: docker://pandoc/core:2.9
         with:
-          args: "public/print_output/proposals.html -f html -t docx -s -o public/print_output/proposals.docx" # gets appended to pandoc command
+          args: "sudo public/print_output/proposals.html -f html -t docx -s -o public/print_output/proposals.docx" # gets appended to pandoc command
