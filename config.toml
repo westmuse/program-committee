@@ -27,6 +27,8 @@ googleAnalytics = ""
 [mediaTypes]
   [mediaTypes."application/rtf"]
     suffixes = ["rtf"]
+  [mediaTypes."text/plain"]
+    suffixes = [ "tex", "txt" ]
 
 [outputFormats]
 	[outputFormats.downloadable]
@@ -34,6 +36,11 @@ googleAnalytics = ""
 		isPlainText = false
 		mediaType = "text/html"
 		path = "../print_output"
+  [outputFormats.latex]
+    baseName = "latex"
+    isPlainText = true
+    mediaType = "text/plain"
+    path = "../print_output"
 
 
 
