@@ -17,14 +17,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: cd public/print_output
-      - run: ls
       - run: chmod +x public/print_output/
+      - run: git rm public/print_layout/proposals.docx
       - uses: docker://pandoc/core:2.9
         with:
           args: "-f html -t docx public/print_output/proposals.html -o proposals.docx" # gets appended to pandoc command
       - run: git add proposals.docx
-      - run: git rm public/print_layout/proposals.docx
       - run: git mv proposals.docx public/print_output/
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
