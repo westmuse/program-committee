@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: chmod +x public/print_output/
-      - run: git rm public/print_layout/proposals.docx
+      - run: git rm public/print_output/proposals.docx
       - uses: docker://pandoc/core:2.9
         with:
           args: "-f html -t docx public/print_output/proposals.html -o proposals.docx" # gets appended to pandoc command
