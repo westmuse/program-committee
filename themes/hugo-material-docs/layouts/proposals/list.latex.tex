@@ -1,0 +1,85 @@
+\documentclass{report}
+\title{ {{.Site.Title}}: {{.Title }} }
+\date{ Last updated: {{ now.Format "January 2, 2006"}}}
+\author{Western Museums Association}
+
+\begin{document}
+  \pagenumbering{gobble}
+  \maketitle
+  \newpage
+  \tableofcontents
+  \newpage
+  \pagenumbering{arabic}
+  {{ range .Pages.GroupByParam "session_type" "desc"}}
+    \newpage
+    \chapter*{ {{.Key}} }
+
+      {{ range .Pages.ByParam "ID" }}
+        {{ if eq .Params.round_number "Round 1" }}
+          \newpage
+          \section{ {{.Params.session_title}} }
+            \begin{description}
+              \item [ID:]
+              {{ .Params.ID | replaceRE "_" "\\_" }}
+
+              \item [Assigned to:]
+                {{- $assignees := .Site.RegularPages.RelatedIndices . "assignee"  -}}
+                {{- range  $assignees -}}
+                  {{- if eq .Section "pc-members" -}}
+                    {{ .Title }}~
+                    {{- end -}}
+                  {{- end }}
+                \item [Track:]
+                  {{- $tracks := .Site.RegularPages.RelatedIndices . "session_track_id"  -}}
+                  {{- range  $tracks -}}
+                    {{- if eq .Section "tracks" -}}
+                      {{ .Title }}~
+                    {{- end -}}
+                  {{- end }}
+              \end{description}
+              \subsection*{}
+                {{.Content|plainify}}
+              \subsection*{Session Information}
+                \begin{description}
+                  \item [Format:] {{.Params.session_type | plainify }}
+							    {{ if ne .Params.session_fee "" }}
+								  \item [Fee:]{{.Params.session_fee | plainify| replaceRE "\x24" "fresh"}} 
+							     {{end}}
+							    \item [Uniqueness:]{{.Params.session_unique | plainify }}
+							    \item [Objectives:]{{.Params.session_objectives | plainify }}
+							    \item [Engagement:]{{.Params.session_engagement | plainify }}
+							    \item [Relationship to Theme:]{{.Params.theme_relationship | plainify }}
+							    {{ with .Params.theme_comments }}
+                    \item [Additional Comments: ]{{ . | plainify  }}{{end}}
+                \end{description}
+              \subsection*{Audience}
+                \begin{description}
+                  \item [Audiences:]
+                    {{- $audience := .Site.RegularPages.RelatedIndices . "audience"  -}}
+                    {{- range  $audience -}}
+									    {{- if eq .Section "audiences" -}}
+										     {{ .Title }}~
+									    {{- end -}}
+								    {{- end }}
+                  \item[Professional Level:]{{- $level := .Site.RegularPages.RelatedIndices . "level" -}}
+                {{- range $level -}}
+									{{- if eq .Section "levels" -}}
+										{{ .Title }}~
+									{{- end -}}
+								{{- end }}
+                \item[Scalability:] {{ .Params.session_scalability|markdownify }}</p>
+							{{ with .Params.other_comments }}
+              \item[Other Comments:] {{ . | plainify  }}{{end}}
+              \end{description}
+
+
+
+
+    {{ end }}
+  {{ end }}
+
+  {{ end }}
+
+
+
+\end{document}

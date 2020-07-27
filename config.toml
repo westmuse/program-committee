@@ -7,6 +7,9 @@ canonifyurls = true
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = ""
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [related]
   threshold = 1
   includeNewer = true
@@ -27,8 +30,9 @@ googleAnalytics = ""
 [mediaTypes]
   [mediaTypes."application/rtf"]
     suffixes = ["rtf"]
-  [mediaTypes."text/plain"]
-    suffixes = [ "tex", "txt" ]
+  [mediaTypes."text/latex"]
+    suffixes = ["tex"]
+
 
 [outputFormats]
 	[outputFormats.downloadable]
@@ -37,15 +41,16 @@ googleAnalytics = ""
 		mediaType = "text/html"
 		path = "../print_output"
   [outputFormats.latex]
-    baseName = "latex"
-    isPlainText = true
-    mediaType = "text/plain"
+    baseName = "print"
+    isPlainText = false
+    mediaType = "text/latex"
     path = "../print_output"
 
 
 
 [outputs]
 	home = ["HTML", "JSON"]
+
 
 
 
