@@ -43,7 +43,7 @@
                 \begin{description}
                   \item [Format:] {{.Params.session_type | plainify }}
 							    {{ if ne .Params.session_fee "" }}
-								  \item [Fee:]{{.Params.session_fee | plainify| replaceRE "\x24" "fresh"}} 
+								  \item [Fee:]{{.Params.session_fee | plainify}}
 							     {{end}}
 							    \item [Uniqueness:]{{.Params.session_unique | plainify }}
 							    \item [Objectives:]{{.Params.session_objectives | plainify }}
@@ -67,10 +67,13 @@
 										{{ .Title }}~
 									{{- end -}}
 								{{- end }}
-                \item[Scalability:] {{ .Params.session_scalability|markdownify }}</p>
+                \item[Scalability:] {{ .Params.session_scalability|plainify }}</p>
 							{{ with .Params.other_comments }}
               \item[Other Comments:] {{ . | plainify  }}{{end}}
               \end{description}
+            \subsection*{Participants}
+              
+
 
 
 
