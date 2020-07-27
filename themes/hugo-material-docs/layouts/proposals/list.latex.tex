@@ -1,4 +1,5 @@
 \documentclass{report}
+\usepackage{multicol}
 \title{ {{.Site.Title}}: {{.Title }} }
 \date{ Last updated: {{ now.Format "January 2, 2006"}}}
 \author{Western Museums Association}
@@ -37,8 +38,8 @@
                     {{- end -}}
                   {{- end }}
               \end{description}
-              \subsection*{}
-                {{.Content|plainify}}
+
+              {{.Content|plainify}}
               \subsection*{Session Information}
                 \begin{description}
                   \item [Format:] {{.Params.session_type | plainify }}
@@ -72,7 +73,54 @@
               \item[Other Comments:] {{ . | plainify  }}{{end}}
               \end{description}
             \subsection*{Participants}
-              
+              \subsubsection*{ {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} }
+              Submitter{{- if eq .Params.submitter.is_mod "true"}}, Moderator{{- end -}}{{ if eq .Params.submitter.is_pres "true"}}, Presenter{{ end }}\newline
+              {{.Params.submitter.title}}\newline
+              {{.Params.submitter.institution}}, {{.Params.submitter.location}}
+              \newline
+              {{ with .Params.submitter.email }}{{.}}\newline{{end}}
+              {{ with .Params.submitter.email2 }}{{.}}\newline{{end}}
+              {{ with .Params.submitter.tel }}{{.}}\newline{{end}}
+              \newline
+              \newline
+              {{ with .Params.submitter.justification}}{{. | plainify }}\newline{{ end }}
+
+
+              {{ if ne .Params.moderator.last_name "" }}
+                \subsubsection*{ {{.Params.moderator.first_name}} {{.Params.moderator.last_name}} }
+                Moderator{{ if eq .Params.moderator.is_pres "true"}}, Presenter{{ end }}\newline
+                {{.Params.moderator.title}}\newline
+                {{.Params.moderator.institution}}, {{.Params.moderator.location}}
+                \newline
+                {{ with .Params.moderator.email }}{{.}}\newline{{end}}
+                {{ with .Params.moderator.email2 }}{{.}}\newline{{end}}
+                {{ with .Params.moderator.tel }}{{.}}\newline{{end}}
+                \newline
+                \newline
+                {{ with .Params.moderator.justification}}{{. | plainify }}\newline{{ end }}
+                \emph{ ({{ if eq .Params.moderator.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
+              {{ end }}
+
+              {{ if ne .Params.pres_1.last_name "" }}
+                \subsubsection*{ {{.Params.pres_1.first_name}} {{.Params.pres_1.last_name}} }
+                Presenter\newline
+                {{.Params.pres_1.title}}\newline
+                {{.Params.pres_1.institution}}, {{.Params.pres_1.location}}
+                \newline
+                {{ with .Params.pres_1.email }}{{.}}\newline{{end}}
+                {{ with .Params.pres_1.email2 }}{{.}}\newline{{end}}
+                {{ with .Params.pres_1.tel }}{{.}}\newline{{end}}
+                \newline
+                \newline
+                {{ with .Params.pres_1.justification}}{{. | plainify }}{{ end }}
+                \emph{ ({{ if eq .Params.pres_1.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
+              {{ end }}
+
+
+
+
+
+
 
 
 
