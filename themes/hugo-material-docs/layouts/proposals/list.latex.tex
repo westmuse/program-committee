@@ -3,6 +3,8 @@
 \title{ {{.Site.Title}}: {{.Title }} }
 \date{ Last updated: {{ now.Format "January 2, 2006"}}}
 \author{Western Museums Association}
+\widowpenalty=600
+\clubpenalty=600
 
 \begin{document}
   \pagenumbering{gobble}
@@ -114,6 +116,51 @@
                 \newline
                 {{ with .Params.pres_1.justification}}{{. | plainify }}{{ end }}
                 \emph{ ({{ if eq .Params.pres_1.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
+              {{ end }}
+
+              {{ if ne .Params.pres_2.last_name "" }}
+                \subsubsection*{ {{.Params.pres_2.first_name}} {{.Params.pres_2.last_name}} }
+                Presenter\newline
+                {{.Params.pres_2.title}}\newline
+                {{.Params.pres_2.institution}}, {{.Params.pres_2.location}}
+                \newline
+                {{ with .Params.pres_2.email }}{{.}}\newline{{end}}
+                {{ with .Params.pres_2.email2 }}{{.}}\newline{{end}}
+                {{ with .Params.pres_2.tel }}{{.}}\newline{{end}}
+                \newline
+                \newline
+                {{ with .Params.pres_2.justification}}{{. | plainify }}{{ end }}
+                \emph{ ({{ if eq .Params.pres_2.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
+              {{ end }}
+
+              {{ if ne .Params.pres_3.last_name "" }}
+                \subsubsection*{ {{.Params.pres_3.first_name}} {{.Params.pres_3.last_name}} }
+                Presenter\newline
+                {{.Params.pres_3.title}}\newline
+                {{.Params.pres_3.institution}}, {{.Params.pres_3.location}}
+                \newline
+                {{ with .Params.pres_3.email }}{{.}}\newline{{end}}
+                {{ with .Params.pres_3.email2 }}{{.}}\newline{{end}}
+                {{ with .Params.pres_3.tel }}{{.}}\newline{{end}}
+                \newline
+                \newline
+                {{ with .Params.pres_3.justification}}{{. | plainify }}{{ end }}
+                \emph{ ({{ if eq .Params.pres_3.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
+              {{ end }}
+
+              {{ if ne .Params.pres_4.last_name "" }}
+                \subsubsection*{ {{.Params.pres_4.first_name}} {{.Params.pres_4.last_name}} }
+                Presenter\newline
+                {{.Params.pres_4.title}}\newline
+                {{.Params.pres_4.institution}}, {{.Params.pres_4.location}}
+                \newline
+                {{ with .Params.pres_4.email }}{{.}}\newline{{end}}
+                {{ with .Params.pres_4.email2 }}{{.}}\newline{{end}}
+                {{ with .Params.pres_4.tel }}{{.}}\newline{{end}}
+                \newline
+                \newline
+                {{ with .Params.pres_4.justification}}{{. | plainify }}{{ end }}
+                \emph{ ({{ if eq .Params.pres_4.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
               {{ end }}
 
 
