@@ -21,7 +21,7 @@ jobs:
       - run: chmod +x public/print_output/
       - run: git rm public/print_output/print.pdf
       - name: Compile LaTeX document
-        uses: dante-ev/latex-action@v0.2.0
+        uses: ddante-ev/latex-action@master
         with:
           root_file: print.tex  # gets appended to pandoc command
           working_directory: public/print_output/
