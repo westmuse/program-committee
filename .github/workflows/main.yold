@@ -13,20 +13,17 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  compile_latex_pdf:
-    runs-on: ubuntu-latest
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Set up Git repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - run: chmod +x public/print_output/
-      - run: git rm public/print_output/proposals.pdf
-      - name: Compile LaTeX document
-        uses: dante-ev/latex-action@master
+      - run: git rm public/print_output/proposals.docx
+      - uses: docker://pandoc/core:2.9
         with:
-          root_file: proposals.tex  # gets appended to pandoc command
-          working_directory: public/print_output/
-      - run: git add proposals.pdf
-      - run: git mv proposals.pdf public/print_output/
+          args: "-f html -t docx public/print_output/proposals.html -o proposals.docx" # gets appended to pandoc command
+      - run: git add proposals.docx
+      - run: git mv proposals.docx public/print_output/
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
