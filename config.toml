@@ -42,7 +42,7 @@ googleAnalytics = ""
 		path = "../print_output"
   [outputFormats.latex]
     baseName = "print"
-    isPlainText = false
+    isPlainText = true
     mediaType = "text/latex"
     path = "../print_output"
 
