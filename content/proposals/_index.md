@@ -6,6 +6,7 @@ download_link: '/docs/allProposals.zip'
 outputs:
 - html
 - downloadable
+- latex
 
 ---
 This is content from the proposals/index.md page.
