@@ -19,7 +19,7 @@ jobs:
       - name: Set up Git repo
         uses: actions/checkout@v2
       - run: chmod +x public/print_output/
-      - run: git rm public/print_output/proposals.pdf
+      - run: git rm public/print_output/print.pdf
       - name: Compile LaTeX document
         uses: dante-ev/latex-action@v0.2.0
         with:
