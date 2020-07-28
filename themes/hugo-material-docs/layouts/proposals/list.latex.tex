@@ -1,10 +1,8 @@
 \documentclass{report}
-\usepackage{multicol}
+
 \title{ {{.Site.Title}}: {{.Title }} }
 \date{ Last updated: {{ now.Format "January 2, 2006"}}}
 \author{Western Museums Association}
-\widowpenalty=600
-\clubpenalty=600
 
 \begin{document}
   \pagenumbering{gobble}
@@ -41,7 +39,7 @@
                   {{- end }}
               \end{description}
 
-              {{.Content | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "\\newline$1\\newline"}}
+              {{.Content | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline"}}
               \subsection*{Session Information}
                 \begin{description}
                   \item [Format:] {{.Params.session_type | plainify }}
