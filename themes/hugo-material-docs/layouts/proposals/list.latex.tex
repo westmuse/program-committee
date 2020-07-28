@@ -41,7 +41,7 @@
                   {{- end }}
               \end{description}
 
-              {{.Content | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-"}}
+              {{.Content | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "\\newline$1\\newline"}}
               \subsection*{Session Information}
                 \begin{description}
                   \item [Format:] {{.Params.session_type | plainify }}
@@ -49,11 +49,11 @@
 								  \item [Fee:]{{.Params.session_fee | plainify}}
 							     {{end}}
 							    \item [Uniqueness:]{{.Params.session_unique | plainify }}
-							    \item [Objectives:]{{.Params.session_objectives | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" }}
-							    \item [Engagement:]{{.Params.session_engagement | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-"}}
-							    \item [Relationship to Theme:]{{.Params.theme_relationship | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" }}
+							    \item [Objectives:]{{.Params.session_objectives | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" }}
+							    \item [Engagement:]{{.Params.session_engagement | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline"}}
+							    \item [Relationship to Theme:]{{.Params.theme_relationship | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" }}
 							    {{ with .Params.theme_comments }}
-                    \item [Additional Comments: ]{{ . | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-"  }}{{end}}
+                    \item [Additional Comments: ]{{ . | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline"  }}{{end}}
                 \end{description}
               \subsection*{Audience}
                 \begin{description}
@@ -61,7 +61,7 @@
                     {{- $audience := .Site.RegularPages.RelatedIndices . "audience"  -}}
                     {{- range  $audience -}}
 									    {{- if eq .Section "audiences" -}}
-										     {{ .Title | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" }}~
+										     {{ .Title | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" }}~
 									    {{- end -}}
 								    {{- end }}
                   \item[Professional Level:]{{- $level := .Site.RegularPages.RelatedIndices . "level" -}}
@@ -70,9 +70,9 @@
 										{{ .Title }}~
 									{{- end -}}
 								{{- end }}
-                \item[Scalability:] {{ .Params.session_scalability | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-"  }}
+                \item[Scalability:] {{ .Params.session_scalability | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline"  }}
 							{{ with .Params.other_comments }}
-              \item[Other Comments:] {{ . | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-"   }}{{end}}
+              \item[Other Comments:] {{ . | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline"   }}{{end}}
               \end{description}
             \subsection*{Participants}
               \subsubsection*{ {{.Params.submitter.first_name}} {{.Params.submitter.last_name}} }
@@ -97,7 +97,7 @@
                 {{ with .Params.moderator.email2 }}{{.}}\newline{{end}}
                 {{ with .Params.moderator.tel }}{{.}}\newline{{end}}
 
-                {{ with .Params.moderator.justification}}{{. | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" }}\newline{{ end }}
+                {{ with .Params.moderator.justification}}{{. | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" }}\newline{{ end }}
                 \emph{ ({{ if eq .Params.moderator.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
               {{ end }}
 
@@ -111,7 +111,7 @@
                 {{ with .Params.pres_1.email2 }}{{.}}\newline{{end}}
                 {{ with .Params.pres_1.tel }}{{.}}\newline{{end}}
 
-                {{ with .Params.pres_1.justification}}{{. | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" }}{{ end }}
+                {{ with .Params.pres_1.justification}}{{. | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" }}{{ end }}
                 \emph{ ({{ if eq .Params.pres_1.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
               {{ end }}
 
@@ -125,7 +125,7 @@
                 {{ with .Params.pres_2.email2 }}{{.}}\newline{{end}}
                 {{ with .Params.pres_2.tel }}{{.}}\newline{{end}}
 
-                {{ with .Params.pres_2.justification}}{{. | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" }}{{ end }}
+                {{ with .Params.pres_2.justification}}{{. | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" }}{{ end }}
                 \emph{ ({{ if eq .Params.pres_2.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
               {{ end }}
 
@@ -139,7 +139,7 @@
                 {{ with .Params.pres_3.email2 }}{{.}}\newline{{end}}
                 {{ with .Params.pres_3.tel }}{{.}}\newline{{end}}
 
-                {{ with .Params.pres_3.justification}}{{. | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" }}{{ end }}
+                {{ with .Params.pres_3.justification}}{{. | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" }}{{ end }}
                 \emph{ ({{ if eq .Params.pres_3.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
               {{ end }}
 
@@ -153,7 +153,7 @@
                 {{ with .Params.pres_4.email2 }}{{.}}\newline{{end}}
                 {{ with .Params.pres_4.tel }}{{.}}\newline{{end}}
 
-                {{ with .Params.pres_4.justification}}{{. | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" }}{{ end }}
+                {{ with .Params.pres_4.justification}}{{. | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<ol>" "\\begin{enumerate}"| replaceRE "<ul>" "\\begin{itemize}"| replaceRE "<li>" "\\item " | replaceRE "<\\/li>" "" | replaceRE "<\\/ol>" "\\end{enumerate}" | replaceRE "<\\/ul>" "\\end{itemize}" | replaceRE "<\\/?p>" "" | replaceRE "\\&" "\\&" | replaceRE "\\$" "\\$" | replaceRE "\\_" "\\_" | replaceRE "\u25CF" "-" | replaceRE "<h[0-9].*>(.*)<\\/h[0-9].*>" "$1\\newline" }}{{ end }}
                 \emph{ ({{ if eq .Params.pres_4.is_confirmed "true" }}confirmed{{else}}not confirmed{{end}}) }
               {{ end }}
 {{- end -}}
