@@ -21,18 +21,18 @@ jobs:
       - run: chmod +x public/print_output/
       - run: git rm public/print_output/proposals.pdf
       - name: Compile LaTeX document
-        uses: dante-ev/latex-action@master
+        uses: dante-ev/latex-action@v0.2.0
         with:
-          root_file: proposals.tex  # gets appended to pandoc command
+          root_file: print.tex  # gets appended to pandoc command
           working_directory: public/print_output/
-      - run: git add proposals.pdf
-      - run: git mv proposals.pdf public/print_output/
+      - run: git add print.pdf
+      - run: git mv print.pdf public/print_output/
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
           author_name: Koven Smith
           author_email: koven@kovenjsmith.com
           message: "Convert HTML proposals list to docx"
-          add: "public/print_output/proposals.docx"
+          add: "public/print_output/print.pdf"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
