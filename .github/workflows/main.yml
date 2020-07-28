@@ -25,6 +25,7 @@ jobs:
         with:
           root_file: print.tex  # gets appended to pandoc command
           working_directory: public/print_output/
+          args: -f -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
       - run: git add print.pdf
       - run: git mv print.pdf public/print_output/
       - name: Commit changes
