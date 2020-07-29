@@ -32,6 +32,8 @@ googleAnalytics = ""
     suffixes = ["rtf"]
   [mediaTypes."text/latex"]
     suffixes = ["tex"]
+  [mediaTypes."application/pdf"]
+    suffixes = ["pdf"]
 
 
 [outputFormats]
@@ -45,7 +47,11 @@ googleAnalytics = ""
     isPlainText = true
     mediaType = "text/latex"
     path = "../print_output"
-
+  [outputFormats.pdf]
+    baseName = "print"
+    isPlainText = false
+    mediaType = "application/pdf"
+    path = "../print_output"
 
 
 [outputs]

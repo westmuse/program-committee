@@ -5,8 +5,8 @@ draft: false
 download_link: '/docs/allProposals.zip'
 outputs:
 - html
-- downloadable
 - latex
+- pdf
 
 ---
 This is content from the proposals/index.md page.
