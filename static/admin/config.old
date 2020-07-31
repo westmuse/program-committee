@@ -1,0 +1,380 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "static/files" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/files" # The src attribute for uploaded media will begin with /images/uploads
+
+
+collections:
+  - name: "pc-materials" # Used in routes, e.g., /admin/collections/blog
+    label: "Program Committee Docs" # Used in the UI
+    folder: "content/pc-materials" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "abstract", name: "abstract", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Weight", name: "weight", widget: "number"}
+  - name: "pc-members" # Used in routes, e.g., /admin/collections/blog
+    label: "Committee Members" # Used in the UI
+    folder: "content/pc-members" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{last_name}}_{{first_name}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "First Name", name: "first_name", widget: "string"}
+      - {label: "Last Name", name: "last_name", widget: "string"}
+      - {label: "Org Title", name: "org_title", widget: "string"}
+      - {label: "Organization", name: "organization", widget: "string"}
+      - {label: "State", name: "state", widget: "string"}
+      - {label: "E-mail", name: "email", widget: "string"}
+      - {label: "Phone", name: "phone", widget: "string"}
+      - {label: "Is Chair?", name: "chair", widget: "boolean"}
+      - {label: "PC Year", name: "year", widget: "string"}
+  - name: "timelines" # Used in routes, e.g., /admin/collections/blog
+    label: "Timelines and Agendas" # Used in the UI
+    folder: "content/timelines" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "abstract", name: "abstract", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Weight", name: "weight", widget: "number"}
+  - name: "home" # Used in routes, e.g., /admin/collections/blog
+    label: "Welcome" # Used in the UI
+    folder: "content/home" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "draft", name: "draft", widget: "boolean"}
+      - {label: "abstract", name: "abstract", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "proposals" # Used in routes, e.g., /admin/collections/blog
+    label: "Proposals" # Used in the UI
+    folder: "content/proposals" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "submitter", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Professional Level", name: "categories", widget: "list"}
+      - {label: "Audience", name: "tags", widget: "list"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Uniqueness", name: "uniqueness", widget: "markdown"}
+      - {label: "Objectives", name: "objectives", widget: "markdown"}
+      - {label: "Engagement", name: "engagement", widget: "markdown"}
+      - {label: "Additional Comments", name: "additional_comments", widget: "markdown", required: false}
+      - {label: "Other Comments", name: "other_comments", widget: "markdown", required: false}
+      - {label: "Relationship to Theme", name: "theme_relationship", widget: "markdown"}
+      - label: "Submitter"
+        name: "submitter"
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string", required: false}
+          - {label: "Telephone", name: "telephone", widget: "string", required: false}
+          - {label: "Also moderating?", name: "is_moderator", widget: "boolean"}
+          - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
+      - label: "Moderator"
+        name: "moderator"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 1"
+        name: "presenter_1"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 2"
+        name: "presenter_2"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 3"
+        name: "presenter_3"
+        required: false
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 4"
+        name: "presenter_4"
+        required: false
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown", required: false}
+      - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown", required: false}
+  - name: "proposals-round2" # Used in routes, e.g., /admin/collections/blog
+    label: "Round 2 Proposals" # Used in the UI
+    folder: "content/proposals-round2" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "submitter", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Professional Level", name: "categories", widget: "list"}
+      - {label: "Audience", name: "tags", widget: "list"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Uniqueness", name: "uniqueness", widget: "markdown"}
+      - {label: "Objectives", name: "objectives", widget: "markdown"}
+      - {label: "Engagement", name: "engagement", widget: "markdown"}
+      - {label: "Additional Comments", name: "additional_comments", widget: "markdown", required: false}
+      - {label: "Other Comments", name: "other_comments", widget: "markdown", required: false}
+      - {label: "Relationship to Theme", name: "theme_relationship", widget: "markdown"}
+      - label: "Submitter"
+        name: "submitter"
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string", required: false}
+          - {label: "Telephone", name: "telephone", widget: "string", required: false}
+          - {label: "Also moderating?", name: "is_moderator", widget: "boolean"}
+          - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
+      - label: "Moderator"
+        name: "moderator"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 1"
+        name: "presenter_1"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 2"
+        name: "presenter_2"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 3"
+        name: "presenter_3"
+        required: false
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 4"
+        name: "presenter_4"
+        required: false
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown", required: false}
+      - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown", required: false}
+  - name: "workshops" # Used in routes, e.g., /admin/collections/blog
+    label: "Workshops" # Used in the UI
+    folder: "content/workshops" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "submitter", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Professional Level", name: "categories", widget: "list"}
+      - {label: "Audience", name: "tags", widget: "list"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Workshop Format", name: "session_format", widget: "string"}
+      - {label: "Workshop Fee", name: "fee", widget: "string"}
+      - {label: "Uniqueness", name: "uniqueness", widget: "markdown"}
+      - {label: "Objectives", name: "objectives", widget: "markdown"}
+      - {label: "Engagement", name: "engagement", widget: "markdown"}
+      - {label: "Additional Comments", name: "additional_comments", widget: "markdown", required: false}
+      - {label: "Other Comments", name: "other_comments", widget: "markdown", required: false}
+      - {label: "Relationship to Theme", name: "theme_relationship", widget: "markdown"}
+      - label: "Submitter"
+        name: "submitter"
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "organization", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string", required: false}
+          - {label: "Telephone", name: "telephone", widget: "string", required: false}
+          - {label: "Also presenting?", name: "is_presenting", widget: "boolean"}
+      - label: "Presenter 1"
+        name: "presenter_1"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 2"
+        name: "presenter_2"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 3"
+        name: "presenter_3"
+        required: false
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - label: "Presenter 4"
+        name: "presenter_4"
+        required: false
+        widget: "object"
+        fields:
+          - {label: "First Name", name: "first_name", widget: "string"}
+          - {label: "Last Name", name: "last_name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Organization", name: "first_name", widget: "string"}
+          - {label: "City, State", name: "city", widget: "string"}
+          - {label: "Primary E-mail", name: "primary_email", widget: "string"}
+          - {label: "Secondary E-mail", name: "secondary_email", widget: "string"}
+          - {label: "Telephone", name: "telephone", widget: "string"}
+          - {label: "Confirmed?", name: "is_confirmed", widget: "boolean"}
+          - {label: "Reason for including", name: "reason", widget: "markdown"}
+      - {label: "Keynote Sugggestions", name: "keynote_suggestions", widget: "markdown", required: false}
+      - {label: "Other Programming Sugggestions", name: "other_suggestions", widget: "markdown", required: false}
