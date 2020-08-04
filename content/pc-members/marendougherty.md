@@ -8,7 +8,7 @@ state: 'CA'
 email: ''
 phone: ''
 chair: 
-active: true
+active: 
 assignee: 'marendougherty'
 
 ---
