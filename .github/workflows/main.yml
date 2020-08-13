@@ -25,14 +25,14 @@ jobs:
         uses: dante-ev/latex-action@v0.2.0
         with:
           root_file: round1.tex  # gets appended to pandoc command
-          working_directory: public/print_output/
+          working_directory: public/files/
           args: -f -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
       - run: git add public/print_output/round1.pdf
-      - name: Compile Round 1 LaTeX document
+      - name: Compile Round 2 LaTeX document
         uses: dante-ev/latex-action@v0.2.0
         with:
           root_file: round2.tex  # gets appended to pandoc command
-          working_directory: public/print_output/
+          working_directory: public/files/
           args: -f -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
       - run: git add public/print_output/round2.pdf
       - name: Commit changes
@@ -41,6 +41,6 @@ jobs:
           author_name: Koven Smith
           author_email: koven@kovenjsmith.com
           message: "Convert latex files to pdf"
-          
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
