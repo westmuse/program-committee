@@ -19,22 +19,22 @@ jobs:
       - name: Set up Git repo
         uses: actions/checkout@v2
       - run: chmod +x public/print_output/
-      - run: git rm public/print_output/round1.pdf
-      - run: git rm public/print_output/round2.pdf
+      - run: git rm public/files/round1.pdf
+      - run: git rm public/files/round2.pdf
       - name: Compile Round 1 LaTeX document
         uses: dante-ev/latex-action@v0.2.0
         with:
           root_file: round1.tex  # gets appended to pandoc command
           working_directory: public/files/
           args: -f -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-      - run: git add public/print_output/round1.pdf
+      - run: git add public/files/round1.pdf
       - name: Compile Round 2 LaTeX document
         uses: dante-ev/latex-action@v0.2.0
         with:
           root_file: round2.tex  # gets appended to pandoc command
           working_directory: public/files/
           args: -f -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-      - run: git add public/print_output/round2.pdf
+      - run: git add public/files/round2.pdf
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
