@@ -46,12 +46,14 @@ googleAnalytics = ""
     baseName = "round1"
     isPlainText = true
     mediaType = "text/latex"
-    path = "../print_output"
+    path = "../files/print_output"
   [outputFormats.round2_print]
     baseName = "round2"
     isPlainText = true
     mediaType = "text/latex"
-    path = "../print_output"
+    path = "../files/print_output"
+
+
 
 
 [outputs]
