@@ -60,7 +60,7 @@
 				{{ range .Pages.GroupByParam "session_type" "desc"}}
 				<h3>{{.Key}}</h3>
 				{{ range .Pages.ByParam "ID" }}
-					{{ if eq .Params.round_number "Round 2" }}
+					{{ if and (eq .Params.round_number "Round 2") (eq .Params.submission_year $.Site.Params.submission_year) }}
 						<li><a href="{{ .Permalink }}" title="{{ .Params.session_title }}">{{ .Params.ID}}: {{ .Params.session_title }}</a></li>
 					{{ end }}
 				{{ end }}
