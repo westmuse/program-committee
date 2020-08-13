@@ -16,7 +16,7 @@
     \chapter*{ {{.Key}} }
 
       {{ range .Pages.ByParam "ID" }}
-        {{ if eq .Params.round_number "Round 1" }}
+        {{ if and (eq .Params.round_number "Round 1") (eq .Params.submission_year $.Site.Params.submission_year) }}
           \newpage
           \section{ {{.Params.session_title}} }
             \begin{description}
