@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Set up Git repo
         uses: actions/checkout@v2
-      - run: chmod +x public/files
+      - run: chmod +x /public/files/
       - run: git rm public/files/round1.pdf
       - run: git rm public/files/round2.pdf
       - name: Compile Round 1 LaTeX document
