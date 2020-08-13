@@ -27,14 +27,14 @@ jobs:
           root_file: round1.tex  # gets appended to pandoc command
           working_directory: public/files/print/
           args: -f -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-      - run: git add public/files/print/round1.pdf
+      - run: git add public/files/print/round1.pdf -f
       - name: Compile Round 2 LaTeX document
         uses: dante-ev/latex-action@v0.2.0
         with:
           root_file: round2.tex  # gets appended to pandoc command
           working_directory: public/files/print/
           args: -f -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-      - run: git add public/files/print/round2.pdf
+      - run: git add public/files/print/round2.pdf -f 
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
