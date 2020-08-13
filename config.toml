@@ -42,15 +42,15 @@ googleAnalytics = ""
 		isPlainText = false
 		mediaType = "text/html"
 		path = "../print_output"
-  [outputFormats.latex]
-    baseName = "print"
+  [outputFormats.round1_print]
+    baseName = "round1"
     isPlainText = true
     mediaType = "text/latex"
     path = "../print_output"
-  [outputFormats.pdf]
-    baseName = "print"
-    isPlainText = false
-    mediaType = "application/pdf"
+  [outputFormats.round2_print]
+    baseName = "round2"
+    isPlainText = true
+    mediaType = "text/latex"
     path = "../print_output"
 
 
