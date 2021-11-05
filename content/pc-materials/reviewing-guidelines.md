@@ -22,6 +22,10 @@ Please note, the PC is evaluating sessions on what is proposed, though, and not 
 
 Some of the most interesting sessions are those with wildly different perspectives. Does the proposal recognize this possibility in the session description? If the session has a hint of controversy, ask the proposer to develop this aspect; suggest any of your professional contacts that may lend a different perspective; stir the pot!
 
+## Community Representation
+
+For any session that discusses a specific group of people, especially if they are the intended audience or focus of an exhibition or program, at least one member from the specific group should be represented on the panel. When session attendance is cost prohibitive for the individual(s), WMA will waive the in-person requirement for all presenters and virtual or recorded participation will be allowed to ensure an appropriate and balanced community representation in the session.
+
 ## Titles
 
 Please think about the session title. Does it convey the content, or is it too confusing, too cutesy, too obscure? Creative titles are fine, but they need to clearly communicate what the session is about. Some of our marketing material will only include the titles of sessions and not the descriptions.
