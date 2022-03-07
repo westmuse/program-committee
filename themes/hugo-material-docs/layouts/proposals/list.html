@@ -35,15 +35,16 @@
 		<span style="padding-left: 20px; padding-right: 20px"><a href="#round-2">Round Two</a></span>
 		<span style="padding-left: 20px; padding-right: 20px"><a href="/files/round1.tex" download>Download Round 1</a></span>
 		<span style="padding-left: 20px; padding-right: 20px"><a href="/files/round2.pdf" download>Download Round 2</a></span>
-			{{ range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
-{{ end -}}
+			
 
 
 <hr>
 
 <section id="round-1">
 	<h2>Round One Proposals and Workshops</h2>
+	{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
 				<ul>
 				{{ range .Pages.GroupByParam "session_type" "desc"}}
 				<h3>{{.Key}}</h3>
