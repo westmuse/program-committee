@@ -67,9 +67,9 @@ googleAnalytics = ""
 [params]
 	# General information
 	author = "Western Museums Association"
-	description = "Site for review of submitted 2020 WMA proposals"
+	description = "Site for review of submitted 2022 WMA proposals"
 	copyright = "2019 Western Museums Association, all rights reserved"
-  submission_year = "2021"
+  submission_year = "2022"
 
 	# Repository
 
