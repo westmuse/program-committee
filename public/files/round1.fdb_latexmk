@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1647136082 "round1.tex" "round1.pdf" "round1" 1647136083
+["pdflatex"] 1647190259 "round1.tex" "round1.pdf" "round1" 1647190259
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -27,11 +27,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1632041033 4362347 be03dfa128b19827518dd8bc96454f42 ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1632025792 2798000 5946cdd4d0be2f86b3a4ab3c877054e7 ""
   "/usr/local/texlive/2021/texmf.cnf" 1632025722 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "round1.aux" 1647136083 148 e1d4694f9d7b378728c56eed34f6dccc "pdflatex"
-  "round1.tex" 1647136080 2997 04e6804ffe7ffb226c3ea9dd224f9bfb ""
-  "round1.toc" 1647136083 75 bea96c5fbc437ece90b41b9b41500f38 "pdflatex"
+  "round1.aux" 1647190259 148 e1d4694f9d7b378728c56eed34f6dccc "pdflatex"
+  "round1.tex" 1647190258 2997 04e6804ffe7ffb226c3ea9dd224f9bfb ""
+  "round1.toc" 1647190259 75 bea96c5fbc437ece90b41b9b41500f38 "pdflatex"
   (generated)
   "round1.aux"
-  "round1.pdf"
-  "round1.log"
   "round1.toc"
+  "round1.log"
+  "round1.pdf"
