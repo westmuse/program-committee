@@ -38,8 +38,8 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          author_name: Koven Smith
-          author_email: koven@kovenjsmith.com
+          author_name: westmuse
+          author_email: 64872597+westmuse@users.noreply.github.com
           message: "Convert latex files to pdf"
 
         env:
