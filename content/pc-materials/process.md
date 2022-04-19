@@ -18,7 +18,7 @@ Summary of the steps taken by the Western Museums Association (WMA) staff and th
 
 In the PC’s work, PC members are representatives of WMA. Conversations with proposers, presenters, as well as any other participants should be professional, neutral, and confidential. All conversations during the PC Meetings are strictly confidential; this is particularly important so that PC members are able to speak candidly in order to develop the best program possible.
 
-## Activities
+## Activities (does not apply to 2022)
 
 1. **Formulating the PC.** Committee members serve for three years in order to provide continuity to the process. Co-Chairs usually serve for two years, replaced on alternate years. It is vital to have museum professionals from the upcoming host venues on the PC in order to take advantage of local opportunities and to develop a local flavor to the program. It is also important to have representation from the crucial segments of the museum profession, the member states of the Western Region, and other important constituencies. The PC for the coming year is finalized by the current year Annual Meeting in order to use it as a recruiting tool for session proposals and other program ideas.
 2. **Call for Proposals.** The formal call for proposals—sessions and workshops—for the coming year is posted on the WMA website by the Annual Meeting. The deadline for submissions is usually late November to early December as determined by WMA staff and PC Co-Chairs. Staff and co-chairs will also determine an internal extended deadline to allow time to fill any potential programmatic gaps. Only proposals submitted in writing are accepted.
