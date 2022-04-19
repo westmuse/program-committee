@@ -4,6 +4,16 @@ date: 2018-12-12T15:40:06.000Z
 abstract: Outline of the process for reviewing proposals.
 weight: 25
 ---
+BELOW IS THE OLD PROCESS FOR REVIEWING PROPOSALS. WHILE THIS PROCESS SHOULD NOT BE FOLLOWED, IT IS BEING LEFT UP AS IT MAY PROVIDE VALUE TO SOME. FOR 2022, PLEASE REVIEW [ALL PROPOSALS](https://pc.westmuse.org/proposals/) WITH AN UNDERSTANDING OF THE [WMA PROPOSAL REVIEWING GUIDELINES](https://pc.westmuse.org/pc-materials/reviewing-guidelines/) AND SEND IN YOUR REVIEW ON THE RANKING SHEET (EMAILED) BY APRIL 29, 2022. 
+
+
+
+
+
+WMA Proposal Reviewing Guidelines
+
+
+
 Each PC member must read ALL of the proposals submitted. Please be sure to bring a copy of the proposals (digital is encouraged) with you to the meeting, and be prepared to discuss them in detail. Before the first meeting, please complete the following steps:
 
 1. Read all the [Guides for PC Members](/pc-materials/) thoroughly (If you have any questions, please ask the Co-Chairs)
