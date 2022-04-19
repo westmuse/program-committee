@@ -13,3 +13,7 @@ Below are some critical documents for your use as a program committee member.
 WMA Staff Email Templates (for reference only).
 
 * [WMA 2020 January Decline / Acceptance Email Template](/files/WMA2020Round1Emails.docx)
+
+
+
+[TEST](/files/2022-pc-roster.xlsx)
