@@ -4,9 +4,9 @@ date: 2018-12-12T15:40:06.000Z
 draft: false
 abstract: This website is the main resource for the WMA Program Committee.
 ---
-**Thank you for being on the Western Museums Association 2020 Program Committee!** 
+**Thank you for being on the Western Museums Association 2022 Program Committee!** 
 
-This website is the main resource for the WMA Program Committee**.** Information about hotel reservations, the actual session proposals, follow up notes from the meetings, etc. can all be found here. Please use the navigation menu to the left (or in the "hamburger" menu if you're on a smaller screen) to maneuver about.
+This website is the main resource for the WMA Program Committee**.** Information about meetings, the actual session proposals, follow up notes, etc. can all be found here. Please use the navigation menu to the left (or in the "hamburger" menu if you're on a smaller screen) to maneuver about.
 
 The best place to start is [Reviewing Guidelines & Process](https://pc.westmuse.org/pc-materials/) - followed by [All Proposals](/proposals/).
 
@@ -19,9 +19,8 @@ Here's the 2020 PC Roster, which includes members; contact information:
 
 ## Important Dates:
 
-* January 3, 2020: Contact your proposers by this date
-* January 10-11, 2020: First PC Meeting in Portland
-* January 31, 2020: Contact your proposers by this date
-* February 14, 2020: Proposal resubmissions due
-* March 13-14, 2020: Second PC Meeting in Portland
-* October 8-11, 2020: WMA 2020 in Portland
+* April 29, 2022: Single round proposal review rankings due
+* May 6, 2022: WMA staff drafted schdule send to the PC
+* May 9-13, 2022: PC meeting this week to finalize schedule
+* June 6, 2022: Registration opens
+* October 6-9, 2022: WMA Annual Meeting in Portland
