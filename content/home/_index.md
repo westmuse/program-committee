@@ -10,12 +10,7 @@ This website is the main resource for the WMA Program Committee**.** Information
 
 The best place to start is [Reviewing Guidelines & Process](https://pc.westmuse.org/pc-materials/) - followed by [All Proposals](/proposals/).
 
-You can view your assigned proposals via the [assignments document](https://pc.westmuse.org/files/WMA2020_round1_pc_assignments_final.xlsx) or by clicking on your name in the [Committee Members](/pc-members/) section.
 
-## PC Roster
-
-Here's the 2020 PC Roster, which includes members; contact information:
-[Doc: Roster](https://pc.westmuse.org/files/wma2020-pc-roster.xlsx)
 
 ## Important Dates:
 
