@@ -12,6 +12,7 @@ The best place to start is [Reviewing Guidelines & Process](https://pc.westmuse.
 
 ## Important Dates:
 
+* March 6, 2023: RFP opens
 * April 7, 2023: RFP deadline
 * April 14, 2023: Proposals and ranking materials to PC
 * May 1. 2023: PC deadline to rank proposals
