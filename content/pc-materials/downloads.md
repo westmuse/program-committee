@@ -6,10 +6,15 @@ weight: 15
 ---
 Below are some documents for your use as a program committee member.
 
+* 2﻿023 Program Committee Roster
+
+<!---->
+
 * [2022 Program Committee Roster](/files/2022-pc-roster.xlsx)
-* [2020 Program Committee Session Assignments](/files/wma2020_round1_pc_assignments_final.xlsx)
-* [2020 Program Committee Roster](/files/wma2020-pc-roster.xlsx)
-* [WMA 2019 Annual Meeting Survey Result](/files/wma2019-survey-results.pdf)
+
+<!---->
+
+* ﻿[WMA 2022 Annual Meeting Survey Result﻿s](static/files/wma-2022-pc-survey-results.pdf)
 
 WMA Staff Email Templates (for reference only).
 
