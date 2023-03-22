@@ -9,7 +9,6 @@ Below are some documents for your use as a program committee member.
 * [2﻿023 Program Committee Roster](static/files/wma-2023-pc-roster.xlsx)
 * [2022 Program Committee Roster](/files/2022-pc-roster.xlsx)
 * ﻿[WMA 2022 Annual Meeting Survey Result﻿s](static/files/wma-2022-pc-survey-results.pdf)
-
-WMA Staff Email Templates (for reference only).
-
-* [WMA 2020 January Decline / Acceptance Email Template](/files/WMA2020Round1Emails.docx)
+* [WMA 2023 Program Rubric](static/files/wma-2023-program-rubric.docx)
+* W﻿MA 2023 Program/Session Structures
+* W﻿MA 2023 Proposal Guidelines
