@@ -1,5 +1,5 @@
 ---
-title: Documents and downloads
+title: Documents and Downloads
 date: 2018-12-12T15:40:06.000Z
 abstract: Important documents for the program committee.
 weight: 15
