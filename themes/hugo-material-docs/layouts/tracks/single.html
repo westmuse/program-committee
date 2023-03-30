@@ -32,7 +32,8 @@
 <h3>Round 1:</h3>
 <ul>
 	{{ range  $related }}
-		{{ if eq .Section "proposals" }}
+		{{ if and (eq .Section "proposals") (eq .Params.submission-year $.Site.Params.submission_year) }}
+	
 			<li><a href="{{.Permalink}}">{{ .Params.ID }}: {{ .Params.session_title }}</a></li>
 		{{ end }}
 	{{ end }}
