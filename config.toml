@@ -119,8 +119,8 @@ googleAnalytics = ""
   weight = 15
 
 [[menu.main]]
-	name   = "Timelines & Meeting Agendas"
-	url    = "timelines/"
+	name   = "Timelines"
+	url    = "timelines/timeline"
 	weight = 25
 
 [[menu.main]]
