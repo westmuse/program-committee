@@ -29,7 +29,7 @@
 
 {{ $related := .Site.RegularPages.RelatedIndices . "session_track_id"  }}
 
-<h3>Round 1:</h3>
+<!--<h3>Round 1:</h3>-->
 <ul>
 	{{ range  $related }}
 		{{ if and (eq .Section "proposals") (eq .Params.submission_year $.Site.Params.submission_year) }}
@@ -38,6 +38,7 @@
 		{{ end }}
 	{{ end }}
 </ul>
+<!--
 <h3>Round 2:</h3>
 <ul>
 	{{ range  $related }}
@@ -46,7 +47,7 @@
 		{{ end }}
 	{{ end }}
 </ul>
-
+-->
 
 </div>
 
