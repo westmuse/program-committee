@@ -1,6 +1,6 @@
 ---
 title: Welcome!
-date: 2018-12-12T15:40:06.000Z
+date: 2023-03-31T20:11:12.753Z
 draft: false
 abstract: This website is the main resource for the WMA Program Committee.
 ---
