@@ -4,29 +4,29 @@ date: 2018-12-12T15:40:06.000Z
 abstract: Overall timeline with important dates and deadlines.
 weight: 10
 ---
-## December 2019
+## January 2023
 
-* Co-Chairs and staff assign proposals to PC members
-* Staff notifies PC when all submitted proposals are posted to the PC Website
-* PC members review all proposals 
-* PC members contact proposer to more fully understand their assigned proposals
+* January 9 – Zoom PC meeting (introductions / plans for the year)
+* January 25 – Zoom PC meeting (review / approve RFP)
 
-## January 2020
+## February 2023
 
-* January 3 – Deadline for the PC to contact proposers
-* January 10-11 in Portland – First Program Committee meeting; Review all session proposals
-* PC members MUST get back in touch with each proposer after the meeting to relay feedback for resubmission, including resubmission due date.
-* January 31 – Deadline for the PC to follow-up with proposers
+* WMA staff prepares website for RFP launch
 
-## February 2020
+## March 2023
 
-* February 14 – Resubmissions due through WMA session resubmittal website
+* March 6 – RFP opens
 
-## March 2020
+## April 2023
 
-* March 13-14 in Portland – Second Program Committee meeting
-  * Review all resubmitted session proposals
-  * Finalize Annual Meeting sessions
-  * Build session schedule
-* WMA staff informs proposers of their session’s acceptance or rejection
-* WMA staff reaches out to PC for follow-up on action items discussed during the second meeting
+* April 7 – RFP closes
+* April 14 - PC website updated with proposals
+* April 14 - PC members begin review and ranking process
+
+## May 2023
+
+* May 1 – PC rankings due
+* May 5 - WMA staff sends draft session schedule to PC for review
+* May 11 - PC meeting finalizes session schedule
+* May 12 - WMA staff informs proposers of their session’s acceptance or rejection
+* May 24 - WMA staff reaches out to PC for follow-up on action items discussed during the second meeting
