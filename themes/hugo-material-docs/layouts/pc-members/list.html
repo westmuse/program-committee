@@ -22,7 +22,7 @@
 			<h1>{{ .Title }}</h1>
 
 <div class="person-block" style="display: grid; grid-template-columns: repeat(auto-fill, 260px);">
-			<!--{{ range sort .Data.Pages ".File.TranslationBaseName" }}-->
+			{{ range sort .Data.Pages ".File.TranslationBaseName" }}
 			{{ if .Params.active "=" true }}
 			
 			<div class="wma-participant">
