@@ -23,7 +23,7 @@
 
 <div class="person-block" style="display: grid; grid-template-columns: repeat(auto-fill, 260px);">
 			<!--{{ range sort .Data.Pages ".File.TranslationBaseName" }}-->
-			{{ range sort (where .Data.Pages "active" "eq" "true") }}
+			{{ if .Params.active "=" true }}
 			
 			<div class="wma-participant">
 				<p><a href="{{ .Permalink }}" title="{{ .Title }}"><strong>{{.Params.first_name}} {{.Params.last_name}}</strong></a> {{ if .Params.chair }}<strong>(Chair)</strong>{{end}}<br>
@@ -35,7 +35,7 @@
 				</p>
 
 			</div>
-	<!--{{end}}-->
+	{{end}}
 			{{ end }}
 </div>
 
