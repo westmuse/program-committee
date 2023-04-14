@@ -8,6 +8,7 @@ Below are some documents for your use as a program committee member.
 
 * [WM﻿A 2023 Program Committee Roster](https://pc.westmuse.org/files/wma2023-pc-roster.xlsx)
 * [WMA 2023 Program Rubric](https://pc.westmuse.org/files/wma-2023-program-rubric.docx)
+* [WMA 2023 Proposal Track Data](static/files/wma-2023-track-data.xlsx)
 * [W﻿MA 2023 Program/Session Structures](https://pc.westmuse.org/files/wma-2023-program-session-structures.docx)
 * [W﻿MA 2023 Proposal Guidelines](https://pc.westmuse.org/files/wma-2023-proposal-guidelines.docx)
 * ﻿[WMA 2022 Annual Meeting Survey Result﻿s](https://pc.westmuse.org/files/wma2022-annual-meeting-evaluation.pdf)
