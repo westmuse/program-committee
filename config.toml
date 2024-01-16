@@ -131,7 +131,7 @@ googleAnalytics = ""
 [[menu.main]]
 	name   = "Committee Members"
 	url    = "pc-members/"
-	weight = 30
+	weight = 0
 [[menu.main]]
   name   = "Proposals by Track"
   url    = "tracks/"
