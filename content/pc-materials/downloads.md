@@ -11,5 +11,5 @@ Below are some documents for your use as a program committee member.
 * [WMA 2024 Program Rubric](https://pc.westmuse.org/files/wma-2024-program-rubric.docx)
 * [WMA 2024 Proposal Track Data](https://pc.westmuse.org/files/wma-2024-proposal-track-data.xlsx)
 * [W﻿MA 2024 Program/Session Structures](https://pc.westmuse.org/files/wma2024_session_structures.docx)
-* [W﻿MA 2025 Proposal Guidelines](static/files/request-for-proposals_guidelines_25.pdf)
+* [W﻿MA 2025 Proposal Guidelines](https://pc.westmuse.org/files/request-for-proposals_guidelines_25.pdf)
 * ﻿[WMA 2024 Annual Meeting Survey Result﻿s](https://pc.westmuse.org/files/wma2024-annual-meeting-evaluation.pdf)
