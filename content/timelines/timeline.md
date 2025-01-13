@@ -4,30 +4,26 @@ date: 2018-12-12T15:40:06.000Z
 abstract: Overall timeline with important dates and deadlines.
 weight: 10
 ---
-## January 2024
+## January 2025
 
-* January 9 – Zoom PC meeting (introductions / plans for the year)
-* January 25 – Zoom PC meeting (review / approve RFP)
+* E﻿arly January: Co-Chairs review RFP and provide feedback
+* L﻿ate January: PC Meeting to review/approve (introductions, community building, and explain plans for 2025)
 
-## February 2024
+## February 2025
 
-* February 5 - Zoom PC meeting (review / approve RFP)
 * WMA staff prepares website for RFP launch
-* February 20 - RFP opens
+* February 10: RFP opens
 
-## March 2024
+## March 2025
 
-* March 6 – WMA Hosted Session Brainstorming Zoom
-* March 29 - RFP closes
+* March 5: WMA Hosts Session Brainstorming Zoom
+* March 21: RFP closes
+* M﻿arch 31: PC website updated with proposals
+* M﻿arch 31: PC members begin review and ranking process
 
-## April 2024
+## April 2025
 
-* April 8 – PC website updated with proposals
-* April 8 - PC members begin review and ranking process
-* April 22 - PC rankings due
-
-## May 2024
-
-* May 3 – WMA staff sends draft session schedule to PC for review
-* May 7 - PC meeting finalizes session schedule
-* May 13 - WMA staff informs proposers of their session’s acceptance or rejection
+* April 11: PC rankings due
+* A﻿pril 21: WMA staff sends rankings by track to PC for review
+* A﻿pril 24: PC meeting finalizes accepted sessions
+* A﻿pril 25: WMA staff send accept/decline emails to proposers (declined sessions are offered the option to present content as a poster, roundtable, or inspiration station)
