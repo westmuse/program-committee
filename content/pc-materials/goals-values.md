@@ -1,12 +1,12 @@
 ---
-title: "Goals and Values for the Annual Meeting Program"
+title: Goals and Values for the Annual Meeting Program
 date: 2018-12-12T09:40:06-06:00
 draft: false
+abstract: Understanding the character and values of WMA, and how those are
+  applied to the annual meeting.
 weight: 30
-abstract: "Understanding the character and values of WMA, and how those are applied to the annual meeting."
 ---
-
-__The Annual Meeting should be:__
+**The Annual Meeting should be:**
 
 * Visionary and inspiring (motivating)
 * Challenging (intellectual rigor)
@@ -16,7 +16,7 @@ __The Annual Meeting should be:__
 * Provocative (controversy)
 * Engaging (interactive)
 
-__The Annual Meeting should:__
+**The Annual Meeting should:**
 
 * Involve diversity in people, institutions, communities, and program
 * Involve large and small institutions
@@ -24,15 +24,16 @@ __The Annual Meeting should:__
 * Encourage dialog within the sessions
 * Provide tangible take-aways for attendees
 
-__Content should target one of the following:__
+**Content should target one of the following:**
 
 * Core curriculum, nuts and bolts, “101” sessions
 * Mid/advanced best practices and issues
 * Senior leadership and management issues
 
-__Additional Goals and Values for the Annual Meeting:__
+**Additional Goals and Values for the Annual Meeting:**
 
-* Celebrate sense of place, location of Annual Meeting
+* E﻿mphasis on WMA's 90th Anniversary in 2025
+* C﻿elebrate a sense of place, location of Annual Meeting
 * Acknowledge and respect cultures, nationalities, and profession
 * Embrace a sense of community within the profession
 * Be intellectually and financially accessible
