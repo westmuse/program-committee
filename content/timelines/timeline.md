@@ -23,7 +23,7 @@ weight: 10
 
 ## April 2025
 
-* April 11: PC rankings due
+* April 14: PC rankings due
 * A﻿pril 21: WMA staff sends rankings by track to PC for review
 * A﻿pril 24: PC meeting finalizes accepted sessions
 * A﻿pril 25: WMA staff send accept/decline emails to proposers (declined sessions are offered the option to present content as a poster, roundtable, or inspiration station)
