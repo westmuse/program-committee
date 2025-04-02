@@ -18,5 +18,5 @@ The best place to start is [Reviewing Guidelines & Process](https://pc.westmuse.
 * March 31, 2024: Proposals website updated with proposals
 * April 11, 2024: PC rankings due to staff
 * April 21, 2025: S﻿taff sends rankings by track to PC for review
-* April 24, 2025: PC meeting finalizes accepted sessions
-* A﻿pril 25, 2025: Staff send accept/decline emails to proposers (declined sessions are offered the option to present content as a poster, roundtable, or inspiration station)
+* April 28, 2025: PC meeting finalizes accepted sessions
+* A﻿pril 29, 2025: Staff send accept/decline emails to proposers (declined sessions are offered the option to present content as a poster, roundtable, or inspiration station)
