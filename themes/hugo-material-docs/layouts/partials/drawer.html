@@ -32,7 +32,7 @@
         <span class="section">Contact WMA</span>
 
         <ul>
-          {{ with .Site.Social.twitter }}
+          {{ with .Site.Params.Social.twitter }}
           <li>
             <a href="https://twitter.com/{{ . }}" target="_blank" title="@{{ . }} on Twitter">
               Twitter
@@ -40,7 +40,7 @@
           </li>
           {{ end }}
 
-          {{ with .Site.Social.web }}
+          {{ with .Site.Params.Social.web }}
           <li>
             <a href="{{ . }}" target="_blank" title="@{{ . }} on the web">
               Web
@@ -48,21 +48,21 @@
           </li>
           {{ end }}
 
-          {{ with .Site.Social.email }}
+          {{ with .Site.Params.Social.email }}
           <li>
             <a href="mailto:{{ . }}" title="Email of {{ . }}">
               E-mail
             </a>
           </li>
           {{ end }}
-          {{ with .Site.Social.instagram }}
+          {{ with .Site.Params.Social.instagram }}
           <li>
             <a href="{{ . }}" target="_blank" title="@{{ . }} on Instagram">
               Instagram
             </a>
           </li>
           {{ end }}
-          {{ with .Site.Social.facebook }}
+          {{ with .Site.Params.Social.facebook }}
           <li>
             <a href="{{ . }}" target="_blank" title="@{{ . }} on Facebook">
               Facebook

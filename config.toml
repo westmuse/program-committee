@@ -5,7 +5,7 @@ theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
 # Enable Google Analytics by entering your tracking id
-googleAnalytics = ""
+GoogleAnalytics = ""
 
 
 [markup.goldmark.renderer]
@@ -67,7 +67,7 @@ googleAnalytics = ""
 [params]
 	# General information
 	author = "Western Museums Association"
-	description = "Site for review of submitted 2022 WMA proposals"
+	description = "Site for review of submitted 2026 WMA proposals"
 	copyright = "2026 Western Museums Association, all rights reserved"
   submission_year = "2026"
 
