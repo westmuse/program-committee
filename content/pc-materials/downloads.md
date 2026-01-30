@@ -7,7 +7,7 @@ weight: 15
 ---
 Below are some documents for your use as a program committee member.
 
-* [WM﻿A 2026 Program Committee Roster](https://pc.westmuse.org/static/files/wma-2026-pc-roster.xlsx)
+* [WM﻿A 2026 Program Committee Roster](https://pc.westmuse.org/files/wma-2026-pc-roster.xlsx)
 * [WMA 2026 Program Rubric](static/files/wma2026_program_rubric.docx)
 * WMA 2026 Proposal Track Data (available after RFP closes)
 * [W﻿MA 2026 Program/Session Structures](static/files/wma2026_session_structures.docx)
