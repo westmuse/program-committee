@@ -12,4 +12,4 @@ Below are some documents for your use as a program committee member.
 * [WMA 2026 Proposal Track Data](static/files/wma-2025-proposal-track-data.xlsx)
 * [W﻿MA 2026 Program/Session Structures](https://pc.westmuse.org/files/wma2024_session_structures.docx)
 * [W﻿MA 2026 Proposal Guidelines](https://pc.westmuse.org/files/request-for-proposals_guidelines_25.pdf)
-* ﻿[WMA 2025 Annual Meeting Survey Result﻿s](https://pc.westmuse.org/files/wma2024-annual-meeting-evaluation.pdf)
+* ﻿[WMA 2025 Annual Meeting Survey Result﻿s](static/files/wma2025-annual-meeting-evaluation.docx)
