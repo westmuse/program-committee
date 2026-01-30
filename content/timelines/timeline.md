@@ -15,7 +15,7 @@ weight: 10
 * March 5: WMA Hosts Session Brainstorming Zoom
 * March 27: RFP closes
 
-## April 2025
+## April 2026
 
 * A﻿pril 3: PC website updated with proposals
 * A﻿pril 3: PC members begin review and ranking process
