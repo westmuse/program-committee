@@ -11,5 +11,5 @@ Below are some documents for your use as a program committee member.
 * [WMA 2026 Program Rubric](static/files/wma2026_program_rubric.docx)
 * WMA 2026 Proposal Track Data (available after RFP closes)
 * [W﻿MA 2026 Program/Session Structures](static/files/wma2026_session_structures.docx)
-* [W﻿MA 2026 Proposal Guidelines](static/files/request-for-proposals_guidelines_26.docx)
+* [W﻿MA 2026 Proposal Guidelines](pc.westmuse.org/static/files/request-for-proposals_guidelines_26.docx)
 * ﻿[WMA 2025 Annual Meeting Survey Result﻿s](static/files/wma2025-annual-meeting-evaluation.docx)
