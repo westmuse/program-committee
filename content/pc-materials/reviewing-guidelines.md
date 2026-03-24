@@ -4,7 +4,7 @@ date: 2018-12-12T15:40:06.000Z
 abstract: Things to think about as you review proposals for this year's WMA conference.
 weight: 20
 ---
-Each year, questions arise from Program Committee (PC) members as to what specific elements should be considered as they read through the proposals. These notes supplement the [WMA Program Rubric](https://pc.westmuse.org/files/wma2026_program_rubric.docx) and [Goals and Values](https://pc.westmuse.org/pc-materials/goals-values/) list. This list addresses the logistical realities of the WMA Annual Meeting: conference size, marketing approach, and other issues that impact the type of program that is possible. Remember that only about 40 sessions will make it to the final program, so these notes, along with the WMA Program Rubric and the Goals and Values list, will help you in your efforts to score the sessions fairly. The PC has the right and the responsibility to recommend to the session proposer that changes be made according to the needs of the Annual Meeting.
+Each year, questions arise from Program Committee (PC) members as to what specific elements should be considered as they read through the proposals. These notes supplement the [WMA Program Rubric](https://pc.westmuse.org/files/wma2026_program_rubric.docx) and [Goals and Values](https://pc.westmuse.org/pc-materials/goals-values/) list. This list addresses the logistical realities of the WMA Annual Meeting: conference size, marketing approach, and other issues that impact the type of program that is possible. Remember that only about 42 sessions will make it to the final program, so these notes, along with the WMA Program Rubric and the Goals and Values list, will help you in your efforts to score the sessions fairly. The PC has the right and the responsibility to recommend to the session proposer that changes be made according to the needs of the Annual Meeting.
 
 ## Representing WMA
 
@@ -24,7 +24,7 @@ Some of the most interesting sessions are those with wildly different perspectiv
 
 ## Community Representation
 
-For any session that discusses a specific group of people, especially if they are the intended audience or focus of an exhibition or program, at least one member from the specific group should be represented on the panel. When session attendance is cost prohibitive for the individual(s), WMA will waive the in-person requirement for all presenters and virtual or recorded participation will be allowed to ensure an appropriate and balanced community representation in the session.
+For any session that discusses a specific group of people, especially if they are the intended audience or focus of an exhibition or program, at least one member from the specific group should be represented on the panel. When session attendance is cost prohibitive for the individual(s), WMA will waive the in-person requirement for them and virtual or recorded participation will be allowed to ensure an appropriate and balanced community representation in the session.
 
 ## Titles
 
@@ -32,7 +32,7 @@ Please think about the session title. Does it convey the content, or is it too c
 
 ## Vendor Proposed Sessions
 
-We do encourage and accept proposals from for-profit entities. In most cases, we prefer to have a museum professional moderate, however each session must be judged on a case-by-case basis. In every case, we prefer not to accept sessions where there is a business relationship between the vendor on the panel and the other panelists. There should always be a non-client included on the panel to address the topic. Furthermore, in no instance can a session include promotion of a business. The vendor must limit themselves to addressing the issue.
+Vendors are essential for museums and nonprofits to achieve their visions, as well as, for Western Museum Association to host successful Annual Meetings year after year. Sessions are a great way for vendors to share knowledge, expertise, and project insights, and we do encourage and accept proposals from for-profit entities. In most cases, we prefer to have a museum professional moderate, however each session must be judged on a case-by-case basis. In every case, we prefer not to accept sessions where there is a business relationship between the vendor on the panel and the other panelists. There should always be a non-client included on the panel to address the topic. Furthermore, in no instance can a session include promotion of a business. The vendor must limit themselves to addressing the issue
 
 ## Audience Participation
 
