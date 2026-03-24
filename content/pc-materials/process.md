@@ -27,26 +27,3 @@ In the PC’s work, PC members are representatives of WMA. Conversations with pr
 5. **Drafting the Schedule.** WMA staff uses the rankings to draft a schedule of sessions with the goal of providing a balanced and varied Program. The rubric and discretion will be used to make decisions.
 6. **PC Review of Session Schedule.** In early May, WMA staff will provide the PC with a draft session schedule ahead of a meeting to finalize Program. PC Co-Chairs conduct the meeting, assisted by WMA staff. At this time, additional program-related responsibilities maybe assigned, such as helping edit session descriptions, outreach to accepted sessions to refine content, etc. In all of these auxiliary assignments, PC members work under the direction of WMA staff.
 7. **Meeting Follow-up.** WMA staff communicates to proposers whether their session was accepted or declined and works with a designer to produce the Preliminary Program to be made available when registration opens in early June.
-
-## **TIMELINE FOR 2026**
-
-**Early January:** CoChairs review staff drafted RFP and provide feedback
-
-**Late January / early February:** PC meeting (Introductions, community building, and explain plans for the year; Review RFP and provide feedback)
-
-**Feb 9:** RFP opens
-
-**March 5:** Session Brainstorm Zoom
-
-**March 27:** RFP closes
-
-**April 3:** PC website updated with proposals
-
-**April 17:** PC rankings due to staff
-
-**April 27:** Staff sends rankings by track to PC for review
-
-**May 1:** PC meeting finalizes accepted sessions
-
-**May 4:** Staff send accept / decline emails to proposers (declined sessions are offered
-the option to present content as a poster, roundtable, or inspiration station)
